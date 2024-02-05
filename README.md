@@ -1,1 +1,3 @@
-# Finance_Manager_Of_Team-C
+# Тема проекту "Finance Manager"
+# Команда "Team-C"
+
