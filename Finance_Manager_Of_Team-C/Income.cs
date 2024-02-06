@@ -16,5 +16,10 @@ namespace Finance_Manager_Of_Team_C
         {
             InitializeComponent();
         }
+
+        private void Income_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
