@@ -6,63 +6,12 @@ namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
-        private readonly IncomeData incomeData;
 
         public Income()
         {
             InitializeComponent();
-            incomeData = new IncomeData();
         }
 
-        private void AddIncomeSourceBtn_Click(object sender, EventArgs e)
-        {
-            string newSourceName = Microsoft.VisualBasic.Interaction.InputBox("Enter new income source name:", "New Income Source");
-            if (!string.IsNullOrEmpty(newSourceName))
-            {
-                incomeData.AddIncomeSource(newSourceName);
-                IncomeSourceCmb.Items.Add(newSourceName);
-                MessageBox.Show($"Income source '{newSourceName}' added successfully.");
-            }
-        }
-
-        private void EditIncomeSourceBtn_Click(object sender, EventArgs e)
-        {
-            string selectedSource = IncomeSourceCmb.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectedSource))
-            {
-                string newName = Microsoft.VisualBasic.Interaction.InputBox($"Enter new name for '{selectedSource}':", "Edit Income Source", selectedSource);
-                if (!string.IsNullOrEmpty(newName) && newName != selectedSource)
-                {
-                    incomeData.ChangeIncomeSourceName(selectedSource, newName);
-                    IncomeSourceCmb.Items[IncomeSourceCmb.SelectedIndex] = newName;
-                    MessageBox.Show($"Income source '{selectedSource}' renamed to '{newName}' successfully.");
-                }
-            }
-        }
-
-        private void DeleteIncomeSourceBtn_Click(object sender, EventArgs e)
-        {
-            string selectedSource = IncomeSourceCmb.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectedSource))
-            {
-                IncomeSourceCmb.Items.RemoveAt(IncomeSourceCmb.SelectedIndex);
-                incomeData.RemoveIncomeSource(selectedSource);
-                MessageBox.Show($"Income source '{selectedSource}' deleted successfully.");
-            }
-        }
-
-        private void IncomeSourceCmb_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Implement functionality to show income data for the selected source
-            string selectedSource = IncomeSourceCmb.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectedSource))
-            {
-                List<IncomeData.IncomeEntry> incomeEntries = incomeData.GetIncomeData(selectedSource);
-                // Use the data to populate your UI elements or show in a grid
-                // For example:
-                // dataGridView.DataSource = incomeEntries;
-            }
-        }
     }
 
     public class IncomeData

@@ -28,144 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            IncomeSourceGroupBox = new GroupBox();
-            DescriptionLabel = new Label();
-            EditIncomeSourceBtn = new Button();
-            DeleteIncomeSourceBtn = new Button();
-            AddIncomeSourceBtn = new Button();
-            IncomeSourceCmb = new ComboBox();
-            GraphGroupBox = new GroupBox();
-            groupBox2 = new GroupBox();
-            monthCalendar1 = new MonthCalendar();
-            IncomeSourceGroupBox.SuspendLayout();
+            panel1 = new Panel();
+            WalletBtn = new Button();
+            button1 = new Button();
+            panel2 = new Panel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            button2 = new Button();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // IncomeSourceGroupBox
+            // panel1
             // 
-            IncomeSourceGroupBox.BackColor = Color.LightSteelBlue;
-            IncomeSourceGroupBox.Controls.Add(DescriptionLabel);
-            IncomeSourceGroupBox.Controls.Add(EditIncomeSourceBtn);
-            IncomeSourceGroupBox.Controls.Add(DeleteIncomeSourceBtn);
-            IncomeSourceGroupBox.Controls.Add(AddIncomeSourceBtn);
-            IncomeSourceGroupBox.Controls.Add(IncomeSourceCmb);
-            IncomeSourceGroupBox.Font = new Font("Myanmar Text", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            IncomeSourceGroupBox.ForeColor = SystemColors.Control;
-            IncomeSourceGroupBox.Location = new Point(12, 12);
-            IncomeSourceGroupBox.Name = "IncomeSourceGroupBox";
-            IncomeSourceGroupBox.Size = new Size(227, 160);
-            IncomeSourceGroupBox.TabIndex = 0;
-            IncomeSourceGroupBox.TabStop = false;
-            IncomeSourceGroupBox.Text = "INCOME SOURCE";
+            panel1.BackColor = Color.FromArgb(24, 30, 54);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(WalletBtn);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(177, 500);
+            panel1.TabIndex = 6;
             // 
-            // DescriptionLabel
+            // WalletBtn
             // 
-            DescriptionLabel.AutoSize = true;
-            DescriptionLabel.Location = new Point(6, 90);
-            DescriptionLabel.Name = "DescriptionLabel";
-            DescriptionLabel.Size = new Size(74, 21);
-            DescriptionLabel.TabIndex = 4;
-            DescriptionLabel.Text = "Description";
+            WalletBtn.BackColor = Color.FromArgb(24, 30, 54);
+            WalletBtn.Dock = DockStyle.Top;
+            WalletBtn.FlatAppearance.BorderSize = 0;
+            WalletBtn.FlatStyle = FlatStyle.Flat;
+            WalletBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WalletBtn.ForeColor = Color.MediumPurple;
+            WalletBtn.Location = new Point(0, 127);
+            WalletBtn.Name = "WalletBtn";
+            WalletBtn.Size = new Size(177, 35);
+            WalletBtn.TabIndex = 4;
+            WalletBtn.Text = "WALLET";
+            WalletBtn.UseVisualStyleBackColor = false;
             // 
-            // EditIncomeSourceBtn
+            // button1
             // 
-            EditIncomeSourceBtn.BackColor = Color.Orange;
-            EditIncomeSourceBtn.Location = new Point(77, 29);
-            EditIncomeSourceBtn.Name = "EditIncomeSourceBtn";
-            EditIncomeSourceBtn.Size = new Size(74, 23);
-            EditIncomeSourceBtn.TabIndex = 3;
-            EditIncomeSourceBtn.Text = "EDIT";
-            EditIncomeSourceBtn.UseVisualStyleBackColor = false;
-            EditIncomeSourceBtn.Click += EditIncomeSourceBtn_Click;
+            button1.BackColor = Color.FromArgb(24, 30, 54);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.MediumPurple;
+            button1.Location = new Point(0, 92);
+            button1.Name = "button1";
+            button1.Size = new Size(177, 35);
+            button1.TabIndex = 3;
+            button1.Text = "DASHBOARD";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // DeleteIncomeSourceBtn
+            // panel2
             // 
-            DeleteIncomeSourceBtn.BackColor = Color.Salmon;
-            DeleteIncomeSourceBtn.Location = new Point(152, 29);
-            DeleteIncomeSourceBtn.Name = "DeleteIncomeSourceBtn";
-            DeleteIncomeSourceBtn.Size = new Size(69, 23);
-            DeleteIncomeSourceBtn.TabIndex = 2;
-            DeleteIncomeSourceBtn.Text = "DELETE";
-            DeleteIncomeSourceBtn.UseVisualStyleBackColor = false;
-            DeleteIncomeSourceBtn.Click += DeleteIncomeSourceBtn_Click;
+            panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 58);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(177, 34);
+            panel2.TabIndex = 2;
             // 
-            // AddIncomeSourceBtn
+            // label1
             // 
-            AddIncomeSourceBtn.BackColor = Color.PaleGreen;
-            AddIncomeSourceBtn.Location = new Point(6, 29);
-            AddIncomeSourceBtn.Name = "AddIncomeSourceBtn";
-            AddIncomeSourceBtn.Size = new Size(69, 23);
-            AddIncomeSourceBtn.TabIndex = 1;
-            AddIncomeSourceBtn.Text = "ADD";
-            AddIncomeSourceBtn.UseVisualStyleBackColor = false;
-            AddIncomeSourceBtn.Click += AddIncomeSourceBtn_Click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.MediumPurple;
+            label1.Location = new Point(42, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 25);
+            label1.TabIndex = 1;
+            label1.Text = "INCOME";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // IncomeSourceCmb
+            // pictureBox1
             // 
-            IncomeSourceCmb.BackColor = Color.LightCyan;
-            IncomeSourceCmb.FormattingEnabled = true;
-            IncomeSourceCmb.Location = new Point(6, 58);
-            IncomeSourceCmb.Name = "IncomeSourceCmb";
-            IncomeSourceCmb.Size = new Size(215, 29);
-            IncomeSourceCmb.TabIndex = 0;
-            IncomeSourceCmb.SelectedIndexChanged += IncomeSourceCmb_SelectedIndexChanged;
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Image = Properties.Resources._12095821;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(177, 58);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // GraphGroupBox
+            // button2
             // 
-            GraphGroupBox.BackColor = Color.LightSteelBlue;
-            GraphGroupBox.Font = new Font("Myanmar Text", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GraphGroupBox.ForeColor = SystemColors.Control;
-            GraphGroupBox.Location = new Point(251, 12);
-            GraphGroupBox.Name = "GraphGroupBox";
-            GraphGroupBox.Size = new Size(537, 160);
-            GraphGroupBox.TabIndex = 4;
-            GraphGroupBox.TabStop = false;
-            GraphGroupBox.Text = "GRAPH";
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.LightSteelBlue;
-            groupBox2.Font = new Font("Myanmar Text", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.ForeColor = SystemColors.Control;
-            groupBox2.Location = new Point(251, 184);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(537, 162);
-            groupBox2.TabIndex = 5;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "GRAPH";
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(12, 184);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 0;
+            button2.BackColor = Color.FromArgb(24, 30, 54);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.MediumPurple;
+            button2.Location = new Point(0, 162);
+            button2.Name = "button2";
+            button2.Size = new Size(177, 35);
+            button2.TabIndex = 5;
+            button2.Text = "SOURCES";
+            button2.UseVisualStyleBackColor = false;
             // 
             // Income
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightCyan;
-            ClientSize = new Size(800, 356);
-            Controls.Add(monthCalendar1);
-            Controls.Add(groupBox2);
-            Controls.Add(GraphGroupBox);
-            Controls.Add(IncomeSourceGroupBox);
+            BackColor = Color.FromArgb(46, 51, 73);
+            ClientSize = new Size(1000, 500);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Income";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Income";
-            IncomeSourceGroupBox.ResumeLayout(false);
-            IncomeSourceGroupBox.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private GroupBox IncomeSourceGroupBox;
-        private ComboBox IncomeSourceCmb;
-        private Button AddIncomeSourceBtn;
-        private Button DeleteIncomeSourceBtn;
-        private Button EditIncomeSourceBtn;
-        private Label DescriptionLabel;
-        private GroupBox GraphGroupBox;
-        private GroupBox groupBox2;
-        private MonthCalendar monthCalendar1;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Panel panel2;
+        private Button button1;
+        private Button WalletBtn;
+        private Button button2;
     }
 }
