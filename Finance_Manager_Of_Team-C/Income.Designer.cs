@@ -75,6 +75,7 @@
             EditIncomeSourceBtn.TabIndex = 3;
             EditIncomeSourceBtn.Text = "EDIT";
             EditIncomeSourceBtn.UseVisualStyleBackColor = false;
+            EditIncomeSourceBtn.Click += EditIncomeSourceBtn_Click;
             // 
             // DeleteIncomeSourceBtn
             // 
@@ -85,6 +86,7 @@
             DeleteIncomeSourceBtn.TabIndex = 2;
             DeleteIncomeSourceBtn.Text = "DELETE";
             DeleteIncomeSourceBtn.UseVisualStyleBackColor = false;
+            DeleteIncomeSourceBtn.Click += DeleteIncomeSourceBtn_Click;
             // 
             // AddIncomeSourceBtn
             // 
@@ -95,6 +97,7 @@
             AddIncomeSourceBtn.TabIndex = 1;
             AddIncomeSourceBtn.Text = "ADD";
             AddIncomeSourceBtn.UseVisualStyleBackColor = false;
+            AddIncomeSourceBtn.Click += AddIncomeSourceBtn_Click;
             // 
             // IncomeSourceCmb
             // 
@@ -104,6 +107,7 @@
             IncomeSourceCmb.Name = "IncomeSourceCmb";
             IncomeSourceCmb.Size = new Size(215, 29);
             IncomeSourceCmb.TabIndex = 0;
+            IncomeSourceCmb.SelectedIndexChanged += IncomeSourceCmb_SelectedIndexChanged;
             // 
             // GraphGroupBox
             // 
@@ -147,7 +151,6 @@
             Controls.Add(IncomeSourceGroupBox);
             Name = "Income";
             Text = "Income";
-            Load += Income_Load;
             IncomeSourceGroupBox.ResumeLayout(false);
             IncomeSourceGroupBox.PerformLayout();
             ResumeLayout(false);
