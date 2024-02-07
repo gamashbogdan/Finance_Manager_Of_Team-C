@@ -1,110 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
 
         public Income()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-    }
-
-    public class IncomeData
-    {
-        private readonly Dictionary<string, List<IncomeEntry>> incomeSources;
-
-        public IncomeData()
+        private void ChangeButtonProperties(Button btn)
         {
-            incomeSources = new Dictionary<string, List<IncomeEntry>>();
+            navPln.Location = btn.Location;
+            DefaultButtonColor();
+            btn.BackColor = Color.FromArgb(30, 36, 60);
         }
 
-        public void AddIncomeSource(string sourceName)
+        private void DefaultButtonColor()
         {
-            if (!incomeSources.ContainsKey(sourceName))
-            {
-                incomeSources[sourceName] = new List<IncomeEntry>();
-            }
-            else
-            {
-                Console.WriteLine($"Income source '{sourceName}' already exists.");
-            }
+            WalletBtn.BackColor = Color.FromArgb(24, 30, 54);
+            SourceBtn.BackColor = Color.FromArgb(24, 30, 54);
+            DashboardBtn.BackColor = Color.FromArgb(24, 30, 54);
+            settingBtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        public void ChangeIncomeSourceName(string oldName, string newName)
+        private void WalletBtn_Click(object sender, EventArgs e)
         {
-            if (incomeSources.ContainsKey(oldName))
-            {
-                incomeSources[newName] = incomeSources[oldName];
-                incomeSources.Remove(oldName);
-            }
-            else
-            {
-                Console.WriteLine($"Income source '{oldName}' not found.");
-            }
+            ChangeButtonProperties(WalletBtn);
         }
 
-        public void AddIncomeData(string sourceName, decimal amount, string description)
+        private void SourceBtn_Click(object sender, EventArgs e)
         {
-            if (incomeSources.ContainsKey(sourceName))
-            {
-                incomeSources[sourceName].Add(new IncomeEntry(amount, description));
-            }
-            else
-            {
-                Console.WriteLine($"Income source '{sourceName}' not found.");
-            }
+            ChangeButtonProperties(SourceBtn);
         }
 
-        public List<IncomeEntry> GetIncomeData(string sourceName)
+        private void dashboardBtn_Click(object sender, EventArgs e)
         {
-            if (incomeSources.ContainsKey(sourceName))
-            {
-                return incomeSources[sourceName];
-            }
-            else
-            {
-                Console.WriteLine($"Income source '{sourceName}' not found.");
-                return null;
-            }
+            ChangeButtonProperties(DashboardBtn);
         }
 
-        public void RemoveIncomeSource(string sourceName)
+        private void settingBtn_Click(object sender, EventArgs e)
         {
-            if (incomeSources.ContainsKey(sourceName))
-            {
-                incomeSources.Remove(sourceName);
-            }
-            else
-            {
-                Console.WriteLine($"Income source '{sourceName}' not found.");
-            }
+            ChangeButtonProperties(settingBtn);
         }
 
-        public class IncomeEntry
-        {
-            public decimal Amount { get; }
-            public string Description { get; }
-
-            public IncomeEntry(decimal amount, string description)
-            {
-                Amount = amount;
-                Description = description;
-            }
-        }
-
-        private void DescriptionLabel_Click(object sender, EventArgs e)
+        private void Income_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
