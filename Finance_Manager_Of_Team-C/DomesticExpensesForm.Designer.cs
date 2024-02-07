@@ -64,7 +64,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Sylfaen", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(288, 114);
+            label3.Location = new Point(302, 114);
             label3.Name = "label3";
             label3.Size = new Size(218, 23);
             label3.TabIndex = 2;
