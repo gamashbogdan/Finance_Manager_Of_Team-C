@@ -130,7 +130,6 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             Name = "UC_Wallet";
             Padding = new Padding(20);
             Size = new Size(823, 500);
-            Load += UC_Wallet_Load;
             roundedPanel1.ResumeLayout(false);
             roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewWallets).EndInit();

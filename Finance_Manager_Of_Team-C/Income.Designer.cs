@@ -196,7 +196,7 @@
             exitBtn.TabIndex = 10;
             exitBtn.Text = "EXIT";
             exitBtn.UseVisualStyleBackColor = false;
-            exitBtn.Click += exitBtn_Click_1;
+            exitBtn.Click += ExitBtn_Click;
             // 
             // panelContainer
             // 
@@ -219,7 +219,7 @@
             Name = "Income";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Income";
-            Load += Income_Load;
+           // Load += Income_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

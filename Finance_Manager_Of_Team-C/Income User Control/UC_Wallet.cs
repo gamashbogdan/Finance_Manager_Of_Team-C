@@ -1,25 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C.Income_User_Control
 {
     public partial class UC_Wallet : UserControl
     {
+        private WalletsManager walletsManager;
+        private string projectDirectory;
+
         public UC_Wallet()
         {
             InitializeComponent();
+            walletsManager = new WalletsManager();
+            projectDirectory = Directory.GetCurrentDirectory();
         }
 
-        private void UC_Wallet_Load(object sender, EventArgs e)
+        public void SaveDataToCsv()
         {
+            string filePath = Path.Combine(projectDirectory, "wallets.csv");
+            walletsManager.SaveToCsv(filePath);
+        }
 
+        public void LoadDataFromCsv()
+        {
+            string filePath = Path.Combine(projectDirectory, "wallets.csv");
+            walletsManager.LoadFromCsv(filePath);
+            RefreshDataGridView();
+        }
+
+        private void RefreshDataGridView()
+        {
+            dataGridViewWallets.Rows.Clear();
+            var wallets = walletsManager.GetAllWallets();
+            foreach (var wallet in wallets)
+            {
+                dataGridViewWallets.Rows.Add(wallet.WalletName, wallet.WalletMoney);
+            }
         }
     }
 }

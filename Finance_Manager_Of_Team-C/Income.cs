@@ -4,11 +4,17 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.IO;
+using System.Globalization;
+using CsvHelper;
+ // Import WalletsManager namespace
 
 namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
+        private UC_Wallet uc_Wallet;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -25,11 +31,15 @@ namespace Finance_Manager_Of_Team_C
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+            uc_Wallet = new UC_Wallet();
+            LoadData();
+            DisplayUserControl(uc_Wallet);
         }
 
-        private void Income_Load(object sender, EventArgs e)
+        private void LoadData()
         {
-
+            uc_Wallet.LoadDataFromCsv();
         }
 
         private void ChangeButtonProperties(Button btn)
@@ -51,10 +61,8 @@ namespace Finance_Manager_Of_Team_C
 
         private void addUserControl(UserControl userControl)
         {
-            //userControl.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(userControl);
-            //userControl.BringToFront();
         }
 
         private void WalletBtn_Click(object sender, EventArgs e)
@@ -85,11 +93,25 @@ namespace Finance_Manager_Of_Team_C
             addUserControl(uc);
         }
 
-        
-
-        private void exitBtn_Click_1(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                uc_Wallet.SaveDataToCsv();
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving income data: {ex.Message}");
+            }
         }
+
+        private void DisplayUserControl(UserControl userControl)
+        {
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.Dock = DockStyle.Fill;
+        }
+
     }
 }
