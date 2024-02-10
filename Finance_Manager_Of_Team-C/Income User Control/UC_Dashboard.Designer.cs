@@ -21,23 +21,12 @@ namespace Finance_Manager_Of_Team_C.IncomeWindows
 
         private void InitializeComponent()
         {
-            panel1 = new Panel();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(1, 126, 255);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 100);
-            panel1.TabIndex = 0;
-            panel1.Paint += new PaintEventHandler(panel1_Paint); // Handle the paint event to apply gradient
             // 
             // UC_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
             Name = "UC_Dashboard";
             Size = new Size(823, 500);
             ResumeLayout(false);
