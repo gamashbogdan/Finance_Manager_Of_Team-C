@@ -8,8 +8,7 @@ namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
-        //private WalletDataHandler walletDataHandler;
-        //private UC_Wallet uc_Wallet;
+        private UC_Wallet uc_Wallet;
 
         public Income()
         {
@@ -20,10 +19,6 @@ namespace Finance_Manager_Of_Team_C
         private void InitializeComponents()
         {
             SetFormRoundedBorders();
-
-            // Display the wallet user control
-            //uc_Wallet = new UC_Wallet();
-            //AddUserControl(uc_Wallet);
         }
 
         private void SetFormRoundedBorders()
@@ -55,7 +50,15 @@ namespace Finance_Manager_Of_Team_C
             AddUserControl(uc);
         }
 
-        private void WalletBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Wallet>(WalletBtn);
+        private void WalletBtn_Click(object sender, EventArgs e)
+        {
+            ChangeButtonProperties(WalletBtn);
+            if (uc_Wallet == null)
+            {
+                uc_Wallet = new UC_Wallet();
+                AddUserControl(uc_Wallet);
+            }
+        }
 
         private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>(SourceBtn);
 
@@ -73,7 +76,7 @@ namespace Finance_Manager_Of_Team_C
         {
             try
             {
-                // sava data to file from  class
+                // Save data to file from class
                 Application.Exit();
             }
             catch (Exception ex)

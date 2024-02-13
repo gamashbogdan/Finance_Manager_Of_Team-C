@@ -83,6 +83,7 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             // 
             // dataGridViewWallets
             // 
+            dataGridViewWallets.AllowUserToResizeColumns = false;
             dataGridViewWallets.AllowUserToResizeRows = false;
             dataGridViewWallets.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewWallets.BackgroundColor = Color.FromArgb(37, 40, 55);
