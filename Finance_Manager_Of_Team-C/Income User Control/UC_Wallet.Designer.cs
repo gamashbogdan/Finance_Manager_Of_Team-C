@@ -38,8 +38,6 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             label3 = new Label();
             label4 = new Label();
             dataGridViewWallets = new DataGridView();
-            WalletName = new DataGridViewTextBoxColumn();
-            Balance = new DataGridViewTextBoxColumn();
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewWallets).BeginInit();
             SuspendLayout();
@@ -100,7 +98,6 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             dataGridViewWallets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewWallets.ColumnHeadersHeight = 40;
             dataGridViewWallets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewWallets.Columns.AddRange(new DataGridViewColumn[] { WalletName, Balance });
             dataGridViewWallets.EnableHeadersVisualStyles = false;
             dataGridViewWallets.GridColor = Color.Black;
             dataGridViewWallets.Location = new Point(20, 146);
@@ -108,16 +105,6 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             dataGridViewWallets.RowHeadersVisible = false;
             dataGridViewWallets.Size = new Size(780, 331);
             dataGridViewWallets.TabIndex = 3;
-            // 
-            // WalletName
-            // 
-            WalletName.HeaderText = "Wallet Name";
-            WalletName.Name = "WalletName";
-            // 
-            // Balance
-            // 
-            Balance.HeaderText = "Balance";
-            Balance.Name = "Balance";
             // 
             // UC_Wallet
             // 
@@ -141,8 +128,6 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
         private Label label3;
         private Label label4;
         private DataGridView dataGridViewWallets;
-        private DataGridViewTextBoxColumn WalletName;
-        private DataGridViewTextBoxColumn Balance;
     }
 
 }

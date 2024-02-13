@@ -1,42 +1,36 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C.Income_User_Control
 {
     public partial class UC_Wallet : UserControl
     {
-        private WalletsManager walletsManager;
-        private string projectDirectory;
-
         public UC_Wallet()
         {
             InitializeComponent();
-            walletsManager = new WalletsManager();
-            projectDirectory = Directory.GetCurrentDirectory();
+            BindClass();
         }
 
-        public void SaveDataToCsv()
+        public class DataClass
         {
-            string filePath = Path.Combine(projectDirectory, "wallets.csv");
-            walletsManager.SaveToCsv(filePath);
+            public int ID { get; set; }
+            public string Name { get; set; }
         }
 
-        public void LoadDataFromCsv()
+        // Initialize myList with some sample data
+        public List<DataClass> myList = new List<DataClass>
         {
-            string filePath = Path.Combine(projectDirectory, "wallets.csv");
-            walletsManager.LoadFromCsv(filePath);
-            RefreshDataGridView();
-        }
+            new DataClass { ID = 1, Name = "John" },
+            new DataClass { ID = 2, Name = "Alice" },
+            new DataClass { ID = 3, Name = "Bob" }
+            // Add more items as needed
+        };
 
-        private void RefreshDataGridView()
+        public void BindClass()
         {
-            dataGridViewWallets.Rows.Clear();
-            var wallets = walletsManager.GetAllWallets();
-            foreach (var wallet in wallets)
-            {
-                dataGridViewWallets.Rows.Add(wallet.WalletName, wallet.WalletMoney);
-            }
+            dataGridViewWallets.DataSource = myList.Select(myClass => new { myClass.ID, myClass.Name }).ToList();
         }
     }
 }
