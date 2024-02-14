@@ -14,6 +14,9 @@ namespace Finance_Manager_Of_Team_C
         {
             InitializeComponent();
             InitializeComponents();
+
+            // Open the wallet window automatically when the form is created
+            OpenWalletWindow();
         }
 
         private void InitializeComponents()
@@ -50,15 +53,8 @@ namespace Finance_Manager_Of_Team_C
             AddUserControl(uc);
         }
 
-        private void WalletBtn_Click(object sender, EventArgs e)
-        {
-            ChangeButtonProperties(WalletBtn);
-            if (uc_Wallet == null)
-            {
-                uc_Wallet = new UC_Wallet();
-                AddUserControl(uc_Wallet);
-            }
-        }
+
+        private void WalletBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Wallet>(WalletBtn);
 
         private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>(SourceBtn);
 
@@ -74,15 +70,13 @@ namespace Finance_Manager_Of_Team_C
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Save data to file from class
-                Application.Exit();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving income data: {ex.Message}");
-            }
+            Application.Exit();
+        }
+
+        // Method to open the wallet window
+        private void OpenWalletWindow()
+        {
+            WalletBtn_Click(WalletBtn, EventArgs.Empty);
         }
     }
 }

@@ -1,20 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C.Income_User_Control
 {
     public partial class UC_Wallet : UserControl
     {
-        private string csvFilePath = "wallet_data.csv";
+        //private string txtFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "wallet_data.txt");
+        private string txtFilePath = "wallet_data.txt";
+
+        private List<WalletData> walletDataList;
 
         public UC_Wallet()
         {
             InitializeComponent();
             InitializeDataGridView();
-            LoadDataFromCSV();
+            LoadDataFromTxt();
+
+            // Attach FormClosing event handler to the parent form
+            if (this.ParentForm != null)
+            {
+                this.ParentForm.FormClosing += ParentForm_FormClosing;
+            }
+
+            UpdateTotalBalanceLabel();
+        }
+
+        // Method to update the balance label
+        private void UpdateTotalBalanceLabel()
+        {
+            decimal totalBalance = 0;
+            foreach (WalletData walletData in walletDataList)
+            {
+                decimal balance; 
+                if (decimal.TryParse(walletData.Balance, out balance))
+                {
+                    totalBalance += balance;
+                }
+            }
+            label3.Text = $"$ {totalBalance}";
         }
 
         private void InitializeDataGridView()
@@ -41,46 +66,58 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
                 if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(balance))
                 {
                     dataGridViewWallets.Rows.RemoveAt(e.RowIndex);
-                    SaveDataToCSV();
+                    walletDataList.RemoveAt(e.RowIndex);
                 }
+                else
+                {
+                    if (e.RowIndex < walletDataList.Count)
+                    {
+                        walletDataList[e.RowIndex].Name = name;
+                        walletDataList[e.RowIndex].Balance = balance;
+                    }
+                    else
+                    {
+                        walletDataList.Add(new WalletData { Name = name, Balance = balance });
+                    }
+                }
+
+                SaveDataToTxt();
             }
         }
 
-        private void SaveDataToCSV()
+        private void SaveDataToTxt()
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(csvFilePath))
+                using (StreamWriter sw = new StreamWriter(txtFilePath))
                 {
-                    StringBuilder sb = new StringBuilder();
-                    foreach (DataGridViewRow row in dataGridViewWallets.Rows)
+                    foreach (WalletData walletData in walletDataList)
                     {
-                        if (!row.IsNewRow)
-                        {
-                            sb.AppendLine($"{row.Cells["Name"].Value},{row.Cells["Balance"].Value}");
-                        }
+                        sw.WriteLine($"{walletData.Name},{walletData.Balance}");
                     }
-                    sw.Write(sb.ToString());
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving data to CSV file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error saving data to TXT file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void LoadDataFromCSV()
+        private void LoadDataFromTxt()
         {
             try
             {
-                if (File.Exists(csvFilePath))
+                walletDataList = new List<WalletData>();
+
+                if (File.Exists(txtFilePath))
                 {
-                    using (StreamReader sr = new StreamReader(csvFilePath))
+                    string[] lines = File.ReadAllLines(txtFilePath);
+                    foreach (string line in lines)
                     {
-                        string line;
-                        while ((line = sr.ReadLine()) != null)
+                        string[] parts = line.Split(',');
+                        if (parts.Length == 2)
                         {
-                            string[] parts = line.Split(',');
+                            walletDataList.Add(new WalletData { Name = parts[0], Balance = parts[1] });
                             dataGridViewWallets.Rows.Add(parts[0], parts[1]);
                         }
                     }
@@ -88,15 +125,24 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading data from CSV file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading data from TXT file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Event handler for the parent form's closing event
+        private void ParentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            UpdateTotalBalanceLabel();
+            SaveDataToTxt();
         }
 
         // Allow adding rows programmatically
         public void AddRow(string walletName, string balance)
         {
             dataGridViewWallets.Rows.Add(walletName, balance);
-            SaveDataToCSV();
+            walletDataList.Add(new WalletData { Name = walletName, Balance = balance });
+            UpdateTotalBalanceLabel();
+            SaveDataToTxt();
         }
 
         // Allow deleting rows programmatically
@@ -105,10 +151,16 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             if (rowIndex >= 0 && rowIndex < dataGridViewWallets.Rows.Count)
             {
                 dataGridViewWallets.Rows.RemoveAt(rowIndex);
-                SaveDataToCSV();
+                walletDataList.RemoveAt(rowIndex);
+                UpdateTotalBalanceLabel();
+                SaveDataToTxt();
             }
         }
+    }
 
-        // You may add more methods to handle additional user interactions
+    public class WalletData
+    {
+        public string Name { get; set; }
+        public string Balance { get; set; }
     }
 }
