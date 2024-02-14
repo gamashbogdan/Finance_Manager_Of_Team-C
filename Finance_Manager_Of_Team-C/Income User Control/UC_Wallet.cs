@@ -160,9 +160,5 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
         }
     }
 
-    public class WalletData
-    {
-        public string Name { get; set; }
-        public string Balance { get; set; }
-    }
+    
 }

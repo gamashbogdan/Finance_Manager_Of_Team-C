@@ -1,5 +1,6 @@
 ﻿using Finance_Manager_Of_Team_C.Income_User_Control;
 
+
 namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
