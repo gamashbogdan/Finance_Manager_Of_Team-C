@@ -30,8 +30,6 @@
         {
             panel1 = new Panel();
             navPln = new Panel();
-            DashboardBtn = new Button();
-            settingBtn = new Button();
             SourceBtn = new Button();
             WalletBtn = new Button();
             panel2 = new Panel();
@@ -49,8 +47,6 @@
             // 
             panel1.BackColor = Color.FromArgb(37, 40, 55);
             panel1.Controls.Add(navPln);
-            panel1.Controls.Add(DashboardBtn);
-            panel1.Controls.Add(settingBtn);
             panel1.Controls.Add(SourceBtn);
             panel1.Controls.Add(WalletBtn);
             panel1.Controls.Add(panel2);
@@ -70,38 +66,7 @@
             navPln.Name = "navPln";
             navPln.Size = new Size(5, 35);
             navPln.TabIndex = 7;
-            // 
-            // DashboardBtn
-            // 
-            DashboardBtn.BackColor = Color.FromArgb(36, 39, 54);
-            DashboardBtn.Dock = DockStyle.Top;
-            DashboardBtn.FlatAppearance.BorderSize = 0;
-            DashboardBtn.FlatStyle = FlatStyle.Flat;
-            DashboardBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DashboardBtn.ForeColor = Color.FromArgb(16, 110, 211);
-            DashboardBtn.Location = new Point(0, 162);
-            DashboardBtn.Name = "DashboardBtn";
-            DashboardBtn.Size = new Size(177, 35);
-            DashboardBtn.TabIndex = 8;
-            DashboardBtn.Text = "DASHBOARD";
-            DashboardBtn.UseVisualStyleBackColor = false;
-            DashboardBtn.Click += dashboardBtn_Click;
-            // 
-            // settingBtn
-            // 
-            settingBtn.BackColor = Color.FromArgb(36, 39, 54);
-            settingBtn.Dock = DockStyle.Bottom;
-            settingBtn.FlatAppearance.BorderSize = 0;
-            settingBtn.FlatStyle = FlatStyle.Flat;
-            settingBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            settingBtn.ForeColor = Color.FromArgb(16, 110, 211);
-            settingBtn.Location = new Point(0, 395);
-            settingBtn.Name = "settingBtn";
-            settingBtn.Size = new Size(177, 35);
-            settingBtn.TabIndex = 6;
-            settingBtn.Text = "SETTINGS";
-            settingBtn.UseVisualStyleBackColor = false;
-            settingBtn.Click += settingBtn_Click;
+            
             // 
             // SourceBtn
             // 
@@ -219,13 +184,13 @@
             Name = "Income";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Income";
-           // Load += Income_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
+
 
         #endregion
         private Panel panel1;
@@ -234,9 +199,7 @@
         private Panel panel2;
         private Button WalletBtn;
         private Button SourceBtn;
-        private Button settingBtn;
         private Panel navPln;
-        private Button DashboardBtn;
         private Button backBtn;
         private Button exitBtn;
         private Panel panelContainer;

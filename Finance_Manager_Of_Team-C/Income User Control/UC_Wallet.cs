@@ -27,6 +27,8 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             UpdateTotalBalanceLabel();
         }
 
+        
+
         // Method to update the balance label
         private void UpdateTotalBalanceLabel()
         {

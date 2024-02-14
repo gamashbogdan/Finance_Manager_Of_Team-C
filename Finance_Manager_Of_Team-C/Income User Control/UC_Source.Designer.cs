@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            textBox2 = new TextBox();
-            comboBox2 = new ComboBox();
+            AddFundsBtn = new Button();
+            textBoxAmountOfMoney = new TextBox();
+            comboBoxMoneySource = new ComboBox();
             roundedPanel1 = new RoundedPanel();
             label7 = new Label();
             roundedPanel2 = new RoundedPanel();
             label2 = new Label();
-            comboBox4 = new ComboBox();
+            comboBoxWallet = new ComboBox();
             roundedPanel3 = new RoundedPanel();
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxCategory = new ComboBox();
             roundedPanel4 = new RoundedPanel();
             label3 = new Label();
             roundedPanel5 = new RoundedPanel();
             label4 = new Label();
-            textBox1 = new TextBox();
+            textBoxDescription = new TextBox();
             roundedPanel1.SuspendLayout();
             roundedPanel2.SuspendLayout();
             roundedPanel3.SuspendLayout();
@@ -51,48 +51,51 @@
             roundedPanel5.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // AddFundsBtn
             // 
-            button1.BackColor = Color.FromArgb(16, 110, 211);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(49, 369);
-            button1.Name = "button1";
-            button1.Size = new Size(705, 76);
-            button1.TabIndex = 0;
-            button1.Text = "Add Funds";
-            button1.UseVisualStyleBackColor = false;
+            AddFundsBtn.BackColor = Color.FromArgb(16, 110, 211);
+            AddFundsBtn.FlatAppearance.BorderSize = 0;
+            AddFundsBtn.FlatStyle = FlatStyle.Flat;
+            AddFundsBtn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddFundsBtn.ForeColor = Color.White;
+            AddFundsBtn.Location = new Point(49, 382);
+            AddFundsBtn.Name = "AddFundsBtn";
+            AddFundsBtn.Size = new Size(705, 76);
+            AddFundsBtn.TabIndex = 0;
+            AddFundsBtn.Text = "Add Funds";
+            AddFundsBtn.UseVisualStyleBackColor = false;
+            AddFundsBtn.Click += AddFundsBtn_Click;
             // 
-            // textBox2
+            // textBoxAmountOfMoney
             // 
-            textBox2.Location = new Point(20, 56);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(297, 23);
-            textBox2.TabIndex = 2;
+            textBoxAmountOfMoney.Location = new Point(20, 67);
+            textBoxAmountOfMoney.Name = "textBoxAmountOfMoney";
+            textBoxAmountOfMoney.Size = new Size(297, 23);
+            textBoxAmountOfMoney.TabIndex = 2;
+            textBoxAmountOfMoney.TextChanged += textBoxAmountOfMoney_TextChanged;
             // 
-            // comboBox2
+            // comboBoxMoneySource
             // 
-            comboBox2.BackColor = Color.White;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(20, 55);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 23);
-            comboBox2.TabIndex = 5;
+            comboBoxMoneySource.BackColor = Color.White;
+            comboBoxMoneySource.FormattingEnabled = true;
+            comboBoxMoneySource.Location = new Point(20, 62);
+            comboBoxMoneySource.Name = "comboBoxMoneySource";
+            comboBoxMoneySource.Size = new Size(182, 23);
+            comboBoxMoneySource.TabIndex = 5;
+            comboBoxMoneySource.SelectedIndexChanged += comboBoxMoneySource_SelectedIndexChanged;
             // 
             // roundedPanel1
             // 
             roundedPanel1.Angle = 230F;
             roundedPanel1.BackColor = Color.FromArgb(16, 110, 211);
             roundedPanel1.Controls.Add(label7);
-            roundedPanel1.Controls.Add(comboBox2);
+            roundedPanel1.Controls.Add(comboBoxMoneySource);
             roundedPanel1.CornerRadius = 20;
             roundedPanel1.EndColor = Color.FromArgb(16, 110, 211);
             roundedPanel1.Location = new Point(296, 40);
             roundedPanel1.Margin = new Padding(0);
             roundedPanel1.Name = "roundedPanel1";
-            roundedPanel1.Size = new Size(221, 118);
+            roundedPanel1.Size = new Size(221, 127);
             roundedPanel1.StartColor = Color.FromArgb(40, 50, 71);
             roundedPanel1.TabIndex = 11;
             // 
@@ -113,13 +116,13 @@
             roundedPanel2.Angle = 230F;
             roundedPanel2.BackColor = Color.FromArgb(16, 110, 211);
             roundedPanel2.Controls.Add(label2);
-            roundedPanel2.Controls.Add(comboBox4);
+            roundedPanel2.Controls.Add(comboBoxWallet);
             roundedPanel2.CornerRadius = 20;
             roundedPanel2.EndColor = Color.FromArgb(16, 110, 211);
             roundedPanel2.Location = new Point(534, 40);
             roundedPanel2.Margin = new Padding(0);
             roundedPanel2.Name = "roundedPanel2";
-            roundedPanel2.Size = new Size(220, 118);
+            roundedPanel2.Size = new Size(220, 127);
             roundedPanel2.StartColor = Color.FromArgb(40, 50, 71);
             roundedPanel2.TabIndex = 12;
             // 
@@ -135,27 +138,28 @@
             label2.TabIndex = 0;
             label2.Text = "Wallet";
             // 
-            // comboBox4
+            // comboBoxWallet
             // 
-            comboBox4.BackColor = Color.White;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(20, 55);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(174, 23);
-            comboBox4.TabIndex = 5;
+            comboBoxWallet.BackColor = Color.White;
+            comboBoxWallet.FormattingEnabled = true;
+            comboBoxWallet.Location = new Point(20, 62);
+            comboBoxWallet.Name = "comboBoxWallet";
+            comboBoxWallet.Size = new Size(174, 23);
+            comboBoxWallet.TabIndex = 5;
+            comboBoxWallet.SelectedIndexChanged += comboBoxWallet_SelectedIndexChanged;
             // 
             // roundedPanel3
             // 
             roundedPanel3.Angle = 230F;
             roundedPanel3.BackColor = Color.FromArgb(16, 110, 211);
             roundedPanel3.Controls.Add(label1);
-            roundedPanel3.Controls.Add(comboBox1);
+            roundedPanel3.Controls.Add(comboBoxCategory);
             roundedPanel3.CornerRadius = 20;
             roundedPanel3.EndColor = Color.FromArgb(16, 110, 211);
             roundedPanel3.Location = new Point(49, 40);
             roundedPanel3.Margin = new Padding(0);
             roundedPanel3.Name = "roundedPanel3";
-            roundedPanel3.Size = new Size(227, 118);
+            roundedPanel3.Size = new Size(227, 127);
             roundedPanel3.StartColor = Color.FromArgb(40, 50, 71);
             roundedPanel3.TabIndex = 13;
             // 
@@ -171,24 +175,25 @@
             label1.TabIndex = 0;
             label1.Text = "Category";
             // 
-            // comboBox1
+            // comboBoxCategory
             // 
-            comboBox1.BackColor = Color.White;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(20, 55);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(184, 23);
-            comboBox1.TabIndex = 5;
+            comboBoxCategory.BackColor = Color.White;
+            comboBoxCategory.FormattingEnabled = true;
+            comboBoxCategory.Location = new Point(20, 62);
+            comboBoxCategory.Name = "comboBoxCategory";
+            comboBoxCategory.Size = new Size(184, 23);
+            comboBoxCategory.TabIndex = 5;
+            comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
             // 
             // roundedPanel4
             // 
             roundedPanel4.Angle = 230F;
             roundedPanel4.BackColor = Color.FromArgb(16, 110, 211);
             roundedPanel4.Controls.Add(label3);
-            roundedPanel4.Controls.Add(textBox2);
+            roundedPanel4.Controls.Add(textBoxAmountOfMoney);
             roundedPanel4.CornerRadius = 20;
             roundedPanel4.EndColor = Color.FromArgb(16, 110, 211);
-            roundedPanel4.Location = new Point(411, 201);
+            roundedPanel4.Location = new Point(411, 205);
             roundedPanel4.Margin = new Padding(0);
             roundedPanel4.Name = "roundedPanel4";
             roundedPanel4.Size = new Size(343, 128);
@@ -201,7 +206,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(20, 32);
+            label3.Location = new Point(20, 27);
             label3.Name = "label3";
             label3.Size = new Size(151, 21);
             label3.TabIndex = 0;
@@ -212,10 +217,10 @@
             roundedPanel5.Angle = 230F;
             roundedPanel5.BackColor = Color.FromArgb(16, 110, 211);
             roundedPanel5.Controls.Add(label4);
-            roundedPanel5.Controls.Add(textBox1);
+            roundedPanel5.Controls.Add(textBoxDescription);
             roundedPanel5.CornerRadius = 20;
             roundedPanel5.EndColor = Color.FromArgb(16, 110, 211);
-            roundedPanel5.Location = new Point(49, 201);
+            roundedPanel5.Location = new Point(49, 205);
             roundedPanel5.Margin = new Padding(0);
             roundedPanel5.Name = "roundedPanel5";
             roundedPanel5.Size = new Size(335, 128);
@@ -228,18 +233,19 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(20, 20);
+            label4.Location = new Point(20, 27);
             label4.Name = "label4";
             label4.Size = new Size(98, 21);
             label4.TabIndex = 0;
             label4.Text = "Description";
             // 
-            // textBox1
+            // textBoxDescription
             // 
-            textBox1.Location = new Point(20, 56);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(295, 23);
-            textBox1.TabIndex = 2;
+            textBoxDescription.Location = new Point(20, 67);
+            textBoxDescription.Name = "textBoxDescription";
+            textBoxDescription.Size = new Size(295, 23);
+            textBoxDescription.TabIndex = 2;
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // UC_Source
             // 
@@ -248,7 +254,7 @@
             BackColor = Color.FromArgb(30, 28, 42);
             Controls.Add(roundedPanel5);
             Controls.Add(roundedPanel4);
-            Controls.Add(button1);
+            Controls.Add(AddFundsBtn);
             Controls.Add(roundedPanel3);
             Controls.Add(roundedPanel2);
             Controls.Add(roundedPanel1);
@@ -269,21 +275,21 @@
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox2;
-        private ComboBox comboBox2;
+        private Button AddFundsBtn;
+        private TextBox textBoxAmountOfMoney;
+        private ComboBox comboBoxMoneySource;
         private RoundedPanel roundedPanel1;
         private Label label7;
         private RoundedPanel roundedPanel2;
         private Label label2;
-        private ComboBox comboBox4;
+        private ComboBox comboBoxWallet;
         private RoundedPanel roundedPanel3;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxCategory;
         private RoundedPanel roundedPanel4;
         private Label label3;
         private RoundedPanel roundedPanel5;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox textBoxDescription;
     }
 }

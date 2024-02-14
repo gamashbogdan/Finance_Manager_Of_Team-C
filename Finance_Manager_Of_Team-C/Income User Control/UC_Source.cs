@@ -17,6 +17,34 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             InitializeComponent();
         }
 
-       
+        private void AddFundsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxMoneySource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxWallet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAmountOfMoney_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

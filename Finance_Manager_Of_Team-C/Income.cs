@@ -1,8 +1,4 @@
 ﻿using Finance_Manager_Of_Team_C.Income_User_Control;
-using Finance_Manager_Of_Team_C.IncomeWindows;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C
 {
@@ -38,7 +34,7 @@ namespace Finance_Manager_Of_Team_C
             navPln.Location = btn.Location;
             btn.BackColor = Color.FromArgb(40, 50, 71);
 
-            Button[] buttons = { WalletBtn, SourceBtn, DashboardBtn, settingBtn, exitBtn, backBtn };
+            Button[] buttons = { WalletBtn, SourceBtn, exitBtn, backBtn };
             foreach (Button button in buttons)
             {
                 if (button != btn)
@@ -58,9 +54,7 @@ namespace Finance_Manager_Of_Team_C
 
         private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>(SourceBtn);
 
-        private void dashboardBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Dashboard>(DashboardBtn);
 
-        private void settingBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Settings>(settingBtn);
 
         private void AddUserControl(UserControl userControl)
         {
