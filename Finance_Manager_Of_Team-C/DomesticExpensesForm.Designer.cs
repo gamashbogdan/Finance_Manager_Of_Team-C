@@ -76,7 +76,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Sylfaen", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(629, 114);
+            label4.Location = new Point(409, 198);
             label4.Name = "label4";
             label4.Size = new Size(114, 26);
             label4.TabIndex = 3;
