@@ -56,7 +56,7 @@
             buttonDomesticExpenses.Location = new Point(139, 222);
             buttonDomesticExpenses.Margin = new Padding(3, 2, 3, 2);
             buttonDomesticExpenses.Name = "buttonDomesticExpenses";
-            buttonDomesticExpenses.Size = new Size(198, 38);
+            buttonDomesticExpenses.Size = new Size(217, 38);
             buttonDomesticExpenses.TabIndex = 1;
             buttonDomesticExpenses.Text = "Domestic Expenses";
             buttonDomesticExpenses.UseVisualStyleBackColor = false;
@@ -72,7 +72,7 @@
             buttonSocialCosts.Location = new Point(139, 101);
             buttonSocialCosts.Margin = new Padding(3, 2, 3, 2);
             buttonSocialCosts.Name = "buttonSocialCosts";
-            buttonSocialCosts.Size = new Size(198, 38);
+            buttonSocialCosts.Size = new Size(217, 38);
             buttonSocialCosts.TabIndex = 2;
             buttonSocialCosts.Text = "Social Costs";
             buttonSocialCosts.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             buttonUnplannedExpenses.Location = new Point(139, 161);
             buttonUnplannedExpenses.Margin = new Padding(3, 2, 3, 2);
             buttonUnplannedExpenses.Name = "buttonUnplannedExpenses";
-            buttonUnplannedExpenses.Size = new Size(198, 38);
+            buttonUnplannedExpenses.Size = new Size(217, 38);
             buttonUnplannedExpenses.TabIndex = 3;
             buttonUnplannedExpenses.Text = "Unplanned Expenses";
             buttonUnplannedExpenses.UseVisualStyleBackColor = false;
