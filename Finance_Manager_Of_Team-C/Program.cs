@@ -11,7 +11,7 @@ namespace Finance_Manager_Of_Team_C
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Income());
+            Application.Run(new FormFinance());
         }
     }
 }

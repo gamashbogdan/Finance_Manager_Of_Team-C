@@ -61,12 +61,11 @@
             // 
             // navPln
             // 
-            navPln.BackColor = Color.FromArgb(16, 110, 211);
+            navPln.BackColor = Color.White;
             navPln.Location = new Point(0, 92);
             navPln.Name = "navPln";
             navPln.Size = new Size(5, 35);
             navPln.TabIndex = 7;
-            
             // 
             // SourceBtn
             // 
@@ -75,7 +74,7 @@
             SourceBtn.FlatAppearance.BorderSize = 0;
             SourceBtn.FlatStyle = FlatStyle.Flat;
             SourceBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SourceBtn.ForeColor = Color.FromArgb(16, 110, 211);
+            SourceBtn.ForeColor = Color.White;
             SourceBtn.Location = new Point(0, 127);
             SourceBtn.Name = "SourceBtn";
             SourceBtn.Size = new Size(177, 35);
@@ -91,7 +90,7 @@
             WalletBtn.FlatAppearance.BorderSize = 0;
             WalletBtn.FlatStyle = FlatStyle.Flat;
             WalletBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            WalletBtn.ForeColor = Color.FromArgb(16, 110, 211);
+            WalletBtn.ForeColor = Color.White;
             WalletBtn.Location = new Point(0, 92);
             WalletBtn.Name = "WalletBtn";
             WalletBtn.Size = new Size(177, 35);
@@ -113,7 +112,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(16, 110, 211);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(42, 3);
             label1.Name = "label1";
             label1.Size = new Size(90, 25);
@@ -139,7 +138,7 @@
             backBtn.FlatAppearance.BorderSize = 0;
             backBtn.FlatStyle = FlatStyle.Flat;
             backBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            backBtn.ForeColor = Color.FromArgb(16, 110, 211);
+            backBtn.ForeColor = Color.White;
             backBtn.Location = new Point(0, 430);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(177, 35);
@@ -154,7 +153,7 @@
             exitBtn.FlatAppearance.BorderSize = 0;
             exitBtn.FlatStyle = FlatStyle.Flat;
             exitBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            exitBtn.ForeColor = Color.FromArgb(16, 110, 211);
+            exitBtn.ForeColor = Color.White;
             exitBtn.Location = new Point(0, 465);
             exitBtn.Name = "exitBtn";
             exitBtn.Size = new Size(177, 35);

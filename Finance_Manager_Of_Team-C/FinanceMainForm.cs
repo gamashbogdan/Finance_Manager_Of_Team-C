@@ -24,5 +24,13 @@ namespace Finance_Manager_Of_Team_C
             UnplannedExpensesForm unplannedExpenses = new UnplannedExpensesForm();
             unplannedExpenses.Show();
         }
+
+        private void IncomeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Income income = new Income();
+            income.Show();
+        }
     }
 }
