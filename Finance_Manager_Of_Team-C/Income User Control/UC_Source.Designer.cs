@@ -68,7 +68,6 @@
             textBoxAmountOfMoney.Name = "textBoxAmountOfMoney";
             textBoxAmountOfMoney.Size = new Size(297, 23);
             textBoxAmountOfMoney.TabIndex = 2;
-            textBoxAmountOfMoney.TextChanged += textBoxAmountOfMoney_TextChanged;
             // 
             // roundedPanel2
             // 
@@ -105,7 +104,6 @@
             comboBoxWallet.Name = "comboBoxWallet";
             comboBoxWallet.Size = new Size(174, 23);
             comboBoxWallet.TabIndex = 5;
-            comboBoxWallet.SelectedIndexChanged += comboBoxWallet_SelectedIndexChanged;
             // 
             // roundedPanel3
             // 
@@ -142,7 +140,7 @@
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(184, 23);
             comboBoxCategory.TabIndex = 5;
-            comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
+          
             // 
             // roundedPanel4
             // 
@@ -204,7 +202,6 @@
             textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.Size = new Size(295, 23);
             textBoxDescription.TabIndex = 2;
-            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // UC_Source
             // 

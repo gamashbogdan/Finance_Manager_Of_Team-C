@@ -1,80 +1,122 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C.Income_User_Control
 {
-    public partial class UC_Source : UserControl
+    partial class UC_Source : UserControl
     {
-        // Reference to the data class
-        private WalletData walletData;
+        // Define file paths for saving and loading data
+        private string dataFilePath = "finance_data.txt";
 
-        public UC_Source(WalletData walletData)
+        // Constructor
+        public UC_Source()
         {
             InitializeComponent();
-            this.walletData = walletData;
+            LoadData();
+            LoadPresets(); // Load presets for categories, wallets, etc.
         }
 
+        // Event handler for Add Funds button click
         private void AddFundsBtn_Click(object sender, EventArgs e)
         {
-            // Retrieve data from UI elements
-            string category = comboBoxCategory.SelectedItem?.ToString();
+            // Get input values
+            string amountOfMoney = textBoxAmountOfMoney.Text;
             string wallet = comboBoxWallet.SelectedItem?.ToString();
+            string category = comboBoxCategory.SelectedItem?.ToString();
             string description = textBoxDescription.Text;
-            decimal amount;
 
-            // Validate and parse the amount
-            if (decimal.TryParse(textBoxAmountOfMoney.Text, out amount))
+            // Validate input
+            if (string.IsNullOrWhiteSpace(amountOfMoney) || string.IsNullOrWhiteSpace(wallet) ||
+                string.IsNullOrWhiteSpace(category))
             {
-                // Create a new income object
-                IncomeData incomeData = new IncomeData
-                {
-                    Date = DateTime.Now, // You might want to allow the user to select the date
-                    Category = category,
-                    MoneySource = wallet,
-                    Description = description,
-                    Amount = amount
-                };
+                MessageBox.Show("Please fill in all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                // Add the income data to the wallet
-                if (walletData != null)
-                {
-                    if (walletData.Incomes == null)
-                    {
-                        walletData.Incomes = new List<IncomeData>();
-                    }
-                    walletData.Incomes.Add(incomeData);
+            // Save data
+            SaveData(amountOfMoney, wallet, category, description);
 
-                    // Update UI or perform any other necessary actions
-                }
-                else
+            // Clear input fields
+            textBoxAmountOfMoney.Clear();
+            comboBoxWallet.SelectedIndex = -1;
+            comboBoxCategory.SelectedIndex = -1;
+            textBoxDescription.Clear();
+        }
+
+        // Save data to file
+        private void SaveData(string amountOfMoney, string wallet, string category, string description)
+        {
+            try
+            {
+                using (StreamWriter writer = File.AppendText(dataFilePath))
                 {
-                    MessageBox.Show("Error: Wallet data is null.");
+                    writer.WriteLine($"Amount: {amountOfMoney}, Wallet: {wallet}, Category: {category}, Description: {description}");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid amount entered.");
+                MessageBox.Show($"Error while saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        // Load data from file
+        private void LoadData()
         {
-            // Handle category selection change
+            try
+            {
+                if (File.Exists(dataFilePath))
+                {
+                    string[] lines = File.ReadAllLines(dataFilePath);
+                    // Display loaded data in your application as needed
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void comboBoxWallet_SelectedIndexChanged(object sender, EventArgs e)
+        // Load presets for categories, wallets, etc.
+        private void LoadPresets()
         {
-            // Handle wallet selection change
+            // Add your code to load presets for categories, wallets, etc.
+            // Example:
+            comboBoxCategory.Items.AddRange(new object[] { "Groceries", "Utilities", "Rent", "Entertainment", "Transportation", "Healthcare" });
+            comboBoxWallet.Items.AddRange(new object[] { "Cash","Card","Crypto" });
         }
 
-        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+
+        // Retrieve all data from the file
+        public List<string> GetAllData()
         {
-            // Handle description text change
+            List<string> allData = new List<string>();
+            try
+            {
+                if (File.Exists(dataFilePath))
+                {
+                    allData.AddRange(File.ReadAllLines(dataFilePath));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while retrieving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return allData;
         }
 
-        private void textBoxAmountOfMoney_TextChanged(object sender, EventArgs e)
+        // Clear all saved data from the file
+        public void ClearAllData()
         {
-            // Handle amount text change
+            try
+            {
+                File.Delete(dataFilePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while clearing data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -1,24 +1,17 @@
 ﻿using Finance_Manager_Of_Team_C.Income_User_Control;
-
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
-        private UC_Wallet uc_Wallet;
-
         public Income()
         {
             InitializeComponent();
-            InitializeComponents();
-
-            // Open the wallet window automatically when the form is created
-            OpenWalletWindow();
-        }
-
-        private void InitializeComponents()
-        {
             SetFormRoundedBorders();
+            OpenWalletWindow();
         }
 
         private void SetFormRoundedBorders()
@@ -50,12 +43,9 @@ namespace Finance_Manager_Of_Team_C
             AddUserControl(uc);
         }
 
+       private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>((Button)sender);
 
-        private void WalletBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Wallet>(WalletBtn);
-
-        private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>(SourceBtn);
-
-
+        private void WalletBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Wallet>((Button)sender);
 
         private void AddUserControl(UserControl userControl)
         {
@@ -68,7 +58,6 @@ namespace Finance_Manager_Of_Team_C
             Application.Exit();
         }
 
-        // Method to open the wallet window
         private void OpenWalletWindow()
         {
             WalletBtn_Click(WalletBtn, EventArgs.Empty);
