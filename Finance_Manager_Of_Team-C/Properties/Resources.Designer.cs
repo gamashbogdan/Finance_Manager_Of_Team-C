@@ -37,6 +37,7 @@ namespace Finance_Manager_Of_Team_C.Properties {
         }
         
         /// <summary>
+
         ///   Returns the cached ResourceManager instance used by this class.
 
         /// </summary>
@@ -54,8 +55,6 @@ namespace Finance_Manager_Of_Team_C.Properties {
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
-
-
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Globalization.CultureInfo Culture {
