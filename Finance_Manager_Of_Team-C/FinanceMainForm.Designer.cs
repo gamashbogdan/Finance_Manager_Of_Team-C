@@ -28,72 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            buttonDomesticExpenses = new Button();
-            buttonSocialCosts = new Button();
-            buttonUnplannedExpenses = new Button();
+            panelMenu = new FlowLayoutPanel();
+            panelLogo = new Panel();
+            iconButtonIncome = new FontAwesome.Sharp.IconButton();
+            iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
+            iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
+            iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
+            panelMenu.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // panelMenu
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Ink Free", 19.7999973F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(233, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(287, 41);
-            label1.TabIndex = 0;
-            label1.Text = "Financial Expenses";
+            panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            panelMenu.Controls.Add(panelLogo);
+            panelMenu.Controls.Add(iconButtonIncome);
+            panelMenu.Controls.Add(iconButtonDomesticExpenses);
+            panelMenu.Controls.Add(iconButtonSocialCosts);
+            panelMenu.Controls.Add(iconButtonUnplannedExpenses);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(220, 597);
+            panelMenu.TabIndex = 4;
             // 
-            // buttonDomesticExpenses
+            // panelLogo
             // 
-            buttonDomesticExpenses.Location = new Point(209, 89);
-            buttonDomesticExpenses.Name = "buttonDomesticExpenses";
-            buttonDomesticExpenses.Size = new Size(161, 51);
-            buttonDomesticExpenses.TabIndex = 1;
-            buttonDomesticExpenses.Text = "Domestic Expenses";
-            buttonDomesticExpenses.UseVisualStyleBackColor = true;
-            buttonDomesticExpenses.Click += buttonDomesticExpenses_Click;
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(3, 3);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(220, 140);
+            panelLogo.TabIndex = 0;
             // 
-            // buttonSocialCosts
+            // iconButtonIncome
             // 
-            buttonSocialCosts.Location = new Point(209, 146);
-            buttonSocialCosts.Name = "buttonSocialCosts";
-            buttonSocialCosts.Size = new Size(161, 51);
-            buttonSocialCosts.TabIndex = 2;
-            buttonSocialCosts.Text = "Social Costs";
-            buttonSocialCosts.UseVisualStyleBackColor = true;
-            buttonSocialCosts.Click += buttonSocialCosts_Click;
+            iconButtonIncome.Dock = DockStyle.Top;
+            iconButtonIncome.FlatAppearance.BorderSize = 0;
+            iconButtonIncome.FlatStyle = FlatStyle.Flat;
+            iconButtonIncome.ForeColor = SystemColors.ButtonHighlight;
+            iconButtonIncome.IconChar = FontAwesome.Sharp.IconChar.I;
+            iconButtonIncome.IconColor = Color.White;
+            iconButtonIncome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButtonIncome.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButtonIncome.Location = new Point(3, 149);
+            iconButtonIncome.Name = "iconButtonIncome";
+            iconButtonIncome.Padding = new Padding(10, 0, 20, 0);
+            iconButtonIncome.Size = new Size(240, 60);
+            iconButtonIncome.TabIndex = 1;
+            iconButtonIncome.Text = "Income";
+            iconButtonIncome.TextAlign = ContentAlignment.MiddleLeft;
+            iconButtonIncome.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButtonIncome.UseVisualStyleBackColor = true;
+            iconButtonIncome.Click += iconButtonIncome_Click;
             // 
-            // buttonUnplannedExpenses
+            // iconButtonDomesticExpenses
             // 
-            buttonUnplannedExpenses.Location = new Point(376, 89);
-            buttonUnplannedExpenses.Name = "buttonUnplannedExpenses";
-            buttonUnplannedExpenses.Size = new Size(161, 51);
-            buttonUnplannedExpenses.TabIndex = 3;
-            buttonUnplannedExpenses.Text = "Unplanned Expenses";
-            buttonUnplannedExpenses.UseVisualStyleBackColor = true;
-            buttonUnplannedExpenses.Click += buttonUnplannedExpenses_Click;
+            iconButtonDomesticExpenses.Dock = DockStyle.Top;
+            iconButtonDomesticExpenses.FlatAppearance.BorderSize = 0;
+            iconButtonDomesticExpenses.FlatStyle = FlatStyle.Flat;
+            iconButtonDomesticExpenses.ForeColor = SystemColors.ButtonHighlight;
+            iconButtonDomesticExpenses.IconChar = FontAwesome.Sharp.IconChar.D;
+            iconButtonDomesticExpenses.IconColor = Color.White;
+            iconButtonDomesticExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButtonDomesticExpenses.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButtonDomesticExpenses.Location = new Point(3, 215);
+            iconButtonDomesticExpenses.Name = "iconButtonDomesticExpenses";
+            iconButtonDomesticExpenses.Padding = new Padding(10, 0, 20, 0);
+            iconButtonDomesticExpenses.Size = new Size(240, 60);
+            iconButtonDomesticExpenses.TabIndex = 2;
+            iconButtonDomesticExpenses.Text = "Domestic Expenses";
+            iconButtonDomesticExpenses.TextAlign = ContentAlignment.MiddleLeft;
+            iconButtonDomesticExpenses.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButtonDomesticExpenses.UseVisualStyleBackColor = true;
+            iconButtonDomesticExpenses.Click += iconButtonDomesticExpenses_Click;
+            // 
+            // iconButtonSocialCosts
+            // 
+            iconButtonSocialCosts.Dock = DockStyle.Top;
+            iconButtonSocialCosts.FlatAppearance.BorderSize = 0;
+            iconButtonSocialCosts.FlatStyle = FlatStyle.Flat;
+            iconButtonSocialCosts.ForeColor = SystemColors.ButtonHighlight;
+            iconButtonSocialCosts.IconChar = FontAwesome.Sharp.IconChar.S;
+            iconButtonSocialCosts.IconColor = Color.White;
+            iconButtonSocialCosts.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButtonSocialCosts.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButtonSocialCosts.Location = new Point(3, 281);
+            iconButtonSocialCosts.Name = "iconButtonSocialCosts";
+            iconButtonSocialCosts.Padding = new Padding(10, 0, 20, 0);
+            iconButtonSocialCosts.Size = new Size(240, 60);
+            iconButtonSocialCosts.TabIndex = 3;
+            iconButtonSocialCosts.Text = "Social Costs";
+            iconButtonSocialCosts.TextAlign = ContentAlignment.MiddleLeft;
+            iconButtonSocialCosts.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButtonSocialCosts.UseVisualStyleBackColor = true;
+            iconButtonSocialCosts.Click += iconButtonSocialCosts_Click;
+            // 
+            // iconButtonUnplannedExpenses
+            // 
+            iconButtonUnplannedExpenses.Dock = DockStyle.Top;
+            iconButtonUnplannedExpenses.FlatAppearance.BorderSize = 0;
+            iconButtonUnplannedExpenses.FlatStyle = FlatStyle.Flat;
+            iconButtonUnplannedExpenses.ForeColor = SystemColors.ButtonHighlight;
+            iconButtonUnplannedExpenses.IconChar = FontAwesome.Sharp.IconChar.U;
+            iconButtonUnplannedExpenses.IconColor = Color.White;
+            iconButtonUnplannedExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButtonUnplannedExpenses.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButtonUnplannedExpenses.Location = new Point(3, 347);
+            iconButtonUnplannedExpenses.Name = "iconButtonUnplannedExpenses";
+            iconButtonUnplannedExpenses.Padding = new Padding(10, 0, 20, 0);
+            iconButtonUnplannedExpenses.Size = new Size(240, 60);
+            iconButtonUnplannedExpenses.TabIndex = 4;
+            iconButtonUnplannedExpenses.Text = "Unplanned Expenses";
+            iconButtonUnplannedExpenses.TextAlign = ContentAlignment.MiddleLeft;
+            iconButtonUnplannedExpenses.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButtonUnplannedExpenses.UseVisualStyleBackColor = true;
+            iconButtonUnplannedExpenses.Click += iconButtonUnplannedExpenses_Click;
             // 
             // FormFinance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(buttonUnplannedExpenses);
-            Controls.Add(buttonSocialCosts);
-            Controls.Add(buttonDomesticExpenses);
-            Controls.Add(label1);
+            ClientSize = new Size(1161, 597);
+            Controls.Add(panelMenu);
             Name = "FormFinance";
             Text = "Finance Manager";
+            panelMenu.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Button buttonDomesticExpenses;
-        private Button buttonSocialCosts;
-        private Button buttonUnplannedExpenses;
+        private FlowLayoutPanel panelMenu;
+        private Panel panelLogo;
+        private FontAwesome.Sharp.IconButton iconButtonIncome;
+        private FontAwesome.Sharp.IconButton iconButtonDomesticExpenses;
+        private FontAwesome.Sharp.IconButton iconButtonSocialCosts;
+        private FontAwesome.Sharp.IconButton iconButtonUnplannedExpenses;
     }
 }
