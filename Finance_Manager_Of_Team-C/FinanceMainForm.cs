@@ -100,6 +100,7 @@ namespace Finance_Manager_Of_Team_C
         private void iconButtonIncome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Income());
         }
 
         private void iconButtonDomesticExpenses_Click(object sender, EventArgs e)
