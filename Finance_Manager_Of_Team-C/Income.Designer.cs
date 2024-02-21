@@ -36,7 +36,6 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             backBtn = new Button();
-            exitBtn = new Button();
             panelContainer = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -52,7 +51,6 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(backBtn);
-            panel1.Controls.Add(exitBtn);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -139,28 +137,13 @@
             backBtn.FlatStyle = FlatStyle.Flat;
             backBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             backBtn.ForeColor = Color.White;
-            backBtn.Location = new Point(0, 430);
+            backBtn.Location = new Point(0, 465);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(177, 35);
             backBtn.TabIndex = 9;
             backBtn.Text = "BACK";
             backBtn.UseVisualStyleBackColor = false;
-            // 
-            // exitBtn
-            // 
-            exitBtn.BackColor = Color.FromArgb(36, 39, 54);
-            exitBtn.Dock = DockStyle.Bottom;
-            exitBtn.FlatAppearance.BorderSize = 0;
-            exitBtn.FlatStyle = FlatStyle.Flat;
-            exitBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            exitBtn.ForeColor = Color.White;
-            exitBtn.Location = new Point(0, 465);
-            exitBtn.Name = "exitBtn";
-            exitBtn.Size = new Size(177, 35);
-            exitBtn.TabIndex = 10;
-            exitBtn.Text = "EXIT";
-            exitBtn.UseVisualStyleBackColor = false;
-            exitBtn.Click += ExitBtn_Click;
+            backBtn.Click += backBtn_Click;
             // 
             // panelContainer
             // 
@@ -173,13 +156,13 @@
             // 
             // Income
             // 
+            AccessibleRole = AccessibleRole.None;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(1000, 500);
             Controls.Add(panelContainer);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "Income";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Income";
@@ -200,7 +183,6 @@
         private Button SourceBtn;
         private Panel navPln;
         private Button backBtn;
-        private Button exitBtn;
         private Panel panelContainer;
     }
 }
