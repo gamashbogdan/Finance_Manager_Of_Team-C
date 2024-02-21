@@ -10,8 +10,6 @@
 
 namespace Finance_Manager_Of_Team_C.Properties {
     using System;
-    
-    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -33,6 +31,7 @@ namespace Finance_Manager_Of_Team_C.Properties {
         }
         
         /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -59,5 +58,25 @@ namespace Finance_Manager_Of_Team_C.Properties {
                 resourceCulture = value;
             }
         }
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _12095821 {
+            get {
+                object obj = ResourceManager.GetObject("12095821", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5996831 {
+            get {
+                object obj = ResourceManager.GetObject("5996831", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
     }
 }
