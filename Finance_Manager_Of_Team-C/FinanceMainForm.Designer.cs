@@ -301,18 +301,15 @@
             labelFinanceManager.TabIndex = 0;
             labelFinanceManager.Text = "Finance Manager";
             // 
-            SuspendLayout();
-            // 
             // FormFinance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1242, 648);
+            ClientSize = new Size(1240, 647);
             Controls.Add(panelDesktop);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
-            ClientSize = new Size(800, 450);
             Name = "FormFinance";
             Text = "Finance Manager";
             panelMenu.ResumeLayout(false);
