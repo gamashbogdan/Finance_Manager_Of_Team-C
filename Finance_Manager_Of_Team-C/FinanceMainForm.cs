@@ -1,9 +1,13 @@
 using FontAwesome.Sharp;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Design;
 using System.Runtime.InteropServices;
 using System.Windows.Media;
 using Color = System.Drawing.Color;
+using Timer = System.Windows.Forms.Timer;
 namespace Finance_Manager_Of_Team_C
 {
     public partial class FormFinance : Form
@@ -11,9 +15,14 @@ namespace Finance_Manager_Of_Team_C
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private Timer timer;
+
         public FormFinance()
         {
             InitializeComponent();
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -21,7 +30,16 @@ namespace Finance_Manager_Of_Team_C
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+            timer.Start();
+
         }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+        }
+
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(95, 77, 221);
@@ -134,6 +152,7 @@ namespace Finance_Manager_Of_Team_C
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            timer.Stop();
             Application.Exit();
         }
 

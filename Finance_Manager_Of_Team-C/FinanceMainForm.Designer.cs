@@ -36,6 +36,7 @@
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
+            labelTime = new Label();
             panelTitleBar = new Panel();
             btnMaximize = new PictureBox();
             btnMinimize = new PictureBox();
@@ -178,6 +179,18 @@
             iconButtonUnplannedExpenses.UseVisualStyleBackColor = true;
             iconButtonUnplannedExpenses.Click += iconButtonUnplannedExpenses_Click;
             // 
+            // labelTime
+            // 
+            labelTime.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            labelTime.AutoSize = true;
+            labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            labelTime.ForeColor = SystemColors.ButtonHighlight;
+            labelTime.Location = new Point(904, 504);
+            labelTime.Name = "labelTime";
+            labelTime.Size = new Size(86, 41);
+            labelTime.TabIndex = 1;
+            labelTime.Text = "Time";
+            // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(26, 25, 62);
@@ -270,6 +283,7 @@
             // 
             panelDesktop.BackColor = Color.FromArgb(34, 33, 74);
             panelDesktop.Controls.Add(labelFinanceManager);
+            panelDesktop.Controls.Add(labelTime);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(226, 84);
             panelDesktop.Name = "panelDesktop";
@@ -308,6 +322,7 @@
             ((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             panelDesktop.ResumeLayout(false);
+            panelDesktop.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -329,5 +344,6 @@
         private PictureBox btnMaximize;
         private PictureBox btnMinimize;
         private PictureBox btnExit;
+        private Label labelTime;
     }
 }
