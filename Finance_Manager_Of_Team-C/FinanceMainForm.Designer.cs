@@ -35,6 +35,7 @@
             panel2 = new Panel();
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
+
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             label2 = new Label();
             panel1 = new Panel();
@@ -61,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
-            panelDesktop.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
@@ -291,6 +291,7 @@
             panelTitleBar.Margin = new Padding(3, 2, 3, 2);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(887, 56);
+
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
@@ -326,6 +327,7 @@
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
             btnMinimize.Location = new Point(772, 8);
             btnMinimize.Margin = new Padding(3, 2, 3, 2);
+
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(28, 28);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -380,12 +382,14 @@
             panelShadow.Margin = new Padding(3, 2, 3, 2);
             panelShadow.Name = "panelShadow";
             panelShadow.Size = new Size(887, 7);
+
             panelShadow.TabIndex = 6;
             // 
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(30, 28, 42);
             panelDesktop.Controls.Add(labelTime);
+
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(198, 63);
             panelDesktop.Margin = new Padding(3, 2, 3, 2);
@@ -419,8 +423,6 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
-            panelDesktop.ResumeLayout(false);
-            panelDesktop.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -436,7 +438,6 @@
         private Label label;
         private Panel panelShadow;
         private Panel panelDesktop;
-        private Label labelFinanceManager;
         private PictureBox btnMaximize;
         private PictureBox btnMinimize;
         private PictureBox btnExit;
