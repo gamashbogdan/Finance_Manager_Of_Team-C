@@ -32,6 +32,7 @@
             panelMenu = new FlowLayoutPanel();
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
+            panel1 = new Panel();
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
@@ -47,10 +48,11 @@
             iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
             panelDesktop = new Panel();
-            panel1 = new Panel();
+            label1 = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMaximize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
@@ -63,7 +65,6 @@
             // 
             panelMenu.BackColor = Color.FromArgb(37, 40, 55);
             panelMenu.Controls.Add(panelLogo);
-            panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 2, 3, 2);
@@ -91,6 +92,16 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(iconButton1);
+            panel1.Controls.Add(iconButtonIncome);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(123, 145);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 112);
+            panel1.TabIndex = 1;
             // 
             // iconButtonDomesticExpenses
             // 
@@ -163,6 +174,7 @@
             // 
             // iconButton1
             // 
+            iconButton1.Dock = DockStyle.Top;
             iconButton1.FlatAppearance.BorderSize = 0;
             iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
@@ -172,11 +184,11 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 36;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(546, 249);
+            iconButton1.Location = new Point(0, 62);
             iconButton1.Margin = new Padding(3, 2, 3, 2);
             iconButton1.Name = "iconButton1";
             iconButton1.Padding = new Padding(9, 0, 18, 0);
-            iconButton1.Size = new Size(210, 45);
+            iconButton1.Size = new Size(200, 45);
             iconButton1.TabIndex = 5;
             iconButton1.Text = "WALLETS";
             iconButton1.TextAlign = ContentAlignment.MiddleLeft;
@@ -186,6 +198,7 @@
             // 
             // iconButtonIncome
             // 
+            iconButtonIncome.Dock = DockStyle.Top;
             iconButtonIncome.FlatAppearance.BorderSize = 0;
             iconButtonIncome.FlatStyle = FlatStyle.Flat;
             iconButtonIncome.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
@@ -195,11 +208,11 @@
             iconButtonIncome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonIncome.IconSize = 36;
             iconButtonIncome.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonIncome.Location = new Point(546, 298);
+            iconButtonIncome.Location = new Point(0, 17);
             iconButtonIncome.Margin = new Padding(3, 2, 3, 2);
             iconButtonIncome.Name = "iconButtonIncome";
             iconButtonIncome.Padding = new Padding(9, 0, 18, 0);
-            iconButtonIncome.Size = new Size(210, 45);
+            iconButtonIncome.Size = new Size(200, 45);
             iconButtonIncome.TabIndex = 1;
             iconButtonIncome.Text = "INCOME";
             iconButtonIncome.TextAlign = ContentAlignment.MiddleLeft;
@@ -328,11 +341,10 @@
             // 
             panelDesktop.BackColor = Color.FromArgb(30, 28, 42);
             panelDesktop.Controls.Add(iconButtonDomesticExpenses);
+            panelDesktop.Controls.Add(panel1);
             panelDesktop.Controls.Add(iconButtonSocialCosts);
             panelDesktop.Controls.Add(labelTime);
             panelDesktop.Controls.Add(iconButtonUnplannedExpenses);
-            panelDesktop.Controls.Add(iconButtonIncome);
-            panelDesktop.Controls.Add(iconButton1);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(198, 63);
             panelDesktop.Margin = new Padding(3, 2, 3, 2);
@@ -340,12 +352,17 @@
             panelDesktop.Size = new Size(887, 425);
             panelDesktop.TabIndex = 7;
             // 
-            // panel1
+            // label1
             // 
-            panel1.Location = new Point(60, 172);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(200, 100);
-            panel1.TabIndex = 1;
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 17);
+            label1.TabIndex = 0;
+            label1.Text = "INCOME";
             // 
             // FormFinance
             // 
@@ -363,6 +380,8 @@
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panelTitleBar.ResumeLayout(false);
             panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnMaximize).EndInit();
@@ -394,5 +413,6 @@
         private PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel1;
+        private Label label1;
     }
 }
