@@ -62,8 +62,8 @@ namespace Finance_Manager_Of_Team_C
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(3, currentBtn.Location.Y);
                 leftBorderBtn.Visible = false;
