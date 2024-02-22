@@ -103,6 +103,7 @@
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(iconButtonIncome);
             panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(3, 229);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 112);
@@ -222,7 +223,7 @@
             iconButtonIncome.Padding = new Padding(9, 0, 18, 0);
             iconButtonIncome.Size = new Size(200, 45);
             iconButtonIncome.TabIndex = 1;
-            iconButtonIncome.Text = "INCOME";
+            iconButtonIncome.Text = "SOURCE";
             iconButtonIncome.TextAlign = ContentAlignment.MiddleLeft;
             iconButtonIncome.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButtonIncome.UseVisualStyleBackColor = true;
@@ -374,6 +375,7 @@
             panel2.Controls.Add(iconButtonUnplannedExpenses);
             panel2.Controls.Add(iconButtonSocialCosts);
             panel2.Controls.Add(label2);
+            panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(3, 68);
             panel2.Name = "panel2";
             panel2.Size = new Size(202, 155);
@@ -387,9 +389,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(59, 17);
+            label2.Size = new Size(71, 17);
             label2.TabIndex = 0;
-            label2.Text = "INCOME";
+            label2.Text = "EXPENCES";
             // 
             // FormFinance
             // 
