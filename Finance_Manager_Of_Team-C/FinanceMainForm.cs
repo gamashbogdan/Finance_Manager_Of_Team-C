@@ -25,18 +25,18 @@ namespace Finance_Manager_Of_Team_C
             timer.Tick += Timer_Tick;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
-            panelMenu.Controls.Add(leftBorderBtn);
+            //panelMenu.Controls.Add(leftBorderBtn);
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
             timer.Start();
-
+            OpenChildForm(new MainForm());
         }
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+            //labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
         }
 
         private struct RGBColors
@@ -127,6 +127,7 @@ namespace Finance_Manager_Of_Team_C
         private void Reset()
         {
             DisableButton();
+            OpenChildForm(new MainForm());
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             label.Text = "Home";
@@ -167,5 +168,7 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
+
+    
     }
 }

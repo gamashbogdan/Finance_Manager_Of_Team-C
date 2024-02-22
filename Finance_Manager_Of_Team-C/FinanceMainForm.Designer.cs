@@ -36,7 +36,6 @@
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
-            labelTime = new Label();
             panelTitleBar = new Panel();
             btnMaximize = new PictureBox();
             btnMinimize = new PictureBox();
@@ -45,7 +44,6 @@
             iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
             panelDesktop = new Panel();
-            labelFinanceManager = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
@@ -54,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
-            panelDesktop.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
@@ -68,7 +65,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(226, 648);
+            panelMenu.Size = new Size(226, 647);
             panelMenu.TabIndex = 4;
             // 
             // panelLogo
@@ -179,18 +176,6 @@
             iconButtonUnplannedExpenses.UseVisualStyleBackColor = true;
             iconButtonUnplannedExpenses.Click += iconButtonUnplannedExpenses_Click;
             // 
-            // labelTime
-            // 
-            labelTime.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            labelTime.AutoSize = true;
-            labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(904, 504);
-            labelTime.Name = "labelTime";
-            labelTime.Size = new Size(86, 41);
-            labelTime.TabIndex = 1;
-            labelTime.Text = "Time";
-            // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(26, 25, 62);
@@ -202,7 +187,7 @@
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(226, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1016, 75);
+            panelTitleBar.Size = new Size(1014, 75);
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
@@ -211,7 +196,7 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.BackColor = Color.FromArgb(26, 25, 62);
             btnMaximize.Image = (Image)resources.GetObject("btnMaximize.Image");
-            btnMaximize.Location = new Point(934, 13);
+            btnMaximize.Location = new Point(937, 8);
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new Size(23, 23);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -224,7 +209,7 @@
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.BackColor = Color.FromArgb(26, 25, 62);
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(885, 10);
+            btnMinimize.Location = new Point(888, 5);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(32, 32);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -237,7 +222,7 @@
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.BackColor = Color.FromArgb(26, 25, 62);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.Location = new Point(976, 12);
+            btnExit.Location = new Point(979, 7);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(24, 24);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -250,7 +235,7 @@
             label.AutoSize = true;
             label.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label.ForeColor = Color.White;
-            label.Location = new Point(56, 36);
+            label.Location = new Point(63, 22);
             label.Name = "label";
             label.Size = new Size(50, 20);
             label.TabIndex = 1;
@@ -264,7 +249,7 @@
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconCurrentChildForm.IconSize = 40;
-            iconCurrentChildForm.Location = new Point(9, 22);
+            iconCurrentChildForm.Location = new Point(16, 8);
             iconCurrentChildForm.Name = "iconCurrentChildForm";
             iconCurrentChildForm.Size = new Size(40, 40);
             iconCurrentChildForm.TabIndex = 0;
@@ -276,30 +261,17 @@
             panelShadow.Dock = DockStyle.Top;
             panelShadow.Location = new Point(226, 75);
             panelShadow.Name = "panelShadow";
-            panelShadow.Size = new Size(1016, 9);
+            panelShadow.Size = new Size(1014, 9);
             panelShadow.TabIndex = 6;
             // 
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(34, 33, 74);
-            panelDesktop.Controls.Add(labelFinanceManager);
-            panelDesktop.Controls.Add(labelTime);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(226, 84);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1016, 564);
+            panelDesktop.Size = new Size(1014, 563);
             panelDesktop.TabIndex = 7;
-            // 
-            // labelFinanceManager
-            // 
-            labelFinanceManager.Anchor = AnchorStyles.Top;
-            labelFinanceManager.Font = new Font("Segoe UI Emoji", 22F, FontStyle.Bold);
-            labelFinanceManager.ForeColor = SystemColors.ControlLightLight;
-            labelFinanceManager.Location = new Point(365, 5);
-            labelFinanceManager.Name = "labelFinanceManager";
-            labelFinanceManager.Size = new Size(330, 54);
-            labelFinanceManager.TabIndex = 0;
-            labelFinanceManager.Text = "Finance Manager";
             // 
             // FormFinance
             // 
@@ -321,8 +293,6 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
-            panelDesktop.ResumeLayout(false);
-            panelDesktop.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -339,10 +309,8 @@
         private Label label;
         private Panel panelShadow;
         private Panel panelDesktop;
-        private Label labelFinanceManager;
         private PictureBox btnMaximize;
         private PictureBox btnMinimize;
         private PictureBox btnExit;
-        private Label labelTime;
     }
 }
