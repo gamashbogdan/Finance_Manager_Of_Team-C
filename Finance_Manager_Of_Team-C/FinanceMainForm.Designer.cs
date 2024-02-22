@@ -49,6 +49,8 @@
             panelShadow = new Panel();
             panelDesktop = new Panel();
             label1 = new Label();
+            panel2 = new Panel();
+            label2 = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,12 +61,15 @@
             ((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
             panelDesktop.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 40, 55);
             panelMenu.Controls.Add(panelLogo);
+            panelMenu.Controls.Add(panel2);
+            panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 2, 3, 2);
@@ -98,13 +103,14 @@
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(iconButtonIncome);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(123, 145);
+            panel1.Location = new Point(3, 229);
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 112);
             panel1.TabIndex = 1;
             // 
             // iconButtonDomesticExpenses
             // 
+            iconButtonDomesticExpenses.Dock = DockStyle.Top;
             iconButtonDomesticExpenses.FlatAppearance.BorderSize = 0;
             iconButtonDomesticExpenses.FlatStyle = FlatStyle.Flat;
             iconButtonDomesticExpenses.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
@@ -114,11 +120,11 @@
             iconButtonDomesticExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonDomesticExpenses.IconSize = 36;
             iconButtonDomesticExpenses.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonDomesticExpenses.Location = new Point(546, 102);
+            iconButtonDomesticExpenses.Location = new Point(0, 107);
             iconButtonDomesticExpenses.Margin = new Padding(3, 2, 3, 2);
             iconButtonDomesticExpenses.Name = "iconButtonDomesticExpenses";
             iconButtonDomesticExpenses.Padding = new Padding(9, 0, 18, 0);
-            iconButtonDomesticExpenses.Size = new Size(210, 45);
+            iconButtonDomesticExpenses.Size = new Size(202, 45);
             iconButtonDomesticExpenses.TabIndex = 2;
             iconButtonDomesticExpenses.Text = "DOMESTIC";
             iconButtonDomesticExpenses.TextAlign = ContentAlignment.MiddleLeft;
@@ -128,6 +134,7 @@
             // 
             // iconButtonSocialCosts
             // 
+            iconButtonSocialCosts.Dock = DockStyle.Top;
             iconButtonSocialCosts.FlatAppearance.BorderSize = 0;
             iconButtonSocialCosts.FlatStyle = FlatStyle.Flat;
             iconButtonSocialCosts.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
@@ -137,11 +144,11 @@
             iconButtonSocialCosts.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSocialCosts.IconSize = 36;
             iconButtonSocialCosts.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonSocialCosts.Location = new Point(546, 151);
+            iconButtonSocialCosts.Location = new Point(0, 17);
             iconButtonSocialCosts.Margin = new Padding(3, 2, 3, 2);
             iconButtonSocialCosts.Name = "iconButtonSocialCosts";
             iconButtonSocialCosts.Padding = new Padding(9, 0, 18, 0);
-            iconButtonSocialCosts.Size = new Size(210, 45);
+            iconButtonSocialCosts.Size = new Size(202, 45);
             iconButtonSocialCosts.TabIndex = 3;
             iconButtonSocialCosts.Text = "SOCIAL";
             iconButtonSocialCosts.TextAlign = ContentAlignment.MiddleLeft;
@@ -151,6 +158,7 @@
             // 
             // iconButtonUnplannedExpenses
             // 
+            iconButtonUnplannedExpenses.Dock = DockStyle.Top;
             iconButtonUnplannedExpenses.FlatAppearance.BorderSize = 0;
             iconButtonUnplannedExpenses.FlatStyle = FlatStyle.Flat;
             iconButtonUnplannedExpenses.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
@@ -160,11 +168,11 @@
             iconButtonUnplannedExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonUnplannedExpenses.IconSize = 36;
             iconButtonUnplannedExpenses.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonUnplannedExpenses.Location = new Point(546, 200);
+            iconButtonUnplannedExpenses.Location = new Point(0, 62);
             iconButtonUnplannedExpenses.Margin = new Padding(3, 2, 3, 2);
             iconButtonUnplannedExpenses.Name = "iconButtonUnplannedExpenses";
             iconButtonUnplannedExpenses.Padding = new Padding(9, 0, 18, 0);
-            iconButtonUnplannedExpenses.Size = new Size(210, 45);
+            iconButtonUnplannedExpenses.Size = new Size(202, 45);
             iconButtonUnplannedExpenses.TabIndex = 4;
             iconButtonUnplannedExpenses.Text = "UNPLANNED";
             iconButtonUnplannedExpenses.TextAlign = ContentAlignment.MiddleLeft;
@@ -340,11 +348,7 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(30, 28, 42);
-            panelDesktop.Controls.Add(iconButtonDomesticExpenses);
-            panelDesktop.Controls.Add(panel1);
-            panelDesktop.Controls.Add(iconButtonSocialCosts);
             panelDesktop.Controls.Add(labelTime);
-            panelDesktop.Controls.Add(iconButtonUnplannedExpenses);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(198, 63);
             panelDesktop.Margin = new Padding(3, 2, 3, 2);
@@ -363,6 +367,29 @@
             label1.Size = new Size(59, 17);
             label1.TabIndex = 0;
             label1.Text = "INCOME";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(iconButtonDomesticExpenses);
+            panel2.Controls.Add(iconButtonUnplannedExpenses);
+            panel2.Controls.Add(iconButtonSocialCosts);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(3, 68);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(202, 155);
+            panel2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Top;
+            label2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(59, 17);
+            label2.TabIndex = 0;
+            label2.Text = "INCOME";
             // 
             // FormFinance
             // 
@@ -390,6 +417,8 @@
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
             panelDesktop.ResumeLayout(false);
             panelDesktop.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -414,5 +443,7 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel1;
         private Label label1;
+        private Panel panel2;
+        private Label label2;
     }
 }
