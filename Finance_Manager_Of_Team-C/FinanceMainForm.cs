@@ -103,10 +103,15 @@ namespace Finance_Manager_Of_Team_C
             childForm.BringToFront();
             childForm.Show();
         }
+
+
+        // source button
         private void iconButtonIncome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new Income());
+
+
         }
 
         private void iconButtonDomesticExpenses_Click(object sender, EventArgs e)
@@ -130,6 +135,8 @@ namespace Finance_Manager_Of_Team_C
 
         }
 
+
+        // wallet buttons
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorIcon);
