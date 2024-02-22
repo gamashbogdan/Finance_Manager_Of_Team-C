@@ -34,13 +34,11 @@
             WalletBtn = new Button();
             panel2 = new Panel();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             backBtn = new Button();
             exitBtn = new Button();
             panelContainer = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -50,7 +48,6 @@
             panel1.Controls.Add(SourceBtn);
             panel1.Controls.Add(WalletBtn);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(backBtn);
             panel1.Controls.Add(exitBtn);
             panel1.Dock = DockStyle.Left;
@@ -66,7 +63,6 @@
             navPln.Name = "navPln";
             navPln.Size = new Size(5, 35);
             navPln.TabIndex = 7;
-            
             // 
             // SourceBtn
             // 
@@ -76,7 +72,7 @@
             SourceBtn.FlatStyle = FlatStyle.Flat;
             SourceBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SourceBtn.ForeColor = Color.FromArgb(16, 110, 211);
-            SourceBtn.Location = new Point(0, 127);
+            SourceBtn.Location = new Point(0, 69);
             SourceBtn.Name = "SourceBtn";
             SourceBtn.Size = new Size(177, 35);
             SourceBtn.TabIndex = 5;
@@ -92,7 +88,7 @@
             WalletBtn.FlatStyle = FlatStyle.Flat;
             WalletBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             WalletBtn.ForeColor = Color.FromArgb(16, 110, 211);
-            WalletBtn.Location = new Point(0, 92);
+            WalletBtn.Location = new Point(0, 34);
             WalletBtn.Name = "WalletBtn";
             WalletBtn.Size = new Size(177, 35);
             WalletBtn.TabIndex = 4;
@@ -104,7 +100,7 @@
             // 
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 58);
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(177, 34);
             panel2.TabIndex = 2;
@@ -120,17 +116,6 @@
             label1.TabIndex = 1;
             label1.Text = "INCOME";
             label1.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = Properties.Resources._12095821;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 58);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // backBtn
             // 
@@ -187,14 +172,12 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
 
         #endregion
         private Panel panel1;
-        private PictureBox pictureBox1;
         private Label label1;
         private Panel panel2;
         private Button WalletBtn;

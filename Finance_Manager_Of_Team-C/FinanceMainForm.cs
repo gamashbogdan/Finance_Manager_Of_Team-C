@@ -45,6 +45,12 @@ namespace Finance_Manager_Of_Team_C
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(24, 161, 251);
+
+            // icon color
+            public static Color colorIcon = Color.FromArgb(24, 161, 251);
+
+            // background button color
+            public static Color colorBtnBg = Color.FromArgb(56, 60, 75);
         }
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -52,7 +58,7 @@ namespace Finance_Manager_Of_Team_C
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                currentBtn.BackColor = RGBColors.colorBtnBg;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -72,7 +78,7 @@ namespace Finance_Manager_Of_Team_C
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.FromArgb(37, 40, 55);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -99,29 +105,35 @@ namespace Finance_Manager_Of_Team_C
         }
         private void iconButtonIncome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new Income());
         }
 
         private void iconButtonDomesticExpenses_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new DomesticExpensesForm());
 
         }
 
         private void iconButtonSocialCosts_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new SocialCostsForm());
 
         }
 
         private void iconButtonUnplannedExpenses_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new UnplannedExpensesForm());
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorIcon);
+            OpenChildForm(new UnplannedExpensesForm());
         }
 
         private void Reset()
@@ -167,5 +179,7 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }
