@@ -7,10 +7,12 @@ namespace Finance_Manager_Of_Team_C
 {
     public partial class Income : Form
     {
-        public Income()
+        public Income(UserControl uc)
         {
             InitializeComponent();
             SetFormRoundedBorders();
+            AddUserControl(uc); // Add the provided user control
+            //OpenWalletWindow(); // Display the wallet window by default
         }
 
         private void SetFormRoundedBorders()
@@ -22,14 +24,24 @@ namespace Finance_Manager_Of_Team_C
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
+        
 
-    
+        private void ChangeButtonAndAddUserControl<T>(Button btn) where T : UserControl, new()
+        {
+           // ChangeButtonProperties(btn);
+            AddUserControl(new T()); // Add the new user control
+        }
+
+        private void SourceBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Source>((Button)sender);
+
+        private void WalletBtn_Click(object sender, EventArgs e) => ChangeButtonAndAddUserControl<UC_Wallet>((Button)sender);
+
         private void AddUserControl(UserControl userControl)
         {
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(userControl);
         }
 
-
+        
     }
 }

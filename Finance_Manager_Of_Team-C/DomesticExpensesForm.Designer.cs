@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -45,10 +44,8 @@
             DrinkBox = new TextBox();
             DessertBox = new TextBox();
             FoodButton = new Button();
-            FoodSum = new Label();
             MoneyLabel = new Label();
             SumEq = new Button();
-            Desc_Label = new Label();
             spoo_check = new CheckBox();
             soap_check = new CheckBox();
             gel_check = new CheckBox();
@@ -62,14 +59,11 @@
             label11 = new Label();
             label12 = new Label();
             Gig_Suma = new Button();
-            Gig_LABEL_Sum = new Label();
-            Sanitary_Sum = new Label();
             Sanitary_Button = new Button();
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
-            GanBox = new TextBox();
             polBox = new TextBox();
             CapBox = new TextBox();
             GanCheck = new CheckBox();
@@ -77,67 +71,61 @@
             CapCheck = new CheckBox();
             PralCheck = new CheckBox();
             PralBox = new TextBox();
+            GanBox = new TextBox();
+            FoodSum = new Label();
+            Gig_LABEL_Sum = new Label();
+            Sanitary_Sum = new Label();
+            Desc_Label = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(254, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(321, 48);
-            label1.TabIndex = 0;
-            label1.Text = "Побутові витрати";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Sylfaen", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(17, 142);
+            label2.Location = new Point(25, 84);
             label2.Name = "label2";
-            label2.Size = new Size(95, 29);
+            label2.Size = new Size(58, 21);
             label2.TabIndex = 1;
-            label2.Text = "На їжу:";
+            label2.Text = "FOOD:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Sylfaen", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(292, 145);
+            label3.Location = new Point(266, 87);
             label3.Name = "label3";
-            label3.Size = new Size(218, 23);
+            label3.Size = new Size(94, 21);
             label3.TabIndex = 2;
-            label3.Text = "Засоби особистої гігєни:";
+            label3.Text = "SELF-CARE:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Sylfaen", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(617, 142);
+            label4.Location = new Point(550, 84);
             label4.Name = "label4";
-            label4.Size = new Size(114, 26);
+            label4.Size = new Size(109, 21);
             label4.TabIndex = 3;
-            label4.Text = "Санітарія:";
+            label4.Text = "SANITATION:";
             // 
             // FruitCheck
             // 
             FruitCheck.AutoSize = true;
             FruitCheck.BackColor = Color.Transparent;
-            FruitCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            FruitCheck.ForeColor = SystemColors.ActiveBorder;
-            FruitCheck.Location = new Point(17, 174);
+            FruitCheck.Font = new Font("Nirmala UI", 9.75F);
+            FruitCheck.ForeColor = Color.White;
+            FruitCheck.Location = new Point(25, 108);
+            FruitCheck.Margin = new Padding(3, 2, 3, 2);
             FruitCheck.Name = "FruitCheck";
-            FruitCheck.Size = new Size(83, 25);
+            FruitCheck.Size = new Size(58, 21);
             FruitCheck.TabIndex = 4;
-            FruitCheck.Text = "Фрукти";
+            FruitCheck.Text = "Fruits";
             FruitCheck.UseVisualStyleBackColor = false;
             FruitCheck.CheckedChanged += FruitCheck_CheckedChanged;
             // 
@@ -145,13 +133,14 @@
             // 
             VegCheck.AutoSize = true;
             VegCheck.BackColor = Color.Transparent;
-            VegCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            VegCheck.ForeColor = SystemColors.ActiveBorder;
-            VegCheck.Location = new Point(17, 205);
+            VegCheck.Font = new Font("Nirmala UI", 9.75F);
+            VegCheck.ForeColor = Color.White;
+            VegCheck.Location = new Point(25, 132);
+            VegCheck.Margin = new Padding(3, 2, 3, 2);
             VegCheck.Name = "VegCheck";
-            VegCheck.Size = new Size(72, 25);
+            VegCheck.Size = new Size(91, 21);
             VegCheck.TabIndex = 5;
-            VegCheck.Text = "Овочі";
+            VegCheck.Text = "Vegetables";
             VegCheck.UseVisualStyleBackColor = false;
             VegCheck.CheckedChanged += VegCheck_CheckedChanged;
             // 
@@ -159,13 +148,14 @@
             // 
             DrinkCheck.AutoSize = true;
             DrinkCheck.BackColor = Color.Transparent;
-            DrinkCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DrinkCheck.ForeColor = SystemColors.ActiveBorder;
-            DrinkCheck.Location = new Point(17, 236);
+            DrinkCheck.Font = new Font("Nirmala UI", 9.75F);
+            DrinkCheck.ForeColor = Color.White;
+            DrinkCheck.Location = new Point(25, 155);
+            DrinkCheck.Margin = new Padding(3, 2, 3, 2);
             DrinkCheck.Name = "DrinkCheck";
-            DrinkCheck.Size = new Size(73, 25);
+            DrinkCheck.Size = new Size(63, 21);
             DrinkCheck.TabIndex = 6;
-            DrinkCheck.Text = "Напої";
+            DrinkCheck.Text = "Drinks";
             DrinkCheck.UseVisualStyleBackColor = false;
             DrinkCheck.CheckedChanged += DrinkCheck_CheckedChanged;
             // 
@@ -173,13 +163,14 @@
             // 
             DessertCheck.AutoSize = true;
             DessertCheck.BackColor = Color.Transparent;
-            DessertCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DessertCheck.ForeColor = SystemColors.ActiveBorder;
-            DessertCheck.Location = new Point(17, 267);
+            DessertCheck.Font = new Font("Nirmala UI", 9.75F);
+            DessertCheck.ForeColor = Color.White;
+            DessertCheck.Location = new Point(25, 178);
+            DessertCheck.Margin = new Padding(3, 2, 3, 2);
             DessertCheck.Name = "DessertCheck";
-            DessertCheck.Size = new Size(87, 25);
+            DessertCheck.Size = new Size(67, 21);
             DessertCheck.TabIndex = 7;
-            DessertCheck.Text = "Десерти";
+            DessertCheck.Text = "Sweets";
             DessertCheck.UseVisualStyleBackColor = false;
             DessertCheck.CheckedChanged += DessertCheck_CheckedChanged;
             // 
@@ -187,10 +178,11 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(106, 176);
+            label5.Font = new Font("Nirmala UI", 9.75F);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(103, 110);
             label5.Name = "label5";
-            label5.Size = new Size(61, 20);
+            label5.Size = new Size(55, 17);
             label5.TabIndex = 8;
             label5.Text = "100 грн";
             label5.Click += label5_Click;
@@ -199,10 +191,11 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(106, 207);
+            label6.Font = new Font("Nirmala UI", 9.75F);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(103, 133);
             label6.Name = "label6";
-            label6.Size = new Size(61, 20);
+            label6.Size = new Size(55, 17);
             label6.TabIndex = 9;
             label6.Text = "120 грн";
             // 
@@ -210,10 +203,11 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(106, 238);
+            label7.Font = new Font("Nirmala UI", 9.75F);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(103, 156);
             label7.Name = "label7";
-            label7.Size = new Size(53, 20);
+            label7.Size = new Size(48, 17);
             label7.TabIndex = 10;
             label7.Text = "50 грн";
             // 
@@ -221,19 +215,21 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.ForeColor = SystemColors.Control;
-            label8.Location = new Point(106, 269);
+            label8.Font = new Font("Nirmala UI", 9.75F);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(103, 180);
             label8.Name = "label8";
-            label8.Size = new Size(61, 20);
+            label8.Size = new Size(55, 17);
             label8.TabIndex = 11;
             label8.Text = "150 грн";
             // 
             // FruitBox
             // 
             FruitBox.Enabled = false;
-            FruitBox.Location = new Point(173, 172);
+            FruitBox.Location = new Point(161, 107);
+            FruitBox.Margin = new Padding(3, 2, 3, 2);
             FruitBox.Name = "FruitBox";
-            FruitBox.Size = new Size(54, 27);
+            FruitBox.Size = new Size(48, 23);
             FruitBox.TabIndex = 12;
             FruitBox.MouseClick += FruitBox_MouseClick;
             FruitBox.TextChanged += FruitBox_TextChanged;
@@ -241,9 +237,10 @@
             // VegBox
             // 
             VegBox.Enabled = false;
-            VegBox.Location = new Point(173, 205);
+            VegBox.Location = new Point(161, 132);
+            VegBox.Margin = new Padding(3, 2, 3, 2);
             VegBox.Name = "VegBox";
-            VegBox.Size = new Size(54, 27);
+            VegBox.Size = new Size(48, 23);
             VegBox.TabIndex = 13;
             VegBox.MouseClick += VegBox_MouseClick;
             VegBox.TextChanged += VegBox_TextChanged;
@@ -251,9 +248,10 @@
             // DrinkBox
             // 
             DrinkBox.Enabled = false;
-            DrinkBox.Location = new Point(173, 238);
+            DrinkBox.Location = new Point(161, 156);
+            DrinkBox.Margin = new Padding(3, 2, 3, 2);
             DrinkBox.Name = "DrinkBox";
-            DrinkBox.Size = new Size(54, 27);
+            DrinkBox.Size = new Size(48, 23);
             DrinkBox.TabIndex = 14;
             DrinkBox.MouseClick += DrinkBox_MouseClick;
             DrinkBox.TextChanged += DrinkBox_TextChanged;
@@ -261,86 +259,70 @@
             // DessertBox
             // 
             DessertBox.Enabled = false;
-            DessertBox.Location = new Point(173, 271);
+            DessertBox.Location = new Point(161, 181);
+            DessertBox.Margin = new Padding(3, 2, 3, 2);
             DessertBox.Name = "DessertBox";
-            DessertBox.Size = new Size(54, 27);
+            DessertBox.Size = new Size(48, 23);
             DessertBox.TabIndex = 15;
             DessertBox.MouseClick += DessertBox_MouseClick;
             DessertBox.TextChanged += DessertBox_TextChanged;
             // 
             // FoodButton
             // 
-            FoodButton.BackColor = Color.MediumSeaGreen;
-            FoodButton.Font = new Font("Sitka Subheading", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            FoodButton.ForeColor = SystemColors.ActiveCaptionText;
-            FoodButton.Location = new Point(17, 316);
+            FoodButton.BackColor = Color.FromArgb(37, 40, 55);
+            FoodButton.FlatAppearance.BorderSize = 0;
+            FoodButton.FlatStyle = FlatStyle.Flat;
+            FoodButton.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            FoodButton.ForeColor = Color.White;
+            FoodButton.Location = new Point(25, 231);
+            FoodButton.Margin = new Padding(3, 2, 3, 2);
             FoodButton.Name = "FoodButton";
-            FoodButton.Size = new Size(184, 47);
+            FoodButton.Size = new Size(184, 31);
             FoodButton.TabIndex = 16;
-            FoodButton.Text = "Обрахувати";
+            FoodButton.Text = "CALCULATE";
             FoodButton.UseVisualStyleBackColor = false;
             FoodButton.Click += FoodButton_Click;
-            // 
-            // FoodSum
-            // 
-            FoodSum.AutoSize = true;
-            FoodSum.BackColor = Color.Transparent;
-            FoodSum.Font = new Font("Impact", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            FoodSum.ForeColor = SystemColors.HotTrack;
-            FoodSum.Location = new Point(17, 380);
-            FoodSum.Name = "FoodSum";
-            FoodSum.Size = new Size(44, 42);
-            FoodSum.TabIndex = 17;
-            FoodSum.Text = ":D";
             // 
             // MoneyLabel
             // 
             MoneyLabel.AutoSize = true;
-            MoneyLabel.Font = new Font("Cascadia Mono", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            MoneyLabel.ForeColor = Color.FromArgb(0, 192, 0);
-            MoneyLabel.Location = new Point(12, 9);
+            MoneyLabel.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            MoneyLabel.ForeColor = Color.White;
+            MoneyLabel.Location = new Point(25, 19);
             MoneyLabel.Name = "MoneyLabel";
-            MoneyLabel.Size = new Size(180, 22);
+            MoneyLabel.Size = new Size(159, 21);
             MoneyLabel.TabIndex = 18;
-            MoneyLabel.Text = "Доступні кошти: -";
+            MoneyLabel.Text = "AVALIABLE MONEY:";
             MoneyLabel.Click += MoneyLabel_Click;
             // 
             // SumEq
             // 
-            SumEq.BackColor = Color.SpringGreen;
-            SumEq.Font = new Font("Sitka Subheading", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            SumEq.ForeColor = Color.Black;
-            SumEq.Location = new Point(17, 60);
+            SumEq.BackColor = Color.FromArgb(37, 40, 55);
+            SumEq.FlatAppearance.BorderSize = 0;
+            SumEq.FlatStyle = FlatStyle.Flat;
+            SumEq.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            SumEq.ForeColor = Color.White;
+            SumEq.Location = new Point(25, 358);
+            SumEq.Margin = new Padding(3, 2, 3, 2);
             SumEq.Name = "SumEq";
-            SumEq.Size = new Size(290, 57);
+            SumEq.Size = new Size(818, 44);
             SumEq.TabIndex = 19;
-            SumEq.Text = "Обрахувати загальну суму";
+            SumEq.Text = "CALCULATE TOTAL";
             SumEq.UseVisualStyleBackColor = false;
             SumEq.Click += SumEq_Click_1;
-            // 
-            // Desc_Label
-            // 
-            Desc_Label.AutoSize = true;
-            Desc_Label.BackColor = Color.Transparent;
-            Desc_Label.Font = new Font("Sitka Subheading", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
-            Desc_Label.ForeColor = Color.FromArgb(255, 128, 0);
-            Desc_Label.Location = new Point(331, 71);
-            Desc_Label.Name = "Desc_Label";
-            Desc_Label.Size = new Size(331, 33);
-            Desc_Label.TabIndex = 20;
-            Desc_Label.Text = "Не остаточний результат!";
             // 
             // spoo_check
             // 
             spoo_check.AutoSize = true;
             spoo_check.BackColor = Color.Transparent;
-            spoo_check.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            spoo_check.ForeColor = SystemColors.ActiveBorder;
-            spoo_check.Location = new Point(292, 174);
+            spoo_check.Font = new Font("Nirmala UI", 9.75F);
+            spoo_check.ForeColor = Color.White;
+            spoo_check.Location = new Point(266, 108);
+            spoo_check.Margin = new Padding(3, 2, 3, 2);
             spoo_check.Name = "spoo_check";
-            spoo_check.Size = new Size(97, 25);
+            spoo_check.Size = new Size(83, 21);
             spoo_check.TabIndex = 21;
-            spoo_check.Text = "Шампуні";
+            spoo_check.Text = "Shampoo";
             spoo_check.UseVisualStyleBackColor = false;
             spoo_check.CheckedChanged += spoo_check_CheckedChanged;
             // 
@@ -348,13 +330,14 @@
             // 
             soap_check.AutoSize = true;
             soap_check.BackColor = Color.Transparent;
-            soap_check.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            soap_check.ForeColor = SystemColors.ActiveBorder;
-            soap_check.Location = new Point(292, 207);
+            soap_check.Font = new Font("Nirmala UI", 9.75F);
+            soap_check.ForeColor = Color.White;
+            soap_check.Location = new Point(266, 133);
+            soap_check.Margin = new Padding(3, 2, 3, 2);
             soap_check.Name = "soap_check";
-            soap_check.Size = new Size(71, 25);
+            soap_check.Size = new Size(57, 21);
             soap_check.TabIndex = 22;
-            soap_check.Text = "Мило";
+            soap_check.Text = "Soap";
             soap_check.UseVisualStyleBackColor = false;
             soap_check.CheckedChanged += soap_check_CheckedChanged;
             // 
@@ -362,13 +345,14 @@
             // 
             gel_check.AutoSize = true;
             gel_check.BackColor = Color.Transparent;
-            gel_check.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gel_check.ForeColor = SystemColors.ActiveBorder;
-            gel_check.Location = new Point(292, 238);
+            gel_check.Font = new Font("Nirmala UI", 9.75F);
+            gel_check.ForeColor = Color.White;
+            gel_check.Location = new Point(266, 156);
+            gel_check.Margin = new Padding(3, 2, 3, 2);
             gel_check.Name = "gel_check";
-            gel_check.Size = new Size(136, 25);
+            gel_check.Size = new Size(93, 21);
             gel_check.TabIndex = 23;
-            gel_check.Text = "Гель для душу";
+            gel_check.Text = "Shower Gel";
             gel_check.UseVisualStyleBackColor = false;
             gel_check.CheckedChanged += gel_check_CheckedChanged;
             // 
@@ -376,22 +360,24 @@
             // 
             ear_check.AutoSize = true;
             ear_check.BackColor = Color.Transparent;
-            ear_check.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ear_check.ForeColor = SystemColors.ActiveBorder;
-            ear_check.Location = new Point(292, 269);
+            ear_check.Font = new Font("Nirmala UI", 9.75F);
+            ear_check.ForeColor = Color.White;
+            ear_check.Location = new Point(266, 180);
+            ear_check.Margin = new Padding(3, 2, 3, 2);
             ear_check.Name = "ear_check";
-            ear_check.Size = new Size(141, 25);
+            ear_check.Size = new Size(82, 21);
             ear_check.TabIndex = 24;
-            ear_check.Text = "Вушні палички";
+            ear_check.Text = "Ear Sticks";
             ear_check.UseVisualStyleBackColor = false;
             ear_check.CheckedChanged += ear_check_CheckedChanged;
             // 
             // spoo_box
             // 
             spoo_box.Enabled = false;
-            spoo_box.Location = new Point(494, 173);
+            spoo_box.Location = new Point(442, 108);
+            spoo_box.Margin = new Padding(3, 2, 3, 2);
             spoo_box.Name = "spoo_box";
-            spoo_box.Size = new Size(54, 27);
+            spoo_box.Size = new Size(48, 23);
             spoo_box.TabIndex = 25;
             spoo_box.MouseClick += spoo_box_MouseClick;
             spoo_box.TextChanged += spoo_box_TextChanged;
@@ -399,9 +385,10 @@
             // soap_box
             // 
             soap_box.Enabled = false;
-            soap_box.Location = new Point(494, 204);
+            soap_box.Location = new Point(442, 131);
+            soap_box.Margin = new Padding(3, 2, 3, 2);
             soap_box.Name = "soap_box";
-            soap_box.Size = new Size(54, 27);
+            soap_box.Size = new Size(48, 23);
             soap_box.TabIndex = 26;
             soap_box.MouseClick += soap_box_MouseClick;
             soap_box.TextChanged += soap_box_TextChanged;
@@ -409,9 +396,10 @@
             // ear_box
             // 
             ear_box.Enabled = false;
-            ear_box.Location = new Point(494, 266);
+            ear_box.Location = new Point(442, 178);
+            ear_box.Margin = new Padding(3, 2, 3, 2);
             ear_box.Name = "ear_box";
-            ear_box.Size = new Size(54, 27);
+            ear_box.Size = new Size(48, 23);
             ear_box.TabIndex = 28;
             ear_box.MouseClick += ear_box_MouseClick;
             ear_box.TextChanged += ear_box_TextChanged;
@@ -419,9 +407,10 @@
             // gel_box
             // 
             gel_box.Enabled = false;
-            gel_box.Location = new Point(494, 235);
+            gel_box.Location = new Point(442, 154);
+            gel_box.Margin = new Padding(3, 2, 3, 2);
             gel_box.Name = "gel_box";
-            gel_box.Size = new Size(54, 27);
+            gel_box.Size = new Size(48, 23);
             gel_box.TabIndex = 27;
             gel_box.MouseClick += gel_box_MouseClick;
             gel_box.TextChanged += gel_box_TextChanged;
@@ -430,10 +419,11 @@
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.ForeColor = SystemColors.Control;
-            label9.Location = new Point(427, 176);
+            label9.Font = new Font("Nirmala UI", 9.75F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(384, 110);
             label9.Name = "label9";
-            label9.Size = new Size(61, 20);
+            label9.Size = new Size(55, 17);
             label9.TabIndex = 29;
             label9.Text = "100 грн";
             // 
@@ -441,10 +431,11 @@
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.ForeColor = SystemColors.Control;
-            label10.Location = new Point(434, 211);
+            label10.Font = new Font("Nirmala UI", 9.75F);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(390, 136);
             label10.Name = "label10";
-            label10.Size = new Size(53, 20);
+            label10.Size = new Size(48, 17);
             label10.TabIndex = 30;
             label10.Text = "30 грн";
             // 
@@ -452,10 +443,11 @@
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
-            label11.ForeColor = SystemColors.Control;
-            label11.Location = new Point(434, 240);
+            label11.Font = new Font("Nirmala UI", 9.75F);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(390, 158);
             label11.Name = "label11";
-            label11.Size = new Size(53, 20);
+            label11.Size = new Size(48, 17);
             label11.TabIndex = 31;
             label11.Text = "70 грн";
             // 
@@ -463,60 +455,43 @@
             // 
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
-            label12.ForeColor = SystemColors.Control;
-            label12.Location = new Point(435, 269);
+            label12.Font = new Font("Nirmala UI", 9.75F);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(391, 180);
             label12.Name = "label12";
-            label12.Size = new Size(53, 20);
+            label12.Size = new Size(48, 17);
             label12.TabIndex = 32;
             label12.Text = "25 грн";
             // 
             // Gig_Suma
             // 
-            Gig_Suma.BackColor = Color.DarkMagenta;
-            Gig_Suma.Font = new Font("Sitka Subheading", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            Gig_Suma.ForeColor = SystemColors.ActiveCaptionText;
-            Gig_Suma.Location = new Point(292, 316);
+            Gig_Suma.BackColor = Color.FromArgb(37, 40, 55);
+            Gig_Suma.FlatAppearance.BorderSize = 0;
+            Gig_Suma.FlatStyle = FlatStyle.Flat;
+            Gig_Suma.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            Gig_Suma.ForeColor = Color.White;
+            Gig_Suma.Location = new Point(266, 231);
+            Gig_Suma.Margin = new Padding(3, 2, 3, 2);
             Gig_Suma.Name = "Gig_Suma";
-            Gig_Suma.Size = new Size(184, 47);
+            Gig_Suma.Size = new Size(224, 31);
             Gig_Suma.TabIndex = 33;
-            Gig_Suma.Text = "Обрахувати";
+            Gig_Suma.Text = "CALCULATE";
             Gig_Suma.UseVisualStyleBackColor = false;
             Gig_Suma.Click += Gig_Suma_Click;
             // 
-            // Gig_LABEL_Sum
-            // 
-            Gig_LABEL_Sum.AutoSize = true;
-            Gig_LABEL_Sum.BackColor = Color.Transparent;
-            Gig_LABEL_Sum.Font = new Font("Impact", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Gig_LABEL_Sum.ForeColor = SystemColors.HotTrack;
-            Gig_LABEL_Sum.Location = new Point(292, 380);
-            Gig_LABEL_Sum.Name = "Gig_LABEL_Sum";
-            Gig_LABEL_Sum.Size = new Size(42, 42);
-            Gig_LABEL_Sum.TabIndex = 34;
-            Gig_LABEL_Sum.Text = ":P";
-            // 
-            // Sanitary_Sum
-            // 
-            Sanitary_Sum.AutoSize = true;
-            Sanitary_Sum.BackColor = Color.Transparent;
-            Sanitary_Sum.Font = new Font("Impact", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Sanitary_Sum.ForeColor = SystemColors.HotTrack;
-            Sanitary_Sum.Location = new Point(617, 377);
-            Sanitary_Sum.Name = "Sanitary_Sum";
-            Sanitary_Sum.Size = new Size(36, 42);
-            Sanitary_Sum.TabIndex = 48;
-            Sanitary_Sum.Text = ":)";
-            // 
             // Sanitary_Button
             // 
-            Sanitary_Button.BackColor = Color.LightSkyBlue;
-            Sanitary_Button.Font = new Font("Sitka Subheading", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            Sanitary_Button.ForeColor = SystemColors.ActiveCaptionText;
-            Sanitary_Button.Location = new Point(617, 313);
+            Sanitary_Button.BackColor = Color.FromArgb(37, 40, 55);
+            Sanitary_Button.FlatAppearance.BorderSize = 0;
+            Sanitary_Button.FlatStyle = FlatStyle.Flat;
+            Sanitary_Button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            Sanitary_Button.ForeColor = Color.White;
+            Sanitary_Button.Location = new Point(550, 231);
+            Sanitary_Button.Margin = new Padding(3, 2, 3, 2);
             Sanitary_Button.Name = "Sanitary_Button";
-            Sanitary_Button.Size = new Size(184, 47);
+            Sanitary_Button.Size = new Size(293, 31);
             Sanitary_Button.TabIndex = 47;
-            Sanitary_Button.Text = "Обрахувати";
+            Sanitary_Button.Text = "CALCULATE";
             Sanitary_Button.UseVisualStyleBackColor = false;
             Sanitary_Button.Click += Sanitary_Button_Click;
             // 
@@ -524,10 +499,11 @@
             // 
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.ForeColor = SystemColors.Control;
-            label14.Location = new Point(839, 268);
+            label14.Font = new Font("Nirmala UI", 9.75F);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(740, 180);
             label14.Name = "label14";
-            label14.Size = new Size(53, 20);
+            label14.Size = new Size(48, 17);
             label14.TabIndex = 46;
             label14.Text = "40 грн";
             // 
@@ -535,10 +511,11 @@
             // 
             label15.AutoSize = true;
             label15.BackColor = Color.Transparent;
-            label15.ForeColor = SystemColors.Control;
-            label15.Location = new Point(838, 239);
+            label15.Font = new Font("Nirmala UI", 9.75F);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(739, 158);
             label15.Name = "label15";
-            label15.Size = new Size(53, 20);
+            label15.Size = new Size(48, 17);
             label15.TabIndex = 45;
             label15.Text = "60 грн";
             // 
@@ -546,10 +523,11 @@
             // 
             label16.AutoSize = true;
             label16.BackColor = Color.Transparent;
-            label16.ForeColor = SystemColors.Control;
-            label16.Location = new Point(838, 208);
+            label16.Font = new Font("Nirmala UI", 9.75F);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(739, 135);
             label16.Name = "label16";
-            label16.Size = new Size(53, 20);
+            label16.Size = new Size(48, 17);
             label16.TabIndex = 44;
             label16.Text = "20 грн";
             // 
@@ -557,29 +535,21 @@
             // 
             label17.AutoSize = true;
             label17.BackColor = Color.Transparent;
-            label17.ForeColor = SystemColors.Control;
-            label17.Location = new Point(831, 175);
+            label17.Font = new Font("Nirmala UI", 9.75F);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(733, 110);
             label17.Name = "label17";
-            label17.Size = new Size(61, 20);
+            label17.Size = new Size(55, 17);
             label17.TabIndex = 43;
             label17.Text = "110 грн";
-            // 
-            // GanBox
-            // 
-            GanBox.Enabled = false;
-            GanBox.Location = new Point(898, 265);
-            GanBox.Name = "GanBox";
-            GanBox.Size = new Size(54, 27);
-            GanBox.TabIndex = 42;
-            GanBox.MouseClick += GanBox_MouseClick;
-            GanBox.TextChanged += GanBox_TextChanged;
             // 
             // polBox
             // 
             polBox.Enabled = false;
-            polBox.Location = new Point(898, 234);
+            polBox.Location = new Point(792, 155);
+            polBox.Margin = new Padding(3, 2, 3, 2);
             polBox.Name = "polBox";
-            polBox.Size = new Size(54, 27);
+            polBox.Size = new Size(48, 23);
             polBox.TabIndex = 41;
             polBox.MouseClick += polBox_MouseClick;
             polBox.TextChanged += polBox_TextChanged;
@@ -587,9 +557,10 @@
             // CapBox
             // 
             CapBox.Enabled = false;
-            CapBox.Location = new Point(898, 203);
+            CapBox.Location = new Point(792, 131);
+            CapBox.Margin = new Padding(3, 2, 3, 2);
             CapBox.Name = "CapBox";
-            CapBox.Size = new Size(54, 27);
+            CapBox.Size = new Size(48, 23);
             CapBox.TabIndex = 40;
             CapBox.MouseClick += CapBox_MouseClick;
             CapBox.TextChanged += CapBox_TextChanged;
@@ -598,13 +569,14 @@
             // 
             GanCheck.AutoSize = true;
             GanCheck.BackColor = Color.Transparent;
-            GanCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GanCheck.ForeColor = SystemColors.ActiveBorder;
-            GanCheck.Location = new Point(617, 266);
+            GanCheck.Font = new Font("Nirmala UI", 9.75F);
+            GanCheck.ForeColor = Color.White;
+            GanCheck.Location = new Point(550, 178);
+            GanCheck.Margin = new Padding(3, 2, 3, 2);
             GanCheck.Name = "GanCheck";
-            GanCheck.Size = new Size(96, 25);
+            GanCheck.Size = new Size(56, 21);
             GanCheck.TabIndex = 38;
-            GanCheck.Text = "Ганчірки";
+            GanCheck.Text = "Rags";
             GanCheck.UseVisualStyleBackColor = false;
             GanCheck.CheckedChanged += GanCheck_CheckedChanged;
             // 
@@ -612,13 +584,14 @@
             // 
             polCheck.AutoSize = true;
             polCheck.BackColor = Color.Transparent;
-            polCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            polCheck.ForeColor = SystemColors.ActiveBorder;
-            polCheck.Location = new Point(617, 235);
+            polCheck.Font = new Font("Nirmala UI", 9.75F);
+            polCheck.ForeColor = Color.White;
+            polCheck.Location = new Point(550, 154);
+            polCheck.Margin = new Padding(3, 2, 3, 2);
             polCheck.Name = "polCheck";
-            polCheck.Size = new Size(180, 25);
+            polCheck.Size = new Size(116, 21);
             polCheck.TabIndex = 37;
-            polCheck.Text = "Поліроль для меблів";
+            polCheck.Text = "Furniture Polish";
             polCheck.UseVisualStyleBackColor = false;
             polCheck.CheckedChanged += polCheck_CheckedChanged;
             // 
@@ -626,13 +599,14 @@
             // 
             CapCheck.AutoSize = true;
             CapCheck.BackColor = Color.Transparent;
-            CapCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CapCheck.ForeColor = SystemColors.ActiveBorder;
-            CapCheck.Location = new Point(617, 204);
+            CapCheck.Font = new Font("Nirmala UI", 9.75F);
+            CapCheck.ForeColor = Color.White;
+            CapCheck.Location = new Point(550, 131);
+            CapCheck.Margin = new Padding(3, 2, 3, 2);
             CapCheck.Name = "CapCheck";
-            CapCheck.Size = new Size(219, 25);
+            CapCheck.Size = new Size(149, 21);
             CapCheck.TabIndex = 36;
-            CapCheck.Text = "Капсули для посудомийки";
+            CapCheck.Text = "Dishwasher Capsules";
             CapCheck.UseVisualStyleBackColor = false;
             CapCheck.CheckedChanged += CapCheck_CheckedChanged;
             // 
@@ -640,34 +614,98 @@
             // 
             PralCheck.AutoSize = true;
             PralCheck.BackColor = Color.Transparent;
-            PralCheck.Font = new Font("Sitka Heading", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PralCheck.ForeColor = SystemColors.ActiveBorder;
-            PralCheck.Location = new Point(617, 174);
+            PralCheck.Font = new Font("Nirmala UI", 9.75F);
+            PralCheck.ForeColor = Color.White;
+            PralCheck.Location = new Point(550, 108);
+            PralCheck.Margin = new Padding(3, 2, 3, 2);
             PralCheck.Name = "PralCheck";
-            PralCheck.Size = new Size(169, 25);
+            PralCheck.Size = new Size(85, 21);
             PralCheck.TabIndex = 35;
-            PralCheck.Text = "Пральний порошок";
+            PralCheck.Text = "Detergent";
             PralCheck.UseVisualStyleBackColor = false;
             PralCheck.CheckedChanged += PralCheck_CheckedChanged;
             // 
             // PralBox
             // 
             PralBox.Enabled = false;
-            PralBox.Location = new Point(898, 172);
+            PralBox.Location = new Point(792, 108);
+            PralBox.Margin = new Padding(3, 2, 3, 2);
             PralBox.Name = "PralBox";
-            PralBox.Size = new Size(54, 27);
+            PralBox.Size = new Size(48, 23);
             PralBox.TabIndex = 49;
             PralBox.MouseClick += PralBox_MouseClick;
             PralBox.TextChanged += PralBox_TextChanged;
             // 
+            // GanBox
+            // 
+            GanBox.Enabled = false;
+            GanBox.Location = new Point(792, 178);
+            GanBox.Margin = new Padding(3, 2, 3, 2);
+            GanBox.Name = "GanBox";
+            GanBox.Size = new Size(48, 23);
+            GanBox.TabIndex = 42;
+            GanBox.MouseClick += GanBox_MouseClick;
+            GanBox.TextChanged += GanBox_TextChanged;
+            // 
+            // FoodSum
+            // 
+            FoodSum.AutoSize = true;
+            FoodSum.BackColor = Color.Transparent;
+            FoodSum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            FoodSum.ForeColor = SystemColors.ButtonFace;
+            FoodSum.Location = new Point(25, 296);
+            FoodSum.Name = "FoodSum";
+            FoodSum.Size = new Size(58, 21);
+            FoodSum.TabIndex = 50;
+            FoodSum.Text = "FOOD:";
+            // 
+            // Gig_LABEL_Sum
+            // 
+            Gig_LABEL_Sum.AutoSize = true;
+            Gig_LABEL_Sum.BackColor = Color.Transparent;
+            Gig_LABEL_Sum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            Gig_LABEL_Sum.ForeColor = SystemColors.ButtonFace;
+            Gig_LABEL_Sum.Location = new Point(266, 296);
+            Gig_LABEL_Sum.Name = "Gig_LABEL_Sum";
+            Gig_LABEL_Sum.Size = new Size(58, 21);
+            Gig_LABEL_Sum.TabIndex = 51;
+            Gig_LABEL_Sum.Text = "FOOD:";
+            // 
+            // Sanitary_Sum
+            // 
+            Sanitary_Sum.AutoSize = true;
+            Sanitary_Sum.BackColor = Color.Transparent;
+            Sanitary_Sum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            Sanitary_Sum.ForeColor = SystemColors.ButtonFace;
+            Sanitary_Sum.Location = new Point(550, 296);
+            Sanitary_Sum.Name = "Sanitary_Sum";
+            Sanitary_Sum.Size = new Size(58, 21);
+            Sanitary_Sum.TabIndex = 52;
+            Sanitary_Sum.Text = "FOOD:";
+            // 
+            // Desc_Label
+            // 
+            Desc_Label.AutoSize = true;
+            Desc_Label.BackColor = Color.Transparent;
+            Desc_Label.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            Desc_Label.ForeColor = SystemColors.ButtonFace;
+            Desc_Label.Location = new Point(550, 19);
+            Desc_Label.Name = "Desc_Label";
+            Desc_Label.Size = new Size(58, 21);
+            Desc_Label.TabIndex = 53;
+            Desc_Label.Text = "FOOD:";
+            // 
             // DomesticExpensesForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
-            ClientSize = new Size(1146, 450);
-            Controls.Add(PralBox);
+            BackColor = Color.FromArgb(30, 28, 42);
+            ClientSize = new Size(887, 425);
+            Controls.Add(Desc_Label);
             Controls.Add(Sanitary_Sum);
+            Controls.Add(Gig_LABEL_Sum);
+            Controls.Add(FoodSum);
+            Controls.Add(PralBox);
             Controls.Add(Sanitary_Button);
             Controls.Add(label14);
             Controls.Add(label15);
@@ -680,7 +718,6 @@
             Controls.Add(polCheck);
             Controls.Add(CapCheck);
             Controls.Add(PralCheck);
-            Controls.Add(Gig_LABEL_Sum);
             Controls.Add(Gig_Suma);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -694,10 +731,8 @@
             Controls.Add(gel_check);
             Controls.Add(soap_check);
             Controls.Add(spoo_check);
-            Controls.Add(Desc_Label);
             Controls.Add(SumEq);
             Controls.Add(MoneyLabel);
-            Controls.Add(FoodSum);
             Controls.Add(FoodButton);
             Controls.Add(DessertBox);
             Controls.Add(DrinkBox);
@@ -714,7 +749,8 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DomesticExpensesForm";
             Text = "Побутові витрати";
             ResumeLayout(false);
@@ -722,8 +758,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -740,10 +774,8 @@
         private TextBox DrinkBox;
         private TextBox DessertBox;
         private Button FoodButton;
-        private Label FoodSum;
         private Label MoneyLabel;
         private Button SumEq;
-        private Label Desc_Label;
         private CheckBox spoo_check;
         private CheckBox soap_check;
         private CheckBox gel_check;
@@ -757,14 +789,11 @@
         private Label label11;
         private Label label12;
         private Button Gig_Suma;
-        private Label Gig_LABEL_Sum;
-        private Label Sanitary_Sum;
         private Button Sanitary_Button;
         private Label label14;
         private Label label15;
         private Label label16;
         private Label label17;
-        private TextBox GanBox;
         private TextBox polBox;
         private TextBox CapBox;
         private CheckBox GanCheck;
@@ -772,5 +801,10 @@
         private CheckBox CapCheck;
         private CheckBox PralCheck;
         private TextBox PralBox;
+        private TextBox GanBox;
+        private Label FoodSum;
+        private Label Gig_LABEL_Sum;
+        private Label Sanitary_Sum;
+        private Label Desc_Label;
     }
 }

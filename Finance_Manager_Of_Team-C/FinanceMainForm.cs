@@ -9,14 +9,13 @@ using System.Runtime.InteropServices;
 using System.Windows.Media;
 using Color = System.Drawing.Color;
 using Timer = System.Windows.Forms.Timer;
-
 namespace Finance_Manager_Of_Team_C
 {
     public partial class FormFinance : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        private UserControl currentChildControl;
+        private Form currentChildForm;
         private Timer timer;
 
         public FormFinance()
@@ -34,8 +33,8 @@ namespace Finance_Manager_Of_Team_C
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
             timer.Start();
-        }
 
+        }
         private void Timer_Tick(object? sender, EventArgs e)
         {
             labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
@@ -86,22 +85,6 @@ namespace Finance_Manager_Of_Team_C
             }
         }
 
-        private void OpenChildControlUC(UserControl childControl)
-        {
-            // Close any existing child control
-            if (currentChildControl != null)
-            {
-                panelDesktop.Controls.Remove(currentChildControl);
-                currentChildControl.Dispose();
-            }
-
-            // Set properties of the child control
-            childControl.Dock = DockStyle.Fill;
-
-            // Add the child control to the panel
-            panelDesktop.Controls.Add(childControl);
-            currentChildControl = childControl;
-        }
 
         private void OpenChildForm(Form childForm)
         {
@@ -125,7 +108,18 @@ namespace Finance_Manager_Of_Team_C
         private void iconButtonIncome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorIcon);
-            OpenChildControlUC(new UC_Source());
+            UC_Source uc1 = new UC_Source();
+            OpenChildForm(new Income(uc1));
+        }
+
+
+
+        // wallet buttons
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorIcon);
+            UC_Wallet uc1 = new UC_Wallet();
+            OpenChildForm(new Income(uc1));
         }
 
         private void iconButtonDomesticExpenses_Click(object sender, EventArgs e)
@@ -149,12 +143,6 @@ namespace Finance_Manager_Of_Team_C
 
         }
 
-        // wallet buttons
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.colorIcon);
-            OpenChildControlUC(new UC_Wallet());
-        }
 
         private void Reset()
         {
@@ -176,15 +164,6 @@ namespace Finance_Manager_Of_Team_C
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            if (currentChildControl != null)
-            {
-                panelDesktop.Controls.Remove(currentChildControl);
-                currentChildControl.Dispose();
-            }
-            Reset();
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -204,5 +183,7 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }

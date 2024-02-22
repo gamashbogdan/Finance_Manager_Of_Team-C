@@ -37,7 +37,7 @@
             panelContainer.Dock = DockStyle.Fill;
             panelContainer.Location = new Point(0, 0);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1000, 500);
+            panelContainer.Size = new Size(887, 425);
             panelContainer.TabIndex = 8;
             // 
             // Income
@@ -45,7 +45,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1000, 500);
+            ClientSize = new Size(887, 425);
             Controls.Add(panelContainer);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Income";
