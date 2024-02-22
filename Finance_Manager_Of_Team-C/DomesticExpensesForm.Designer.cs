@@ -76,6 +76,7 @@
             Gig_LABEL_Sum = new Label();
             Sanitary_Sum = new Label();
             Desc_Label = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // label2
@@ -689,11 +690,22 @@
             Desc_Label.BackColor = Color.Transparent;
             Desc_Label.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Desc_Label.ForeColor = SystemColors.ButtonFace;
-            Desc_Label.Location = new Point(550, 19);
+            Desc_Label.Location = new Point(652, 19);
             Desc_Label.Name = "Desc_Label";
             Desc_Label.Size = new Size(58, 21);
             Desc_Label.TabIndex = 53;
             Desc_Label.Text = "FOOD:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(546, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 21);
+            label1.TabIndex = 54;
+            label1.Text = "TOTAL SUM:";
             // 
             // DomesticExpensesForm
             // 
@@ -701,6 +713,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 28, 42);
             ClientSize = new Size(887, 425);
+            Controls.Add(label1);
             Controls.Add(Desc_Label);
             Controls.Add(Sanitary_Sum);
             Controls.Add(Gig_LABEL_Sum);
@@ -806,5 +819,6 @@
         private Label Gig_LABEL_Sum;
         private Label Sanitary_Sum;
         private Label Desc_Label;
+        private Label label1;
     }
 }
