@@ -35,7 +35,7 @@
             panel2 = new Panel();
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
-
+            iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             label2 = new Label();
             panel1 = new Panel();
@@ -68,6 +68,11 @@
             // 
             panelMenu.BackColor = Color.FromArgb(37, 40, 55);
             panelMenu.Controls.Add(panelLogo);
+            panelMenu.Controls.Add(iconButtonIncome);
+            panelMenu.Controls.Add(iconButtonDomesticExpenses);
+            panelMenu.Controls.Add(iconButtonSocialCosts);
+            panelMenu.Controls.Add(iconButtonUnplannedExpenses);
+            panelMenu.Controls.Add(iconButton1);
             panelMenu.Controls.Add(panel2);
             panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
@@ -277,6 +282,27 @@
             labelTime.TabIndex = 1;
             labelTime.Text = "Time";
             // 
+            // iconButton1
+            // 
+            iconButton1.Dock = DockStyle.Top;
+            iconButton1.FlatAppearance.BorderSize = 0;
+            iconButton1.FlatStyle = FlatStyle.Flat;
+            iconButton1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            iconButton1.ForeColor = SystemColors.ButtonHighlight;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.U;
+            iconButton1.IconColor = Color.White;
+            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton1.Location = new Point(3, 413);
+            iconButton1.Name = "iconButton1";
+            iconButton1.Padding = new Padding(10, 0, 20, 0);
+            iconButton1.Size = new Size(240, 73);
+            iconButton1.TabIndex = 5;
+            iconButton1.Text = "Unplanned Expenses";
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton1.UseVisualStyleBackColor = true;
+            // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(37, 40, 55);
@@ -441,6 +467,7 @@
         private PictureBox btnMaximize;
         private PictureBox btnMinimize;
         private PictureBox btnExit;
+        private FontAwesome.Sharp.IconButton iconButton1;
         private Label labelTime;
         private PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
