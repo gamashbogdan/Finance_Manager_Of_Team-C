@@ -1,3 +1,4 @@
+using Finance_Manager_Of_Team_C.Income_User_Control;
 using FontAwesome.Sharp;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -45,41 +46,46 @@ namespace Finance_Manager_Of_Team_C
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(24, 161, 251);
+
+            // icon color
+            public static Color colorIcon = Color.FromArgb(24, 161, 251);
+
+            // background button color
+            public static Color colorBtnBg = Color.FromArgb(56, 60, 75);
         }
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                currentBtn.BackColor = RGBColors.colorBtnBg;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(3, currentBtn.Location.Y);
                 leftBorderBtn.Visible = false;
                 leftBorderBtn.BringToFront();
-
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
                 label.Text = currentBtn.Text;
             }
         }
+
         private void DisableButton()
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.FromArgb(37, 40, 55);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
+
+
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -97,59 +103,72 @@ namespace Finance_Manager_Of_Team_C
             childForm.BringToFront();
             childForm.Show();
         }
+
+        // Event handler for the iconButtonIncome (presumably used to open UC_Source)
         private void iconButtonIncome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new Income());
+            ActivateButton(sender, RGBColors.colorIcon);
+            UC_Source uc1 = new UC_Source();
+            OpenChildForm(new Income(uc1));
+        }
+
+
+
+        // wallet buttons
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.colorIcon);
+            UC_Wallet uc1 = new UC_Wallet();
+            OpenChildForm(new Income(uc1));
         }
 
         private void iconButtonDomesticExpenses_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new DomesticExpensesForm());
 
         }
 
         private void iconButtonSocialCosts_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new SocialCostsForm());
 
         }
 
         private void iconButtonUnplannedExpenses_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, RGBColors.colorIcon);
             OpenChildForm(new UnplannedExpensesForm());
 
         }
 
+
         private void Reset()
         {
             DisableButton();
+
             OpenChildForm(new MainForm());
-            iconCurrentChildForm.IconChar = IconChar.Home;
+            //iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             label.Text = "Home";
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            Reset();
-        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             timer.Stop();
@@ -168,7 +187,5 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
-
-    
     }
 }
