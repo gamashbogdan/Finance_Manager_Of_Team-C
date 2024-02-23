@@ -34,28 +34,11 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            roundedPanel1 = new RoundedPanel();
             label3 = new Label();
             label4 = new Label();
             dataGridViewWallets = new DataGridView();
-            roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewWallets).BeginInit();
             SuspendLayout();
-            // 
-            // roundedPanel1
-            // 
-            roundedPanel1.Angle = 230F;
-            roundedPanel1.BackColor = Color.FromArgb(16, 110, 211);
-            roundedPanel1.Controls.Add(label3);
-            roundedPanel1.Controls.Add(label4);
-            roundedPanel1.CornerRadius = 20;
-            roundedPanel1.EndColor = Color.FromArgb(16, 110, 211);
-            roundedPanel1.Location = new Point(20, 20);
-            roundedPanel1.Margin = new Padding(0);
-            roundedPanel1.Name = "roundedPanel1";
-            roundedPanel1.Size = new Size(780, 99);
-            roundedPanel1.StartColor = Color.FromArgb(40, 50, 71);
-            roundedPanel1.TabIndex = 2;
             // 
             // label3
             // 
@@ -63,7 +46,7 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(20, 41);
+            label3.Location = new Point(23, 58);
             label3.Name = "label3";
             label3.Size = new Size(143, 37);
             label3.TabIndex = 1;
@@ -75,7 +58,7 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(20, 20);
+            label4.Location = new Point(23, 37);
             label4.Name = "label4";
             label4.Size = new Size(111, 21);
             label4.TabIndex = 0;
@@ -101,10 +84,10 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             dataGridViewWallets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewWallets.EnableHeadersVisualStyles = false;
             dataGridViewWallets.GridColor = Color.Black;
-            dataGridViewWallets.Location = new Point(20, 146);
+            dataGridViewWallets.Location = new Point(20, 130);
             dataGridViewWallets.Name = "dataGridViewWallets";
             dataGridViewWallets.RowHeadersVisible = false;
-            dataGridViewWallets.Size = new Size(780, 331);
+            dataGridViewWallets.Size = new Size(826, 251);
             dataGridViewWallets.TabIndex = 3;
             // 
             // UC_Wallet
@@ -112,20 +95,19 @@ namespace Finance_Manager_Of_Team_C.Income_User_Control
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 28, 42);
+            Controls.Add(label3);
             Controls.Add(dataGridViewWallets);
-            Controls.Add(roundedPanel1);
+            Controls.Add(label4);
             Margin = new Padding(0);
             Name = "UC_Wallet";
             Padding = new Padding(20);
-            Size = new Size(823, 500);
-            roundedPanel1.ResumeLayout(false);
-            roundedPanel1.PerformLayout();
+            Size = new Size(887, 425);
             ((System.ComponentModel.ISupportInitialize)dataGridViewWallets).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private RoundedPanel roundedPanel1;
         private Label label3;
         private Label label4;
         private DataGridView dataGridViewWallets;
