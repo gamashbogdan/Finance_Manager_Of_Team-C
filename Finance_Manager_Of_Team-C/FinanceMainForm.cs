@@ -168,7 +168,5 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
-
-    
     }
 }
