@@ -88,13 +88,14 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(7, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(192, 61);
+            pictureBox1.Size = new Size(56, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -210,7 +211,7 @@
             iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             iconButton2.ForeColor = SystemColors.ButtonHighlight;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Navicon;
             iconButton2.IconColor = Color.White;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 36;
@@ -221,7 +222,7 @@
             iconButton2.Padding = new Padding(9, 0, 18, 0);
             iconButton2.Size = new Size(200, 45);
             iconButton2.TabIndex = 2;
-            iconButton2.Text = "SOURCE";
+            iconButton2.Text = "WALLET";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = true;
@@ -299,7 +300,7 @@
             btnMaximize.Location = new Point(815, 10);
             btnMaximize.Margin = new Padding(3, 2, 3, 2);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(20, 21);
+            btnMaximize.Size = new Size(20, 18);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMaximize.TabIndex = 3;
             btnMaximize.TabStop = false;
@@ -313,7 +314,7 @@
             btnMinimize.Location = new Point(772, 8);
             btnMinimize.Margin = new Padding(3, 2, 3, 2);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(28, 28);
+            btnMinimize.Size = new Size(28, 25);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
@@ -327,7 +328,7 @@
             btnExit.Location = new Point(852, 9);
             btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(21, 22);
+            btnExit.Size = new Size(21, 19);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
             btnExit.TabIndex = 1;
             btnExit.TabStop = false;
@@ -338,11 +339,11 @@
             label.AutoSize = true;
             label.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label.ForeColor = Color.White;
-            label.Location = new Point(49, 27);
+            label.Location = new Point(49, 24);
             label.Name = "label";
-            label.Size = new Size(45, 17);
+            label.Size = new Size(47, 17);
             label.TabIndex = 1;
-            label.Text = "Home";
+            label.Text = "HOME";
             // 
             // iconCurrentChildForm
             // 

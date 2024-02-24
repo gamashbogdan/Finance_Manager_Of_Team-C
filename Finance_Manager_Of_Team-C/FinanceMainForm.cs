@@ -141,6 +141,12 @@ namespace Finance_Manager_Of_Team_C
 
         }
 
+        // home 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MainForm());
+        }
+
 
         private void Reset()
         {
@@ -180,6 +186,9 @@ namespace Finance_Manager_Of_Team_C
             else
                 WindowState = FormWindowState.Normal;
         }
+
+
+
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {

@@ -44,7 +44,6 @@
             DrinkBox = new TextBox();
             DessertBox = new TextBox();
             FoodButton = new Button();
-            MoneyLabel = new Label();
             SumEq = new Button();
             spoo_check = new CheckBox();
             soap_check = new CheckBox();
@@ -85,7 +84,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(25, 84);
+            label2.Location = new Point(22, 21);
             label2.Name = "label2";
             label2.Size = new Size(58, 21);
             label2.TabIndex = 1;
@@ -97,7 +96,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(266, 87);
+            label3.Location = new Point(263, 24);
             label3.Name = "label3";
             label3.Size = new Size(94, 21);
             label3.TabIndex = 2;
@@ -109,7 +108,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(550, 84);
+            label4.Location = new Point(547, 21);
             label4.Name = "label4";
             label4.Size = new Size(109, 21);
             label4.TabIndex = 3;
@@ -121,7 +120,7 @@
             FruitCheck.BackColor = Color.Transparent;
             FruitCheck.Font = new Font("Nirmala UI", 9.75F);
             FruitCheck.ForeColor = Color.White;
-            FruitCheck.Location = new Point(25, 108);
+            FruitCheck.Location = new Point(25, 48);
             FruitCheck.Margin = new Padding(3, 2, 3, 2);
             FruitCheck.Name = "FruitCheck";
             FruitCheck.Size = new Size(58, 21);
@@ -136,7 +135,7 @@
             VegCheck.BackColor = Color.Transparent;
             VegCheck.Font = new Font("Nirmala UI", 9.75F);
             VegCheck.ForeColor = Color.White;
-            VegCheck.Location = new Point(25, 132);
+            VegCheck.Location = new Point(25, 72);
             VegCheck.Margin = new Padding(3, 2, 3, 2);
             VegCheck.Name = "VegCheck";
             VegCheck.Size = new Size(91, 21);
@@ -151,7 +150,7 @@
             DrinkCheck.BackColor = Color.Transparent;
             DrinkCheck.Font = new Font("Nirmala UI", 9.75F);
             DrinkCheck.ForeColor = Color.White;
-            DrinkCheck.Location = new Point(25, 155);
+            DrinkCheck.Location = new Point(25, 95);
             DrinkCheck.Margin = new Padding(3, 2, 3, 2);
             DrinkCheck.Name = "DrinkCheck";
             DrinkCheck.Size = new Size(63, 21);
@@ -166,7 +165,7 @@
             DessertCheck.BackColor = Color.Transparent;
             DessertCheck.Font = new Font("Nirmala UI", 9.75F);
             DessertCheck.ForeColor = Color.White;
-            DessertCheck.Location = new Point(25, 178);
+            DessertCheck.Location = new Point(25, 118);
             DessertCheck.Margin = new Padding(3, 2, 3, 2);
             DessertCheck.Name = "DessertCheck";
             DessertCheck.Size = new Size(67, 21);
@@ -181,7 +180,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Nirmala UI", 9.75F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(103, 110);
+            label5.Location = new Point(103, 50);
             label5.Name = "label5";
             label5.Size = new Size(55, 17);
             label5.TabIndex = 8;
@@ -194,7 +193,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Nirmala UI", 9.75F);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(103, 133);
+            label6.Location = new Point(103, 73);
             label6.Name = "label6";
             label6.Size = new Size(55, 17);
             label6.TabIndex = 9;
@@ -206,7 +205,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Nirmala UI", 9.75F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(103, 156);
+            label7.Location = new Point(103, 96);
             label7.Name = "label7";
             label7.Size = new Size(48, 17);
             label7.TabIndex = 10;
@@ -218,7 +217,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Nirmala UI", 9.75F);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(103, 180);
+            label8.Location = new Point(103, 120);
             label8.Name = "label8";
             label8.Size = new Size(55, 17);
             label8.TabIndex = 11;
@@ -227,7 +226,7 @@
             // FruitBox
             // 
             FruitBox.Enabled = false;
-            FruitBox.Location = new Point(161, 107);
+            FruitBox.Location = new Point(161, 47);
             FruitBox.Margin = new Padding(3, 2, 3, 2);
             FruitBox.Name = "FruitBox";
             FruitBox.Size = new Size(48, 23);
@@ -238,7 +237,7 @@
             // VegBox
             // 
             VegBox.Enabled = false;
-            VegBox.Location = new Point(161, 132);
+            VegBox.Location = new Point(161, 72);
             VegBox.Margin = new Padding(3, 2, 3, 2);
             VegBox.Name = "VegBox";
             VegBox.Size = new Size(48, 23);
@@ -249,7 +248,7 @@
             // DrinkBox
             // 
             DrinkBox.Enabled = false;
-            DrinkBox.Location = new Point(161, 156);
+            DrinkBox.Location = new Point(161, 96);
             DrinkBox.Margin = new Padding(3, 2, 3, 2);
             DrinkBox.Name = "DrinkBox";
             DrinkBox.Size = new Size(48, 23);
@@ -260,7 +259,7 @@
             // DessertBox
             // 
             DessertBox.Enabled = false;
-            DessertBox.Location = new Point(161, 181);
+            DessertBox.Location = new Point(161, 121);
             DessertBox.Margin = new Padding(3, 2, 3, 2);
             DessertBox.Name = "DessertBox";
             DessertBox.Size = new Size(48, 23);
@@ -275,7 +274,7 @@
             FoodButton.FlatStyle = FlatStyle.Flat;
             FoodButton.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             FoodButton.ForeColor = Color.White;
-            FoodButton.Location = new Point(25, 231);
+            FoodButton.Location = new Point(25, 171);
             FoodButton.Margin = new Padding(3, 2, 3, 2);
             FoodButton.Name = "FoodButton";
             FoodButton.Size = new Size(184, 31);
@@ -283,18 +282,6 @@
             FoodButton.Text = "CALCULATE";
             FoodButton.UseVisualStyleBackColor = false;
             FoodButton.Click += FoodButton_Click;
-            // 
-            // MoneyLabel
-            // 
-            MoneyLabel.AutoSize = true;
-            MoneyLabel.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
-            MoneyLabel.ForeColor = Color.White;
-            MoneyLabel.Location = new Point(25, 19);
-            MoneyLabel.Name = "MoneyLabel";
-            MoneyLabel.Size = new Size(159, 21);
-            MoneyLabel.TabIndex = 18;
-            MoneyLabel.Text = "AVALIABLE MONEY:";
-            MoneyLabel.Click += MoneyLabel_Click;
             // 
             // SumEq
             // 
@@ -318,7 +305,7 @@
             spoo_check.BackColor = Color.Transparent;
             spoo_check.Font = new Font("Nirmala UI", 9.75F);
             spoo_check.ForeColor = Color.White;
-            spoo_check.Location = new Point(266, 108);
+            spoo_check.Location = new Point(266, 48);
             spoo_check.Margin = new Padding(3, 2, 3, 2);
             spoo_check.Name = "spoo_check";
             spoo_check.Size = new Size(83, 21);
@@ -333,7 +320,7 @@
             soap_check.BackColor = Color.Transparent;
             soap_check.Font = new Font("Nirmala UI", 9.75F);
             soap_check.ForeColor = Color.White;
-            soap_check.Location = new Point(266, 133);
+            soap_check.Location = new Point(266, 73);
             soap_check.Margin = new Padding(3, 2, 3, 2);
             soap_check.Name = "soap_check";
             soap_check.Size = new Size(57, 21);
@@ -348,7 +335,7 @@
             gel_check.BackColor = Color.Transparent;
             gel_check.Font = new Font("Nirmala UI", 9.75F);
             gel_check.ForeColor = Color.White;
-            gel_check.Location = new Point(266, 156);
+            gel_check.Location = new Point(266, 96);
             gel_check.Margin = new Padding(3, 2, 3, 2);
             gel_check.Name = "gel_check";
             gel_check.Size = new Size(93, 21);
@@ -363,7 +350,7 @@
             ear_check.BackColor = Color.Transparent;
             ear_check.Font = new Font("Nirmala UI", 9.75F);
             ear_check.ForeColor = Color.White;
-            ear_check.Location = new Point(266, 180);
+            ear_check.Location = new Point(266, 120);
             ear_check.Margin = new Padding(3, 2, 3, 2);
             ear_check.Name = "ear_check";
             ear_check.Size = new Size(82, 21);
@@ -375,7 +362,7 @@
             // spoo_box
             // 
             spoo_box.Enabled = false;
-            spoo_box.Location = new Point(442, 108);
+            spoo_box.Location = new Point(442, 48);
             spoo_box.Margin = new Padding(3, 2, 3, 2);
             spoo_box.Name = "spoo_box";
             spoo_box.Size = new Size(48, 23);
@@ -386,7 +373,7 @@
             // soap_box
             // 
             soap_box.Enabled = false;
-            soap_box.Location = new Point(442, 131);
+            soap_box.Location = new Point(442, 71);
             soap_box.Margin = new Padding(3, 2, 3, 2);
             soap_box.Name = "soap_box";
             soap_box.Size = new Size(48, 23);
@@ -397,7 +384,7 @@
             // ear_box
             // 
             ear_box.Enabled = false;
-            ear_box.Location = new Point(442, 178);
+            ear_box.Location = new Point(442, 118);
             ear_box.Margin = new Padding(3, 2, 3, 2);
             ear_box.Name = "ear_box";
             ear_box.Size = new Size(48, 23);
@@ -408,7 +395,7 @@
             // gel_box
             // 
             gel_box.Enabled = false;
-            gel_box.Location = new Point(442, 154);
+            gel_box.Location = new Point(442, 94);
             gel_box.Margin = new Padding(3, 2, 3, 2);
             gel_box.Name = "gel_box";
             gel_box.Size = new Size(48, 23);
@@ -422,7 +409,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Nirmala UI", 9.75F);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(384, 110);
+            label9.Location = new Point(384, 50);
             label9.Name = "label9";
             label9.Size = new Size(55, 17);
             label9.TabIndex = 29;
@@ -434,7 +421,7 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Nirmala UI", 9.75F);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(390, 136);
+            label10.Location = new Point(390, 76);
             label10.Name = "label10";
             label10.Size = new Size(48, 17);
             label10.TabIndex = 30;
@@ -446,7 +433,7 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Nirmala UI", 9.75F);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(390, 158);
+            label11.Location = new Point(390, 98);
             label11.Name = "label11";
             label11.Size = new Size(48, 17);
             label11.TabIndex = 31;
@@ -458,7 +445,7 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Nirmala UI", 9.75F);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(391, 180);
+            label12.Location = new Point(391, 120);
             label12.Name = "label12";
             label12.Size = new Size(48, 17);
             label12.TabIndex = 32;
@@ -471,7 +458,7 @@
             Gig_Suma.FlatStyle = FlatStyle.Flat;
             Gig_Suma.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Gig_Suma.ForeColor = Color.White;
-            Gig_Suma.Location = new Point(266, 231);
+            Gig_Suma.Location = new Point(266, 171);
             Gig_Suma.Margin = new Padding(3, 2, 3, 2);
             Gig_Suma.Name = "Gig_Suma";
             Gig_Suma.Size = new Size(224, 31);
@@ -487,7 +474,7 @@
             Sanitary_Button.FlatStyle = FlatStyle.Flat;
             Sanitary_Button.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Sanitary_Button.ForeColor = Color.White;
-            Sanitary_Button.Location = new Point(550, 231);
+            Sanitary_Button.Location = new Point(550, 171);
             Sanitary_Button.Margin = new Padding(3, 2, 3, 2);
             Sanitary_Button.Name = "Sanitary_Button";
             Sanitary_Button.Size = new Size(293, 31);
@@ -502,7 +489,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Nirmala UI", 9.75F);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(740, 180);
+            label14.Location = new Point(740, 120);
             label14.Name = "label14";
             label14.Size = new Size(48, 17);
             label14.TabIndex = 46;
@@ -514,7 +501,7 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("Nirmala UI", 9.75F);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(739, 158);
+            label15.Location = new Point(739, 98);
             label15.Name = "label15";
             label15.Size = new Size(48, 17);
             label15.TabIndex = 45;
@@ -526,7 +513,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("Nirmala UI", 9.75F);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(739, 135);
+            label16.Location = new Point(739, 75);
             label16.Name = "label16";
             label16.Size = new Size(48, 17);
             label16.TabIndex = 44;
@@ -538,7 +525,7 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("Nirmala UI", 9.75F);
             label17.ForeColor = Color.White;
-            label17.Location = new Point(733, 110);
+            label17.Location = new Point(733, 50);
             label17.Name = "label17";
             label17.Size = new Size(55, 17);
             label17.TabIndex = 43;
@@ -547,7 +534,7 @@
             // polBox
             // 
             polBox.Enabled = false;
-            polBox.Location = new Point(792, 155);
+            polBox.Location = new Point(792, 95);
             polBox.Margin = new Padding(3, 2, 3, 2);
             polBox.Name = "polBox";
             polBox.Size = new Size(48, 23);
@@ -558,7 +545,7 @@
             // CapBox
             // 
             CapBox.Enabled = false;
-            CapBox.Location = new Point(792, 131);
+            CapBox.Location = new Point(792, 71);
             CapBox.Margin = new Padding(3, 2, 3, 2);
             CapBox.Name = "CapBox";
             CapBox.Size = new Size(48, 23);
@@ -572,7 +559,7 @@
             GanCheck.BackColor = Color.Transparent;
             GanCheck.Font = new Font("Nirmala UI", 9.75F);
             GanCheck.ForeColor = Color.White;
-            GanCheck.Location = new Point(550, 178);
+            GanCheck.Location = new Point(550, 118);
             GanCheck.Margin = new Padding(3, 2, 3, 2);
             GanCheck.Name = "GanCheck";
             GanCheck.Size = new Size(56, 21);
@@ -587,7 +574,7 @@
             polCheck.BackColor = Color.Transparent;
             polCheck.Font = new Font("Nirmala UI", 9.75F);
             polCheck.ForeColor = Color.White;
-            polCheck.Location = new Point(550, 154);
+            polCheck.Location = new Point(550, 94);
             polCheck.Margin = new Padding(3, 2, 3, 2);
             polCheck.Name = "polCheck";
             polCheck.Size = new Size(116, 21);
@@ -602,7 +589,7 @@
             CapCheck.BackColor = Color.Transparent;
             CapCheck.Font = new Font("Nirmala UI", 9.75F);
             CapCheck.ForeColor = Color.White;
-            CapCheck.Location = new Point(550, 131);
+            CapCheck.Location = new Point(550, 71);
             CapCheck.Margin = new Padding(3, 2, 3, 2);
             CapCheck.Name = "CapCheck";
             CapCheck.Size = new Size(149, 21);
@@ -617,7 +604,7 @@
             PralCheck.BackColor = Color.Transparent;
             PralCheck.Font = new Font("Nirmala UI", 9.75F);
             PralCheck.ForeColor = Color.White;
-            PralCheck.Location = new Point(550, 108);
+            PralCheck.Location = new Point(550, 48);
             PralCheck.Margin = new Padding(3, 2, 3, 2);
             PralCheck.Name = "PralCheck";
             PralCheck.Size = new Size(85, 21);
@@ -629,7 +616,7 @@
             // PralBox
             // 
             PralBox.Enabled = false;
-            PralBox.Location = new Point(792, 108);
+            PralBox.Location = new Point(792, 48);
             PralBox.Margin = new Padding(3, 2, 3, 2);
             PralBox.Name = "PralBox";
             PralBox.Size = new Size(48, 23);
@@ -640,7 +627,7 @@
             // GanBox
             // 
             GanBox.Enabled = false;
-            GanBox.Location = new Point(792, 178);
+            GanBox.Location = new Point(792, 118);
             GanBox.Margin = new Padding(3, 2, 3, 2);
             GanBox.Name = "GanBox";
             GanBox.Size = new Size(48, 23);
@@ -654,11 +641,11 @@
             FoodSum.BackColor = Color.Transparent;
             FoodSum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             FoodSum.ForeColor = SystemColors.ButtonFace;
-            FoodSum.Location = new Point(25, 296);
+            FoodSum.Location = new Point(25, 236);
             FoodSum.Name = "FoodSum";
-            FoodSum.Size = new Size(58, 21);
+            FoodSum.Size = new Size(51, 21);
             FoodSum.TabIndex = 50;
-            FoodSum.Text = "FOOD:";
+            FoodSum.Text = "0 грн";
             // 
             // Gig_LABEL_Sum
             // 
@@ -666,11 +653,11 @@
             Gig_LABEL_Sum.BackColor = Color.Transparent;
             Gig_LABEL_Sum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Gig_LABEL_Sum.ForeColor = SystemColors.ButtonFace;
-            Gig_LABEL_Sum.Location = new Point(266, 296);
+            Gig_LABEL_Sum.Location = new Point(266, 236);
             Gig_LABEL_Sum.Name = "Gig_LABEL_Sum";
-            Gig_LABEL_Sum.Size = new Size(58, 21);
+            Gig_LABEL_Sum.Size = new Size(51, 21);
             Gig_LABEL_Sum.TabIndex = 51;
-            Gig_LABEL_Sum.Text = "FOOD:";
+            Gig_LABEL_Sum.Text = "0 грн";
             // 
             // Sanitary_Sum
             // 
@@ -678,11 +665,11 @@
             Sanitary_Sum.BackColor = Color.Transparent;
             Sanitary_Sum.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Sanitary_Sum.ForeColor = SystemColors.ButtonFace;
-            Sanitary_Sum.Location = new Point(550, 296);
+            Sanitary_Sum.Location = new Point(550, 236);
             Sanitary_Sum.Name = "Sanitary_Sum";
-            Sanitary_Sum.Size = new Size(58, 21);
+            Sanitary_Sum.Size = new Size(51, 21);
             Sanitary_Sum.TabIndex = 52;
-            Sanitary_Sum.Text = "FOOD:";
+            Sanitary_Sum.Text = "0 грн";
             // 
             // Desc_Label
             // 
@@ -690,18 +677,18 @@
             Desc_Label.BackColor = Color.Transparent;
             Desc_Label.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             Desc_Label.ForeColor = SystemColors.ButtonFace;
-            Desc_Label.Location = new Point(652, 19);
+            Desc_Label.Location = new Point(131, 305);
             Desc_Label.Name = "Desc_Label";
-            Desc_Label.Size = new Size(58, 21);
+            Desc_Label.Size = new Size(51, 21);
             Desc_Label.TabIndex = 53;
-            Desc_Label.Text = "FOOD:";
+            Desc_Label.Text = "0 грн";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(546, 19);
+            label1.Location = new Point(25, 305);
             label1.Name = "label1";
             label1.Size = new Size(100, 21);
             label1.TabIndex = 54;
@@ -745,7 +732,6 @@
             Controls.Add(soap_check);
             Controls.Add(spoo_check);
             Controls.Add(SumEq);
-            Controls.Add(MoneyLabel);
             Controls.Add(FoodButton);
             Controls.Add(DessertBox);
             Controls.Add(DrinkBox);
@@ -762,7 +748,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "DomesticExpensesForm";
             Text = "Побутові витрати";
@@ -787,7 +772,6 @@
         private TextBox DrinkBox;
         private TextBox DessertBox;
         private Button FoodButton;
-        private Label MoneyLabel;
         private Button SumEq;
         private CheckBox spoo_check;
         private CheckBox soap_check;
