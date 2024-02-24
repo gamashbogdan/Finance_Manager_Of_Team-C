@@ -37,9 +37,9 @@
             labelFinanceManager.Anchor = AnchorStyles.Top;
             labelFinanceManager.Font = new Font("Segoe UI Emoji", 22F, FontStyle.Bold);
             labelFinanceManager.ForeColor = SystemColors.ControlLightLight;
-            labelFinanceManager.Location = new Point(332, 9);
+            labelFinanceManager.Location = new Point(290, 7);
             labelFinanceManager.Name = "labelFinanceManager";
-            labelFinanceManager.Size = new Size(330, 54);
+            labelFinanceManager.Size = new Size(289, 40);
             labelFinanceManager.TabIndex = 2;
             labelFinanceManager.Text = "Finance Manager";
             // 
@@ -49,20 +49,21 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(898, 466);
+            labelTime.Location = new Point(786, 350);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(86, 41);
+            labelTime.Size = new Size(67, 32);
             labelTime.TabIndex = 3;
             labelTime.Text = "Time";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 33, 74);
-            ClientSize = new Size(996, 516);
+            ClientSize = new Size(872, 387);
             Controls.Add(labelFinanceManager);
             Controls.Add(labelTime);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "MainForm";
             ResumeLayout(false);

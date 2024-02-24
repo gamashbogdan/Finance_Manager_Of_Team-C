@@ -38,6 +38,7 @@
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             label2 = new Label();
             panel1 = new Panel();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButtonIncome = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             labelTime = new Label();
@@ -59,16 +60,13 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).BeginInit();
+            panelDesktop.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 40, 55);
             panelMenu.Controls.Add(panelLogo);
-            panelMenu.Controls.Add(iconButtonIncome);
-            panelMenu.Controls.Add(iconButtonDomesticExpenses);
-            panelMenu.Controls.Add(iconButtonSocialCosts);
-            panelMenu.Controls.Add(iconButtonUnplannedExpenses);
             panelMenu.Controls.Add(panel2);
             panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
@@ -90,14 +88,14 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Location = new Point(7, 7);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(192, 61);
+            pictureBox1.Size = new Size(56, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
@@ -197,6 +195,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(iconButton2);
             panel1.Controls.Add(iconButtonIncome);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -204,6 +203,30 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 112);
             panel1.TabIndex = 1;
+            // 
+            // iconButton2
+            // 
+            iconButton2.Dock = DockStyle.Top;
+            iconButton2.FlatAppearance.BorderSize = 0;
+            iconButton2.FlatStyle = FlatStyle.Flat;
+            iconButton2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
+            iconButton2.ForeColor = SystemColors.ButtonHighlight;
+            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            iconButton2.IconColor = Color.White;
+            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton2.IconSize = 36;
+            iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
+            iconButton2.Location = new Point(0, 62);
+            iconButton2.Margin = new Padding(3, 2, 3, 2);
+            iconButton2.Name = "iconButton2";
+            iconButton2.Padding = new Padding(9, 0, 18, 0);
+            iconButton2.Size = new Size(200, 45);
+            iconButton2.TabIndex = 2;
+            iconButton2.Text = "WALLET";
+            iconButton2.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton2.UseVisualStyleBackColor = true;
+            iconButton2.Click += iconButton2_Click;
             // 
             // iconButtonIncome
             // 
@@ -247,7 +270,7 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(789, 380);
+            labelTime.Location = new Point(1476, 705);
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(67, 32);
             labelTime.TabIndex = 1;
@@ -277,7 +300,7 @@
             btnMaximize.Location = new Point(815, 10);
             btnMaximize.Margin = new Padding(3, 2, 3, 2);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(20, 21);
+            btnMaximize.Size = new Size(20, 18);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMaximize.TabIndex = 3;
             btnMaximize.TabStop = false;
@@ -290,9 +313,8 @@
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
             btnMinimize.Location = new Point(772, 8);
             btnMinimize.Margin = new Padding(3, 2, 3, 2);
-
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(28, 28);
+            btnMinimize.Size = new Size(28, 25);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
@@ -306,7 +328,7 @@
             btnExit.Location = new Point(852, 9);
             btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(21, 22);
+            btnExit.Size = new Size(21, 19);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
             btnExit.TabIndex = 1;
             btnExit.TabStop = false;
@@ -317,11 +339,11 @@
             label.AutoSize = true;
             label.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label.ForeColor = Color.White;
-            label.Location = new Point(49, 27);
+            label.Location = new Point(49, 24);
             label.Name = "label";
-            label.Size = new Size(45, 17);
+            label.Size = new Size(47, 17);
             label.TabIndex = 1;
-            label.Text = "Home";
+            label.Text = "HOME";
             // 
             // iconCurrentChildForm
             // 
@@ -345,14 +367,12 @@
             panelShadow.Margin = new Padding(3, 2, 3, 2);
             panelShadow.Name = "panelShadow";
             panelShadow.Size = new Size(887, 7);
-
             panelShadow.TabIndex = 6;
             // 
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.FromArgb(30, 28, 42);
             panelDesktop.Controls.Add(labelTime);
-
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(198, 63);
             panelDesktop.Margin = new Padding(3, 2, 3, 2);
@@ -386,6 +406,8 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnExit).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildForm).EndInit();
+            panelDesktop.ResumeLayout(false);
+            panelDesktop.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -411,5 +433,6 @@
         private Label label1;
         private Panel panel2;
         private Label label2;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
