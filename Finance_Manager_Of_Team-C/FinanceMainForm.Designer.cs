@@ -35,16 +35,13 @@
             panel2 = new Panel();
             iconButtonDomesticExpenses = new FontAwesome.Sharp.IconButton();
             iconButtonUnplannedExpenses = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButtonSocialCosts = new FontAwesome.Sharp.IconButton();
             label2 = new Label();
             panel1 = new Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButtonIncome = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             labelTime = new Label();
             panelTitleBar = new Panel();
-            labelFinanceManager = new Label();
             btnMaximize = new PictureBox();
             btnMinimize = new PictureBox();
             btnExit = new PictureBox();
@@ -72,7 +69,6 @@
             panelMenu.Controls.Add(iconButtonDomesticExpenses);
             panelMenu.Controls.Add(iconButtonSocialCosts);
             panelMenu.Controls.Add(iconButtonUnplannedExpenses);
-            panelMenu.Controls.Add(iconButton1);
             panelMenu.Controls.Add(panel2);
             panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
@@ -201,7 +197,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(iconButtonIncome);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -209,30 +204,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 112);
             panel1.TabIndex = 1;
-            // 
-            // iconButton1
-            // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            iconButton1.ForeColor = SystemColors.ButtonHighlight;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Microsoft;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 36;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(0, 62);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new Padding(9, 0, 18, 0);
-            iconButton1.Size = new Size(200, 45);
-            iconButton1.TabIndex = 5;
-            iconButton1.Text = "WALLETS";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = true;
-            iconButton1.Click += iconButton1_Click;
             // 
             // iconButtonIncome
             // 
@@ -282,31 +253,9 @@
             labelTime.TabIndex = 1;
             labelTime.Text = "Time";
             // 
-            // iconButton1
-            // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            iconButton1.ForeColor = SystemColors.ButtonHighlight;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.U;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(3, 413);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Padding = new Padding(10, 0, 20, 0);
-            iconButton1.Size = new Size(240, 73);
-            iconButton1.TabIndex = 5;
-            iconButton1.Text = "Unplanned Expenses";
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = true;
-            // 
             // panelTitleBar
             // 
             panelTitleBar.BackColor = Color.FromArgb(37, 40, 55);
-            panelTitleBar.Controls.Add(labelFinanceManager);
             panelTitleBar.Controls.Add(btnMaximize);
             panelTitleBar.Controls.Add(btnMinimize);
             panelTitleBar.Controls.Add(btnExit);
@@ -317,20 +266,8 @@
             panelTitleBar.Margin = new Padding(3, 2, 3, 2);
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(887, 56);
-
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
-            // 
-            // labelFinanceManager
-            // 
-            labelFinanceManager.Anchor = AnchorStyles.Top;
-            labelFinanceManager.Font = new Font("Nirmala UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelFinanceManager.ForeColor = SystemColors.ControlLightLight;
-            labelFinanceManager.Location = new Point(286, 9);
-            labelFinanceManager.Name = "labelFinanceManager";
-            labelFinanceManager.Size = new Size(306, 40);
-            labelFinanceManager.TabIndex = 0;
-            labelFinanceManager.Text = "FINANCE MANAGER";
             // 
             // btnMaximize
             // 
@@ -470,7 +407,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private Label labelTime;
         private PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel1;
         private Label label1;
         private Panel panel2;
