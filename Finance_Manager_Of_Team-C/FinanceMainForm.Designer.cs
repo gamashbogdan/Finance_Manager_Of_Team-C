@@ -265,6 +265,17 @@
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
+            // labelFinanceManager
+            // 
+            labelFinanceManager.Anchor = AnchorStyles.Top;
+            labelFinanceManager.Font = new Font("Nirmala UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFinanceManager.ForeColor = SystemColors.ControlLightLight;
+            labelFinanceManager.Location = new Point(285, 9);
+            labelFinanceManager.Name = "labelFinanceManager";
+            labelFinanceManager.Size = new Size(306, 40);
+            labelFinanceManager.TabIndex = 0;
+            labelFinanceManager.Text = "FINANCE MANAGER";
+            // 
             // btnMaximize
             // 
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
