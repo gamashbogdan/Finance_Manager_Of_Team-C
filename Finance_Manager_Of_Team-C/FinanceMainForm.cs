@@ -112,10 +112,8 @@ namespace Finance_Manager_Of_Team_C
             OpenChildForm(new Income(uc1));
         }
 
-
-
-        // wallet buttons
-        private void iconButton1_Click(object sender, EventArgs e)
+        // wallet
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.colorIcon);
             UC_Wallet uc1 = new UC_Wallet();
@@ -187,5 +185,7 @@ namespace Finance_Manager_Of_Team_C
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }
