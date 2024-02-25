@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calendar));
-            monthCalendar1 = new MonthCalendar();
+            monthCalendar = new MonthCalendar();
             buttonCancelDate = new Button();
             buttonOkDate = new Button();
             SuspendLayout();
             // 
-            // monthCalendar1
+            // monthCalendar
             // 
-            monthCalendar1.CalendarDimensions = new Size(2, 1);
-            monthCalendar1.Location = new Point(9, 6);
-            monthCalendar1.MaxDate = new DateTime(2120, 1, 1, 0, 0, 0, 0);
-            monthCalendar1.MaxSelectionCount = 365;
-            monthCalendar1.MinDate = new DateTime(2020, 1, 1, 0, 0, 0, 0);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.ShowToday = false;
-            monthCalendar1.ShowTodayCircle = false;
-            monthCalendar1.TabIndex = 0;
+            monthCalendar.CalendarDimensions = new Size(2, 1);
+            monthCalendar.Location = new Point(9, 6);
+            monthCalendar.MaxDate = new DateTime(2120, 1, 1, 0, 0, 0, 0);
+            monthCalendar.MaxSelectionCount = 365;
+            monthCalendar.MinDate = new DateTime(2020, 1, 1, 0, 0, 0, 0);
+            monthCalendar.Name = "monthCalendar";
+            monthCalendar.ShowToday = false;
+            monthCalendar.ShowTodayCircle = false;
+            monthCalendar.TabIndex = 0;
             // 
             // buttonCancelDate
             // 
@@ -57,6 +57,7 @@
             buttonCancelDate.TabIndex = 1;
             buttonCancelDate.Text = "Cancel";
             buttonCancelDate.UseVisualStyleBackColor = false;
+            buttonCancelDate.Click += buttonCancelDate_Click;
             // 
             // buttonOkDate
             // 
@@ -69,6 +70,7 @@
             buttonOkDate.TabIndex = 2;
             buttonOkDate.Text = "OK";
             buttonOkDate.UseVisualStyleBackColor = false;
+            buttonOkDate.Click += buttonOkDate_Click;
             // 
             // Calendar
             // 
@@ -77,7 +79,7 @@
             ClientSize = new Size(406, 259);
             Controls.Add(buttonOkDate);
             Controls.Add(buttonCancelDate);
-            Controls.Add(monthCalendar1);
+            Controls.Add(monthCalendar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Calendar";
             Text = "Calendar";
@@ -86,7 +88,7 @@
 
         #endregion
 
-        private MonthCalendar monthCalendar1;
+        private MonthCalendar monthCalendar;
         private Button buttonCancelDate;
         private Button buttonOkDate;
     }

@@ -37,6 +37,10 @@ namespace Finance_Manager_Of_Team_C
         {
             Calendar calendar = new Calendar();
             calendar.ShowDialog();
+            if (calendar.StartDate != calendar.EndtDate)
+                labelDateRange.Text = $"Витрати з {calendar.StartDate.ToString("dd: MM : yyyy")} по {calendar.EndtDate.ToString("dd: MM : yyyy")}";
+            else
+                labelDateRange.Text = $"Витрати за {calendar.StartDate.ToString("dd: MM : yyyy")}";
         }
 
     }

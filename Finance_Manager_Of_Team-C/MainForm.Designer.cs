@@ -31,6 +31,7 @@
             labelFinanceManager = new Label();
             labelTime = new Label();
             labelDate = new Label();
+            labelDateRange = new Label();
             SuspendLayout();
             // 
             // labelFinanceManager
@@ -38,7 +39,7 @@
             labelFinanceManager.Anchor = AnchorStyles.Top;
             labelFinanceManager.Font = new Font("Segoe UI Emoji", 22F, FontStyle.Bold);
             labelFinanceManager.ForeColor = SystemColors.ControlLightLight;
-            labelFinanceManager.Location = new Point(331, 9);
+            labelFinanceManager.Location = new Point(12, 9);
             labelFinanceManager.Name = "labelFinanceManager";
             labelFinanceManager.Size = new Size(330, 53);
             labelFinanceManager.TabIndex = 2;
@@ -69,12 +70,25 @@
             labelDate.Text = "Date";
             labelDate.Click += labelDate_Click;
             // 
+            // labelDateRange
+            // 
+            labelDateRange.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            labelDateRange.AutoSize = true;
+            labelDateRange.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
+            labelDateRange.ForeColor = SystemColors.ButtonHighlight;
+            labelDateRange.Location = new Point(459, 21);
+            labelDateRange.Name = "labelDateRange";
+            labelDateRange.Size = new Size(147, 35);
+            labelDateRange.TabIndex = 5;
+            labelDateRange.Text = "Date Range";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 28, 42);
             ClientSize = new Size(997, 516);
+            Controls.Add(labelDateRange);
             Controls.Add(labelDate);
             Controls.Add(labelFinanceManager);
             Controls.Add(labelTime);
@@ -89,5 +103,6 @@
         private Label labelFinanceManager;
         private Label labelTime;
         private Label labelDate;
+        private Label labelDateRange;
     }
 }
