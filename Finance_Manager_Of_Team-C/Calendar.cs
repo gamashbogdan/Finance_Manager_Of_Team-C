@@ -25,11 +25,11 @@ namespace Finance_Manager_Of_Team_C
         private void buttonOkDate_Click(object sender, EventArgs e)
         {
             StartDate = monthCalendar.SelectionStart;
-            EndtDate = monthCalendar.SelectionEnd;
+            EndDate = monthCalendar.SelectionEnd;
             this.Close();
         }
         public DateTime StartDate {  get; set; }
-        public DateTime EndtDate {  get; set; }
+        public DateTime EndDate {  get; set; }
 
        
 

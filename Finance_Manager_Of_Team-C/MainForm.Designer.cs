@@ -69,14 +69,16 @@
             labelDate.TabIndex = 4;
             labelDate.Text = "Date";
             labelDate.Click += labelDate_Click;
+            labelDate.MouseEnter += ElementIllumination_MouseEnter;
+            labelDate.MouseLeave += ElementIllumination_MouseLeave;
             // 
             // labelDateRange
             // 
-            labelDateRange.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            labelDateRange.Anchor = AnchorStyles.Top;
             labelDateRange.AutoSize = true;
             labelDateRange.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
             labelDateRange.ForeColor = SystemColors.ButtonHighlight;
-            labelDateRange.Location = new Point(459, 21);
+            labelDateRange.Location = new Point(381, 21);
             labelDateRange.Name = "labelDateRange";
             labelDateRange.Size = new Size(147, 35);
             labelDateRange.TabIndex = 5;

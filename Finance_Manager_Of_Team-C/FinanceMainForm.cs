@@ -22,7 +22,31 @@ namespace Finance_Manager_Of_Team_C
             this.ControlBox = false;
             this.DoubleBuffered = true;
             OpenChildForm(new MainForm());
+
         }
+
+        private void ElementIllumination_MouseEnter(object sender, EventArgs e)
+        {
+            // Приведення sender до типу Control
+            Control control = (sender as Control)!;
+            if (control != null)
+            {
+                control.BackColor = Color.LightGray; // Використовуйте світло-сірий колір для підсвічування
+            }
+        }
+
+        private void ElementIllumination_MouseLeave(object sender, EventArgs e)
+        {
+            // Приведення sender до типу Control
+            Control control = (sender as Control)!;
+            if (control != null)
+            {
+                control.BackColor = Color.FromArgb(37, 40, 55); // Поверніть до стандартного кольору фону контролів
+            }
+        }
+
+        
+
         private struct RGBColors
         {
             // icon color
@@ -129,7 +153,7 @@ namespace Finance_Manager_Of_Team_C
             OpenChildForm(new MainForm());
             iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             iconCurrentChildForm.IconColor = Color.White;
-            label.Text = "Home";
+            label.Text = "HOME";
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
