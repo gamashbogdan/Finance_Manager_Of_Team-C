@@ -65,7 +65,7 @@
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(37, 40, 55);
+            panelMenu.BackColor = Color.FromArgb(38, 41, 56);
             panelMenu.Controls.Add(panelLogo);
             panelMenu.Controls.Add(panel2);
             panelMenu.Controls.Add(panel1);
@@ -87,7 +87,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(8, 9);
+            pictureBox1.Location = new Point(13, 4);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(64, 65);
@@ -95,6 +95,8 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            pictureBox1.MouseEnter += ElementIllumination_MouseEnter;
+            pictureBox1.MouseLeave += ElementIllumination_MouseLeave;
             // 
             // panel2
             // 
@@ -266,6 +268,7 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
+            labelTime.Location = new Point(1644, 940);
             labelTime.Location = new Point(1687, 940);
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(86, 41);
@@ -274,7 +277,7 @@
             // 
             // panelTitleBar
             // 
-            panelTitleBar.BackColor = Color.FromArgb(37, 40, 55);
+            panelTitleBar.BackColor = Color.FromArgb(38, 41, 56);
             panelTitleBar.Controls.Add(btnMaximize);
             panelTitleBar.Controls.Add(btnMinimize);
             panelTitleBar.Controls.Add(btnExit);
@@ -292,6 +295,11 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.BackColor = Color.FromArgb(37, 40, 55);
             btnMaximize.Image = (Image)resources.GetObject("btnMaximize.Image");
+
+            btnMaximize.Location = new Point(924, 11);
+            btnMaximize.Name = "btnMaximize";
+            btnMaximize.Size = new Size(29, 29);
+            btnMaximize.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximize.Location = new Point(931, 13);
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new Size(23, 24);
@@ -299,12 +307,15 @@
             btnMaximize.TabIndex = 3;
             btnMaximize.TabStop = false;
             btnMaximize.Click += btnMaximize_Click;
+            btnMaximize.MouseEnter += ElementIllumination_MouseEnter;
+            btnMaximize.MouseLeave += ElementIllumination_MouseLeave;
             // 
             // btnMinimize
             // 
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.BackColor = Color.FromArgb(37, 40, 55);
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
+            btnMinimize.Location = new Point(877, 11);
             btnMinimize.Location = new Point(882, 11);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(32, 33);
@@ -312,12 +323,17 @@
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
             btnMinimize.Click += btnMinimize_Click;
+            btnMinimize.MouseEnter += ElementIllumination_MouseEnter;
+            btnMinimize.MouseLeave += ElementIllumination_MouseLeave;
             // 
             // btnExit
             // 
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.BackColor = Color.FromArgb(37, 40, 55);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.Location = new Point(970, 11);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(32, 33);
             btnExit.Location = new Point(974, 12);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(24, 25);
@@ -325,6 +341,8 @@
             btnExit.TabIndex = 1;
             btnExit.TabStop = false;
             btnExit.Click += btnExit_Click;
+            btnExit.MouseEnter += ElementIllumination_MouseEnter;
+            btnExit.MouseLeave += ElementIllumination_MouseLeave;
             // 
             // label
             // 
@@ -379,6 +397,7 @@
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormFinance";
             Text = "Finance Manager";
             panelMenu.ResumeLayout(false);

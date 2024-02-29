@@ -14,39 +14,41 @@ namespace Finance_Manager_Of_Team_C
     public partial class FormFinance : Form
     {
         private IconButton currentBtn;
-        private Panel leftBorderBtn;
         private Form currentChildForm;
-        private Timer timer;
-
         public FormFinance()
         {
             InitializeComponent();
-            timer = new Timer();
-            timer.Interval = 1000;
-            timer.Tick += Timer_Tick;
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(10, 60);
-            //panelMenu.Controls.Add(leftBorderBtn);
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            //labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
-            timer.Start();
             OpenChildForm(new MainForm());
+
         }
-        private void Timer_Tick(object? sender, EventArgs e)
+
+        private void ElementIllumination_MouseEnter(object sender, EventArgs e)
         {
-            //labelTime.Text = $"{DateTime.Now.Hour} : {DateTime.Now.Minute} : {DateTime.Now.Second}";
+            // Приведення sender до типу Control
+            Control control = (sender as Control)!;
+            if (control != null)
+            {
+                control.BackColor = Color.LightGray; // Використовуйте світло-сірий колір для підсвічування
+            }
         }
+
+        private void ElementIllumination_MouseLeave(object sender, EventArgs e)
+        {
+            // Приведення sender до типу Control
+            Control control = (sender as Control)!;
+            if (control != null)
+            {
+                control.BackColor = Color.FromArgb(37, 40, 55); // Поверніть до стандартного кольору фону контролів
+            }
+        }
+
+        
 
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(95, 77, 221);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(24, 161, 251);
-
             // icon color
             public static Color colorIcon = Color.FromArgb(24, 161, 251);
 
@@ -64,10 +66,6 @@ namespace Finance_Manager_Of_Team_C
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(3, currentBtn.Location.Y);
-                leftBorderBtn.Visible = false;
-                leftBorderBtn.BringToFront();
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
                 label.Text = currentBtn.Text;
@@ -144,6 +142,7 @@ namespace Finance_Manager_Of_Team_C
         // home 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Reset();
             OpenChildForm(new MainForm());
         }
 
@@ -151,13 +150,10 @@ namespace Finance_Manager_Of_Team_C
         private void Reset()
         {
             DisableButton();
-
             OpenChildForm(new MainForm());
-            //iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
-            label.Text = "Home";
+            iconCurrentChildForm.IconColor = Color.White;
+            label.Text = "HOME";
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -171,14 +167,10 @@ namespace Finance_Manager_Of_Team_C
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-
         private void btnExit_Click(object sender, EventArgs e)
         {
-            timer.Stop();
             Application.Exit();
         }
-
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -186,15 +178,9 @@ namespace Finance_Manager_Of_Team_C
             else
                 WindowState = FormWindowState.Normal;
         }
-
-
-
-
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        
     }
 }
