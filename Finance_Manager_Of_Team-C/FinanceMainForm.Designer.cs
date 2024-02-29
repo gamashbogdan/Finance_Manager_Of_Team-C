@@ -71,27 +71,26 @@
             panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
-            panelMenu.Margin = new Padding(3, 2, 3, 2);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(198, 488);
+            panelMenu.Size = new Size(226, 651);
             panelMenu.TabIndex = 4;
             // 
             // panelLogo
             // 
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
-            panelLogo.Location = new Point(3, 2);
-            panelLogo.Margin = new Padding(3, 2, 3, 2);
+            panelLogo.Location = new Point(3, 3);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(192, 61);
+            panelLogo.Size = new Size(219, 81);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(7, 7);
+            pictureBox1.Location = new Point(8, 9);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 49);
+            pictureBox1.Size = new Size(64, 65);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -104,9 +103,10 @@
             panel2.Controls.Add(iconButtonSocialCosts);
             panel2.Controls.Add(label2);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(3, 68);
+            panel2.Location = new Point(3, 91);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(202, 155);
+            panel2.Size = new Size(231, 207);
             panel2.TabIndex = 6;
             // 
             // iconButtonDomesticExpenses
@@ -121,11 +121,10 @@
             iconButtonDomesticExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonDomesticExpenses.IconSize = 36;
             iconButtonDomesticExpenses.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonDomesticExpenses.Location = new Point(0, 107);
-            iconButtonDomesticExpenses.Margin = new Padding(3, 2, 3, 2);
+            iconButtonDomesticExpenses.Location = new Point(0, 143);
             iconButtonDomesticExpenses.Name = "iconButtonDomesticExpenses";
-            iconButtonDomesticExpenses.Padding = new Padding(9, 0, 18, 0);
-            iconButtonDomesticExpenses.Size = new Size(202, 45);
+            iconButtonDomesticExpenses.Padding = new Padding(10, 0, 21, 0);
+            iconButtonDomesticExpenses.Size = new Size(231, 60);
             iconButtonDomesticExpenses.TabIndex = 2;
             iconButtonDomesticExpenses.Text = "DOMESTIC";
             iconButtonDomesticExpenses.TextAlign = ContentAlignment.MiddleLeft;
@@ -145,11 +144,10 @@
             iconButtonUnplannedExpenses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonUnplannedExpenses.IconSize = 36;
             iconButtonUnplannedExpenses.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonUnplannedExpenses.Location = new Point(0, 62);
-            iconButtonUnplannedExpenses.Margin = new Padding(3, 2, 3, 2);
+            iconButtonUnplannedExpenses.Location = new Point(0, 83);
             iconButtonUnplannedExpenses.Name = "iconButtonUnplannedExpenses";
-            iconButtonUnplannedExpenses.Padding = new Padding(9, 0, 18, 0);
-            iconButtonUnplannedExpenses.Size = new Size(202, 45);
+            iconButtonUnplannedExpenses.Padding = new Padding(10, 0, 21, 0);
+            iconButtonUnplannedExpenses.Size = new Size(231, 60);
             iconButtonUnplannedExpenses.TabIndex = 4;
             iconButtonUnplannedExpenses.Text = "UNPLANNED";
             iconButtonUnplannedExpenses.TextAlign = ContentAlignment.MiddleLeft;
@@ -169,11 +167,10 @@
             iconButtonSocialCosts.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonSocialCosts.IconSize = 36;
             iconButtonSocialCosts.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonSocialCosts.Location = new Point(0, 17);
-            iconButtonSocialCosts.Margin = new Padding(3, 2, 3, 2);
+            iconButtonSocialCosts.Location = new Point(0, 23);
             iconButtonSocialCosts.Name = "iconButtonSocialCosts";
-            iconButtonSocialCosts.Padding = new Padding(9, 0, 18, 0);
-            iconButtonSocialCosts.Size = new Size(202, 45);
+            iconButtonSocialCosts.Padding = new Padding(10, 0, 21, 0);
+            iconButtonSocialCosts.Size = new Size(231, 60);
             iconButtonSocialCosts.TabIndex = 3;
             iconButtonSocialCosts.Text = "SOCIAL";
             iconButtonSocialCosts.TextAlign = ContentAlignment.MiddleLeft;
@@ -189,7 +186,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(71, 17);
+            label2.Size = new Size(92, 23);
             label2.TabIndex = 0;
             label2.Text = "EXPENCES";
             // 
@@ -199,9 +196,10 @@
             panel1.Controls.Add(iconButtonIncome);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(3, 229);
+            panel1.Location = new Point(3, 306);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 112);
+            panel1.Size = new Size(229, 149);
             panel1.TabIndex = 1;
             // 
             // iconButton2
@@ -216,11 +214,10 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 36;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(0, 62);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
+            iconButton2.Location = new Point(0, 83);
             iconButton2.Name = "iconButton2";
-            iconButton2.Padding = new Padding(9, 0, 18, 0);
-            iconButton2.Size = new Size(200, 45);
+            iconButton2.Padding = new Padding(10, 0, 21, 0);
+            iconButton2.Size = new Size(229, 60);
             iconButton2.TabIndex = 2;
             iconButton2.Text = "WALLET";
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
@@ -240,11 +237,10 @@
             iconButtonIncome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButtonIncome.IconSize = 36;
             iconButtonIncome.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButtonIncome.Location = new Point(0, 17);
-            iconButtonIncome.Margin = new Padding(3, 2, 3, 2);
+            iconButtonIncome.Location = new Point(0, 23);
             iconButtonIncome.Name = "iconButtonIncome";
-            iconButtonIncome.Padding = new Padding(9, 0, 18, 0);
-            iconButtonIncome.Size = new Size(200, 45);
+            iconButtonIncome.Padding = new Padding(10, 0, 21, 0);
+            iconButtonIncome.Size = new Size(229, 60);
             iconButtonIncome.TabIndex = 1;
             iconButtonIncome.Text = "SOURCE";
             iconButtonIncome.TextAlign = ContentAlignment.MiddleLeft;
@@ -260,7 +256,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(59, 17);
+            label1.Size = new Size(77, 23);
             label1.TabIndex = 0;
             label1.Text = "INCOME";
             // 
@@ -270,9 +266,9 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(1476, 705);
+            labelTime.Location = new Point(1687, 940);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(67, 32);
+            labelTime.Size = new Size(86, 41);
             labelTime.TabIndex = 1;
             labelTime.Text = "Time";
             // 
@@ -285,10 +281,9 @@
             panelTitleBar.Controls.Add(label);
             panelTitleBar.Controls.Add(iconCurrentChildForm);
             panelTitleBar.Dock = DockStyle.Top;
-            panelTitleBar.Location = new Point(198, 0);
-            panelTitleBar.Margin = new Padding(3, 2, 3, 2);
+            panelTitleBar.Location = new Point(226, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(887, 56);
+            panelTitleBar.Size = new Size(1014, 75);
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
@@ -297,10 +292,9 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.BackColor = Color.FromArgb(37, 40, 55);
             btnMaximize.Image = (Image)resources.GetObject("btnMaximize.Image");
-            btnMaximize.Location = new Point(815, 10);
-            btnMaximize.Margin = new Padding(3, 2, 3, 2);
+            btnMaximize.Location = new Point(931, 13);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(20, 18);
+            btnMaximize.Size = new Size(23, 24);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMaximize.TabIndex = 3;
             btnMaximize.TabStop = false;
@@ -311,10 +305,9 @@
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.BackColor = Color.FromArgb(37, 40, 55);
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(772, 8);
-            btnMinimize.Margin = new Padding(3, 2, 3, 2);
+            btnMinimize.Location = new Point(882, 11);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(28, 25);
+            btnMinimize.Size = new Size(32, 33);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
@@ -325,10 +318,9 @@
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.BackColor = Color.FromArgb(37, 40, 55);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.Location = new Point(852, 9);
-            btnExit.Margin = new Padding(3, 2, 3, 2);
+            btnExit.Location = new Point(974, 12);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(21, 19);
+            btnExit.Size = new Size(24, 25);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
             btnExit.TabIndex = 1;
             btnExit.TabStop = false;
@@ -339,9 +331,9 @@
             label.AutoSize = true;
             label.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label.ForeColor = Color.White;
-            label.Location = new Point(49, 24);
+            label.Location = new Point(56, 32);
             label.Name = "label";
-            label.Size = new Size(47, 17);
+            label.Size = new Size(61, 23);
             label.TabIndex = 1;
             label.Text = "HOME";
             // 
@@ -351,11 +343,10 @@
             iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.HomeLgAlt;
             iconCurrentChildForm.IconColor = Color.White;
             iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconCurrentChildForm.IconSize = 30;
-            iconCurrentChildForm.Location = new Point(8, 16);
-            iconCurrentChildForm.Margin = new Padding(3, 2, 3, 2);
+            iconCurrentChildForm.IconSize = 40;
+            iconCurrentChildForm.Location = new Point(9, 21);
             iconCurrentChildForm.Name = "iconCurrentChildForm";
-            iconCurrentChildForm.Size = new Size(35, 30);
+            iconCurrentChildForm.Size = new Size(40, 40);
             iconCurrentChildForm.TabIndex = 0;
             iconCurrentChildForm.TabStop = false;
             // 
@@ -363,10 +354,9 @@
             // 
             panelShadow.BackColor = Color.FromArgb(37, 40, 55);
             panelShadow.Dock = DockStyle.Top;
-            panelShadow.Location = new Point(198, 56);
-            panelShadow.Margin = new Padding(3, 2, 3, 2);
+            panelShadow.Location = new Point(226, 75);
             panelShadow.Name = "panelShadow";
-            panelShadow.Size = new Size(887, 7);
+            panelShadow.Size = new Size(1014, 9);
             panelShadow.TabIndex = 6;
             // 
             // panelDesktop
@@ -374,23 +364,21 @@
             panelDesktop.BackColor = Color.FromArgb(30, 28, 42);
             panelDesktop.Controls.Add(labelTime);
             panelDesktop.Dock = DockStyle.Fill;
-            panelDesktop.Location = new Point(198, 63);
-            panelDesktop.Margin = new Padding(3, 2, 3, 2);
+            panelDesktop.Location = new Point(226, 84);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(887, 425);
+            panelDesktop.Size = new Size(1014, 567);
             panelDesktop.TabIndex = 7;
             // 
             // FormFinance
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1085, 488);
+            ClientSize = new Size(1240, 651);
             Controls.Add(panelDesktop);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormFinance";
             Text = "Finance Manager";
             panelMenu.ResumeLayout(false);
