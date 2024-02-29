@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace Finance_Manager_Of_Team_C
 {
+    public class CostData
+    {
+
+    }
     public class WalletData
     {
         public string Name { get; set; }

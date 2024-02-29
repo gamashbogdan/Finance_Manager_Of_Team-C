@@ -185,7 +185,6 @@
             label5.Size = new Size(55, 17);
             label5.TabIndex = 8;
             label5.Text = "100 грн";
-            label5.Click += label5_Click;
             // 
             // label6
             // 

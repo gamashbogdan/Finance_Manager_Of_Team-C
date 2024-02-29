@@ -82,6 +82,7 @@
             Controls.Add(monthCalendar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Calendar";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Calendar";
             ResumeLayout(false);
         }

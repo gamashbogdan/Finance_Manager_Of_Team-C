@@ -26,12 +26,7 @@ namespace Finance_Manager_Of_Team_C
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-            ///////////////////
-        }
-        /// <summary>////////////////////////////////////////////////////////////
-        /// //
+        
         private void FruitCheck_CheckedChanged(object sender, EventArgs e)
         {
             bool isChecked = FruitCheck.Checked;
@@ -87,18 +82,7 @@ namespace Finance_Manager_Of_Team_C
                 DessertBox.Text = " ";
             }
         }
-        /// <summary>
-        /// ////////////////////////////////////////////////////////////////////
-        //
-
-
-
-
-
-
-
-
-
+        
         private void FruitBox_TextChanged(object sender, EventArgs e)
         {
             // Отримання тексту з TextBox

@@ -268,7 +268,6 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(1644, 940);
             labelTime.Location = new Point(1687, 940);
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(86, 41);
@@ -295,14 +294,9 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.BackColor = Color.FromArgb(37, 40, 55);
             btnMaximize.Image = (Image)resources.GetObject("btnMaximize.Image");
-
-            btnMaximize.Location = new Point(924, 11);
-            btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(29, 29);
-            btnMaximize.SizeMode = PictureBoxSizeMode.Zoom;
             btnMaximize.Location = new Point(931, 13);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(23, 24);
+            btnMaximize.Size = new Size(25, 26);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMaximize.TabIndex = 3;
             btnMaximize.TabStop = false;
@@ -315,10 +309,9 @@
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.BackColor = Color.FromArgb(37, 40, 55);
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(877, 11);
             btnMinimize.Location = new Point(882, 11);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(32, 33);
+            btnMinimize.Size = new Size(29, 30);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
             btnMinimize.TabIndex = 2;
             btnMinimize.TabStop = false;
@@ -331,12 +324,9 @@
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.BackColor = Color.FromArgb(37, 40, 55);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.Location = new Point(970, 11);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(32, 33);
             btnExit.Location = new Point(974, 12);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(24, 25);
+            btnExit.Size = new Size(27, 28);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
             btnExit.TabIndex = 1;
             btnExit.TabStop = false;
@@ -396,7 +386,6 @@
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormFinance";
             Text = "Finance Manager";

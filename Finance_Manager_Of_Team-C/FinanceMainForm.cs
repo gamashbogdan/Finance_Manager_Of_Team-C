@@ -23,6 +23,7 @@ namespace Finance_Manager_Of_Team_C
             this.DoubleBuffered = true;
             OpenChildForm(new MainForm());
 
+
         }
 
         private void ElementIllumination_MouseEnter(object sender, EventArgs e)
@@ -169,6 +170,9 @@ namespace Finance_Manager_Of_Team_C
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
+            MainForm mainForm = new MainForm(); 
+            mainForm.timer.Stop();
+            
             Application.Exit();
         }
         private void btnMaximize_Click(object sender, EventArgs e)
