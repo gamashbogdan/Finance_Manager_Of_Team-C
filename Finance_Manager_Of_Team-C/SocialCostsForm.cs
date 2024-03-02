@@ -21,7 +21,7 @@ namespace Finance_Manager_Of_Team_C
         {
             double totalSum = 0;
 
-          
+
             if (!string.IsNullOrWhiteSpace(PayInetTb.Text))
             {
                 string inetCostText = PayInetTb.Text.Replace(".", ",");
@@ -106,9 +106,14 @@ namespace Finance_Manager_Of_Team_C
                 }
             }
 
-          
-            PayAllSocialTb.Text = totalSum.ToString(); 
+
+            PayAllSocialTb.Text = totalSum.ToString();
             MessageBox.Show($"Total sum Social Costs: {totalSum}", "Total Sum UAH");
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

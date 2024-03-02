@@ -72,7 +72,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(226, 651);
+            panelMenu.Size = new Size(226, 697);
             panelMenu.TabIndex = 4;
             // 
             // panelLogo
@@ -188,9 +188,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(92, 23);
+            label2.Size = new Size(91, 23);
             label2.TabIndex = 0;
-            label2.Text = "EXPENCES";
+            label2.Text = "EXPENSES";
             // 
             // panel1
             // 
@@ -268,7 +268,7 @@
             labelTime.AutoSize = true;
             labelTime.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
             labelTime.ForeColor = SystemColors.ButtonHighlight;
-            labelTime.Location = new Point(1687, 940);
+            labelTime.Location = new Point(1825, 986);
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(86, 41);
             labelTime.TabIndex = 1;
@@ -285,7 +285,7 @@
             panelTitleBar.Dock = DockStyle.Top;
             panelTitleBar.Location = new Point(226, 0);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1014, 75);
+            panelTitleBar.Size = new Size(1152, 75);
             panelTitleBar.TabIndex = 5;
             panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
@@ -294,7 +294,7 @@
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMaximize.BackColor = Color.FromArgb(37, 40, 55);
             btnMaximize.Image = (Image)resources.GetObject("btnMaximize.Image");
-            btnMaximize.Location = new Point(931, 13);
+            btnMaximize.Location = new Point(1069, 13);
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new Size(25, 26);
             btnMaximize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -309,7 +309,7 @@
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnMinimize.BackColor = Color.FromArgb(37, 40, 55);
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(882, 11);
+            btnMinimize.Location = new Point(1020, 11);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(29, 30);
             btnMinimize.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -324,7 +324,7 @@
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.BackColor = Color.FromArgb(37, 40, 55);
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.Location = new Point(974, 12);
+            btnExit.Location = new Point(1112, 12);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(27, 28);
             btnExit.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -364,7 +364,7 @@
             panelShadow.Dock = DockStyle.Top;
             panelShadow.Location = new Point(226, 75);
             panelShadow.Name = "panelShadow";
-            panelShadow.Size = new Size(1014, 9);
+            panelShadow.Size = new Size(1152, 9);
             panelShadow.TabIndex = 6;
             // 
             // panelDesktop
@@ -374,14 +374,14 @@
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(226, 84);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(1014, 567);
+            panelDesktop.Size = new Size(1152, 613);
             panelDesktop.TabIndex = 7;
             // 
             // FormFinance
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1240, 651);
+            ClientSize = new Size(1378, 697);
             Controls.Add(panelDesktop);
             Controls.Add(panelShadow);
             Controls.Add(panelTitleBar);
