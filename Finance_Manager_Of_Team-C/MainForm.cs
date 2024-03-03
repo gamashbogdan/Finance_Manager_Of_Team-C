@@ -14,10 +14,13 @@ namespace Finance_Manager_Of_Team_C
 {
     public partial class MainForm : Form
     {
-        public Timer timer = new Timer();
+        public Calendar calendar;
+        public Timer timer;
         public MainForm()
         {
             InitializeComponent();
+            calendar = new Calendar();
+            timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
             timer.Start();
@@ -31,6 +34,11 @@ namespace Finance_Manager_Of_Team_C
         }
         private void DiagramUnplanned()
         {
+            if (UnplannedExpensesPanelDiagram.Controls.Count > 0)
+            {
+                // Припускаємо, що у панелі є тільки один контрол діаграми
+                UnplannedExpensesPanelDiagram.Controls.Clear(); // Очищення панелі перед додаванням нової діаграми
+            }
             // Створення нового екземпляру контролу Chart
             Chart chart = new Chart
             {
@@ -48,19 +56,17 @@ namespace Finance_Manager_Of_Team_C
                 ChartType = SeriesChartType.Column// Тип діаграми - стовпчикова
             };
             // Додавання даних до серії (приклад)
-            series.Points.AddXY("Січень", 100);
-            series.Points.AddXY("Лютий", 300);
-            series.Points.AddXY("Березень", 150);
-            series.Points.AddXY("Березень", 450);
-            series.Points.AddXY("Січень", 100);
-            series.Points.AddXY("Лютий", 300);
-            series.Points.AddXY("Березень", 150);
-            series.Points.AddXY("Березень", 450);
-            series.Points.AddXY("Січень", 100);
-            series.Points.AddXY("Лютий", 300);
-            series.Points.AddXY("Березень", 150);
-            series.Points.AddXY("Березень", -450);
-            // Продовжуйте додавати дані за потребою
+
+            bool isDifferentYears = calendar.StartDate.Year != calendar.EndDate.Year;
+            // Цикл для кожного дня у вибраному діапазоні
+            for (DateTime date = calendar.StartDate; date <= calendar.EndDate; date = date.AddDays(1)) // Змінено на AddDays(1)
+            {
+                // Форматування дати
+                string dateFormat = isDifferentYears ? "dd.MM.yyyy" : "dd.MM";
+                string formattedDate = date.ToString(dateFormat);
+                // Додавання точки до серії з форматованою датою як X і деяким значенням Y, наприклад, 1000
+                series.Points.AddXY(formattedDate, 1000);
+            }
 
             // Додавання серії даних до діаграми
             chart.Series.Add(series);
@@ -77,6 +83,11 @@ namespace Finance_Manager_Of_Team_C
         }
         private void DiagramDomestic()
         {
+            if (DomesticExpensesPanelDiagram.Controls.Count > 0)
+            {
+                // Припускаємо, що у панелі є тільки один контрол діаграми
+                DomesticExpensesPanelDiagram.Controls.Clear(); // Очищення панелі перед додаванням нової діаграми
+            }
             // Створення нового екземпляру контролу Chart
             Chart chart = new Chart
             {
@@ -94,11 +105,16 @@ namespace Finance_Manager_Of_Team_C
                 ChartType = SeriesChartType.Column // Тип діаграми - стовпчикова
             };
             // Додавання даних до серії (приклад)
-            series.Points.AddXY("Січень", 1000);
-            series.Points.AddXY("Лютий", 800);
-            series.Points.AddXY("Березень", 28000);
-            // Продовжуйте додавати дані за потребою
-
+            bool isDifferentYears = calendar.StartDate.Year != calendar.EndDate.Year;
+            // Цикл для кожного дня у вибраному діапазоні
+            for (DateTime date = calendar.StartDate; date <= calendar.EndDate; date = date.AddDays(1)) // Змінено на AddDays(1)
+            {
+                // Форматування дати
+                string dateFormat = isDifferentYears ? "dd.MM.yyyy" : "dd.MM";
+                string formattedDate = date.ToString(dateFormat);
+                // Додавання точки до серії з форматованою датою як X і деяким значенням Y, наприклад, 1000
+                series.Points.AddXY(formattedDate, 1000);
+            }
             // Додавання серії даних до діаграми
             chart.Series.Add(series);
 
@@ -114,13 +130,17 @@ namespace Finance_Manager_Of_Team_C
         }
         private void DiagramSocial()
         {
+            if (SocialExpensesPanelDiagram.Controls.Count > 0)
+            {
+                // Припускаємо, що у панелі є тільки один контрол діаграми
+                SocialExpensesPanelDiagram.Controls.Clear(); // Очищення панелі перед додаванням нової діаграми
+            }
             // Створення нового екземпляру контролу Chart
             Chart chart = new Chart
             {
                 // Налаштування розміру та положення діаграми відповідно до розміру панелі
                 Dock = DockStyle.Fill
             };
-
             // Налаштування області діаграми
             ChartArea chartArea = new ChartArea();
             chart.ChartAreas.Add(chartArea);
@@ -131,10 +151,17 @@ namespace Finance_Manager_Of_Team_C
                 ChartType = SeriesChartType.Column // Тип діаграми - стовпчикова
             };
             // Додавання даних до серії (приклад)
-            series.Points.AddXY("Січень", 1000);
-            series.Points.AddXY("Лютий", 800);
-            series.Points.AddXY("Березень", 28000);
-            // Продовжуйте додавати дані за потребою
+            // Перевірка, чи діапазон дат охоплює більше одного року
+            bool isDifferentYears = calendar.StartDate.Year != calendar.EndDate.Year;
+            // Цикл для кожного дня у вибраному діапазоні
+            for (DateTime date = calendar.StartDate; date <= calendar.EndDate; date = date.AddDays(1)) // Змінено на AddDays(1)
+            {
+                // Форматування дати
+                string dateFormat = isDifferentYears ? "dd.MM.yyyy" : "dd.MM";
+                string formattedDate = date.ToString(dateFormat);
+                // Додавання точки до серії з форматованою датою як X і деяким значенням Y, наприклад, 1000
+                series.Points.AddXY(formattedDate, 1000);
+            }
 
             // Додавання серії даних до діаграми
             chart.Series.Add(series);
@@ -151,6 +178,11 @@ namespace Finance_Manager_Of_Team_C
         }
         private void DiagramIncome()
         {
+            if (IncomePanelDiagram.Controls.Count > 0)
+            {
+                // Припускаємо, що у панелі є тільки один контрол діаграми
+                IncomePanelDiagram.Controls.Clear(); // Очищення панелі перед додаванням нової діаграми
+            }
             // Створення нового екземпляру контролу Chart
             Chart chart = new Chart
             {
@@ -168,10 +200,16 @@ namespace Finance_Manager_Of_Team_C
                 ChartType = SeriesChartType.Column // Тип діаграми - стовпчикова
             };
             // Додавання даних до серії (приклад)
-            series.Points.AddXY("Січень", 1000);
-            series.Points.AddXY("Лютий", 800);
-            series.Points.AddXY("Березень", 28000);
-            // Продовжуйте додавати дані за потребою
+            bool isDifferentYears = calendar.StartDate.Year != calendar.EndDate.Year;
+            // Цикл для кожного дня у вибраному діапазоні
+            for (DateTime date = calendar.StartDate; date <= calendar.EndDate; date = date.AddDays(1)) // Змінено на AddDays(1)
+            {
+                // Форматування дати
+                string dateFormat = isDifferentYears ? "dd.MM.yyyy" : "dd.MM";
+                string formattedDate = date.ToString(dateFormat);
+                // Додавання точки до серії з форматованою датою як X і деяким значенням Y, наприклад, 1000
+                series.Points.AddXY(formattedDate, 1000);
+            }
 
             // Додавання серії даних до діаграми
             chart.Series.Add(series);
@@ -214,35 +252,34 @@ namespace Finance_Manager_Of_Team_C
                 control.BackColor = Color.FromArgb(30, 28, 42); // Поверніть до стандартного кольору фону контролів
             }
         }
+        public void UpdateDiagram()
+        {
+            DiagramIncome();
+            DiagramSocial();
+            DiagramDomestic();
+            DiagramUnplanned();
+        }
         private void labelDate_Click(object sender, EventArgs e)
         {
-            bool dateSelected = false;
-            while (!dateSelected)
+            
+            calendar.ShowDialog();
+            if (calendar.StartDate > DateTime.MinValue && calendar.EndDate > DateTime.MinValue)
             {
-                Calendar calendar = new Calendar();
-                calendar.ShowDialog();
-
-                if (calendar.StartDate > DateTime.MinValue && calendar.EndDate > DateTime.MinValue)
+                if (calendar.StartDate.Day != calendar.EndDate.Day)
                 {
-                    if (calendar.StartDate != calendar.EndDate)
-                    {
-                        labelDateRange.Text = $"Expenses {calendar.StartDate.ToString("dd. MM. yyyy")} - {calendar.EndDate.ToString("dd. MM. yyyy")}";
-                    }
-                    else
-                    {
-                        labelDateRange.Text = $"Expenses {calendar.StartDate.ToString("dd. MM. yyyy")}";
-                    }
-                    dateSelected = true; // Встановлюємо флаг, що дата була вибрана
+                    labelDateRange.Text = $"Expenses {calendar.StartDate.ToString("dd. MM. yyyy")} - {calendar.EndDate.ToString("dd. MM. yyyy")}";
+                    UpdateDiagram();
                 }
                 else
                 {
-                    if (MessageBox.Show("Select today's date?", "No Date Set", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        labelDateRange.Text = $"Expenses {DateTime.Now.ToString("dd. MM. yyyy")}";
-                        dateSelected = true; // Встановлюємо флаг, що дата була вибрана
-                    }
-                    // Якщо користувач вибирає "No", цикл продовжиться для повторного відкриття календаря
+                    labelDateRange.Text = $"Expenses {calendar.StartDate.ToString("dd. MM. yyyy")}";
+                    UpdateDiagram();
                 }
+            }
+            else
+            {
+                labelDateRange.Text = $"Expenses {DateTime.Now.ToString("dd. MM. yyyy")}";
+                UpdateDiagram();
             }
         }
 

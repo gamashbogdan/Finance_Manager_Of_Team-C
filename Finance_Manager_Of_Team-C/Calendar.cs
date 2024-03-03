@@ -28,12 +28,13 @@ namespace Finance_Manager_Of_Team_C
             EndDate = monthCalendar.SelectionEnd;
             this.Close();
         }
-        public DateTime StartDate {  get; set; }
-        public DateTime EndDate {  get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
-       
 
-        
+
+
+
 
     }
 }
