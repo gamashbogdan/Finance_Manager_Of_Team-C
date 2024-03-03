@@ -5,7 +5,14 @@ namespace Finance_Manager_Of_Team_C
 {
     public static class SocialData
     {
-        public static double Many {  get; set; }
+        private static double many;
+
+        public static double Many
+        {
+            get { return many; }
+            set { many += value; }
+        }
+
         public static DateTime Date { get; set; }
     }
     public static class UnplannedData

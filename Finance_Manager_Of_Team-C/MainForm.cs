@@ -27,10 +27,7 @@ namespace Finance_Manager_Of_Team_C
             labelTime.Text = DateTime.Now.ToString("HH : mm : ss");
             labelDate.Text = DateTime.Now.ToString("dd. MM. yyyy");
             labelDateRange.Text = $"Expenses {DateTime.Now.ToString("dd. MM. yyyy")}";
-            DiagramIncome();
-            DiagramSocial();
-            DiagramDomestic();
-            DiagramUnplanned();
+            UpdateDiagram();
         }
         public void DiagramUnplanned()
         {
@@ -185,7 +182,7 @@ namespace Finance_Manager_Of_Team_C
             }
             else
             {
-                series.Points.AddXY(DateTime.Now.ToString("dd.MM"), 0);
+                series.Points.AddXY(DateTime.Now.ToString("dd.MM"), SocialData.Many);
                 labelSocialExpences.Text = $"Social Expenses : {SocialData.Many}"; 
             }
             // Додавання серії даних до діаграми

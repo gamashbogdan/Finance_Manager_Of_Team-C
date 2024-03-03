@@ -44,9 +44,6 @@ namespace Finance_Manager_Of_Team_C
                 control.BackColor = Color.FromArgb(37, 40, 55); // Поверніть до стандартного кольору фону контролів
             }
         }
-
-        
-
         private struct RGBColors
         {
             // icon color
@@ -143,7 +140,7 @@ namespace Finance_Manager_Of_Team_C
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             MainForm mainForm = new MainForm();
-            mainForm.UpdateDiagram();
+            mainForm.DiagramSocial();
             Reset();
             OpenChildForm(new MainForm());
         }
