@@ -3,9 +3,20 @@ using System.Collections.Generic;
 
 namespace Finance_Manager_Of_Team_C
 {
-    public class CostData
+    public static class SocialData
     {
-
+        public static double Many {  get; set; }
+        public static DateTime Date { get; set; }
+    }
+    public static class UnplannedData
+    {
+        public static double Many {  get; set; }
+        public static DateTime Date { get; set; }
+    }
+    public static class DomesticData
+    {
+        public static double Many {  get; set; }
+        public static DateTime Date { get; set; }
     }
     public class WalletData
     {

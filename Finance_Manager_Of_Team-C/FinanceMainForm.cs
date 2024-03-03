@@ -25,7 +25,6 @@ namespace Finance_Manager_Of_Team_C
 
 
         }
-
         private void ElementIllumination_MouseEnter(object sender, EventArgs e)
         {
             // Приведення sender до типу Control
@@ -143,6 +142,8 @@ namespace Finance_Manager_Of_Team_C
         // home 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            MainForm mainForm = new MainForm();
+            mainForm.UpdateDiagram();
             Reset();
             OpenChildForm(new MainForm());
         }

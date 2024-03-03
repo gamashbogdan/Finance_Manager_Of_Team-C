@@ -108,12 +108,11 @@ namespace Finance_Manager_Of_Team_C
 
 
             PayAllSocialTb.Text = totalSum.ToString();
+            SocialData.Many = totalSum;
+            SocialData.Date = DateTime.Now;
             MessageBox.Show($"Total sum Social Costs: {totalSum}", "Total Sum UAH");
         }
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

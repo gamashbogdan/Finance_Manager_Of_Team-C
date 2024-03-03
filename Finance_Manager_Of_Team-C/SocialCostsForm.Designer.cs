@@ -171,7 +171,7 @@
             SocialCostsBtn.Name = "SocialCostsBtn";
             SocialCostsBtn.Size = new Size(754, 68);
             SocialCostsBtn.TabIndex = 13;
-            SocialCostsBtn.Text = "PAY TOTAL ";
+            SocialCostsBtn.Text = "CALCULATE TOTAL";
             SocialCostsBtn.UseVisualStyleBackColor = false;
             SocialCostsBtn.Click += SocialCostsBtn_Click;
             // 
@@ -237,7 +237,6 @@
             label12.Size = new Size(55, 28);
             label12.TabIndex = 19;
             label12.Text = "UAH";
-            label12.Click += label12_Click;
             // 
             // label13
             // 
